@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baeloom | Meet Lucy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Afacad:wght@700&family=Albert+Sans:wght@300;400;500;600&display=swap');
+
+        :root {
+            --primary: #FF6D1F;      /* Primary Orange */
+            --sub-cream: #F5E7C6;    /* Soft Cream */
+            --sub-brown: #6A2500;    /* Dark Burnt Orange */
+            --sub-apricot: #FBD8A9;  /* Light Apricot */
+            --text-main: #222222;    /* Dark Grey */
+            --text-muted: #505050;   /* Medium Grey */
+            --white: #FFFFFF;
+        }
+
+        html, body { 
+            scroll-behavior: smooth; 
+            overflow-x: hidden; 
+            width: 100%;
+        }
+
+        body {
+            font-family: 'Albert Sans', sans-serif;
+            background-color: var(--white);
+            color: var(--text-main);
+        }
+
+        h1, h2, h3, h4, .heading-font {
+            font-family: 'Afacad', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+        }
+
+        .pill-button {
+            border-radius: 9999px;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            font-family: 'Afacad', sans-serif;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            padding: 0 2rem;
+        }
+        @media (min-width: 768px) {
+            .btn-primary { padding: 0 2.8rem; }
+        }
+
+        .btn-primary:hover {
+            background-color: var(--sub-brown) !important;
+            color: var(--primary) !important;
+        }
+
+        /* NAVIGATION */
+        nav { transition: all 0.4s ease; }
+        #nav-container {
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-at-top #nav-container {
+            background-color: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(15px);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        .nav-scrolled #nav-container {
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(25px);
+            border-color: rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+        }
+        
+        #nav-logo { height: 30px; width: auto; display: block; transition: opacity 0.3s ease; }
+        @media (min-width: 768px) { #nav-logo { height: 28px; } }
+
+        /* HERO */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+            overflow: hidden;
+            background-color: #000;
+        }
+        .hero-video-container {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 0;
+        }
+        .hero-video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hero-video-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.7) 100%);
+            z-index: 1;
+        }
+        .hero-content { 
+            position: relative; 
+            z-index: 2; 
+            width: 100%; 
+            padding-top: 80px; 
+        }
+
+        /* INTERACTION */
+        .interaction-section {
+            padding: 4rem 0 3rem 0;
+            background-color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        @media (min-width: 768px) {
+            .interaction-section { padding: 8rem 0 4rem 0; }
+        }
+
+        .phone-mockup {
+            width: 250px;
+            height: 500px;
+            border: 4px solid #222;
+            border-radius: 40px;
+            background: #fff;
+            position: relative;
+            box-shadow: 0 40px 80px -20px rgba(0,0,0,0.12);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+        }
+
+        /* CHAT ANIMATION */
+        .chat-bubble {
+            max-width: 85%;
+            padding: 10px 14px;
+            border-radius: 18px;
+            font-size: 11px;
+            line-height: 1.4;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: bubbleIn 0.4s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        @keyframes bubbleIn { to { opacity: 1; transform: translateY(0); } }
+        .bubble-lucy { background: var(--sub-cream); color: var(--text-main); align-self: flex-start; border-bottom-left-radius: 4px; }
+        .bubble-user { background: var(--primary); color: white; align-self: flex-end; border-bottom-right-radius: 4px; }
+
+        /* REVEAL LOGIC */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .reveal-visible { opacity: 1; transform: translateY(0); }
+
+        /* COMPANION SLIDEDECK */
+        .slidedeck-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 1.5rem;
+            padding-top: 1rem;
+            padding-bottom: 2rem;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            cursor: grab;
+            user-select: none;
+            width: 100%;
+            /* Fix for mobile padding: ensures scroll track includes the left/right margins */
+            padding-left: 2rem;
+            padding-right: 2rem;
+            scroll-padding-left: 2rem;
+        }
+        @media (min-width: 768px) { 
+            .slidedeck-container { 
+                gap: 2rem; 
+                padding-left: 0;
+                padding-right: 0;
+                scroll-padding-left: 0;
+            } 
+        }
+        .slidedeck-container::-webkit-scrollbar { display: none; }
+
+        .companion-card {
+            flex: 0 0 85vw;
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+            background: #ffffff;
+            border-radius: 44px;
+            padding: 2rem;
+            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.05);
+            transition: box-shadow 0.5s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .companion-card {
+                flex: 0 0 580px;
+                flex-direction: row;
+                align-items: flex-start;
+                padding: 3rem;
+                gap: 2.5rem;
+            }
+        }
+
+        .companion-status {
+            display: flex;
+            align-items: center; gap: 0.4rem; font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: #10b981; margin-top: 0.6rem; margin-bottom: 1.5rem; }
+        @keyframes status-pulse { 0% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.4); opacity: 0.4; } 100% { transform: scale(1); opacity: 1; } }
+        .pulse-dot { width: 7px; height: 7px; background-color: #10b981; border-radius: 50%; animation: status-pulse 2s infinite ease-in-out; }
+
+        /* CORE VISUAL & ASYNC ANIMATIONS */
+        .neural-core-container { position: relative; height: 750px; width: 100%; margin: 4.5rem auto 3rem auto; display: flex; align-items: center; justify-content: center; }
+        .core-orb { position: relative; width: 120px; height: 120px; z-index: 50; display: flex; align-items: center; justify-content: center; }
+        .core-plate { position: absolute; border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; }
+        .plate-inner { width: 380px; height: 380px; background-color: #FF6D1F; z-index: 10; }
+        .plate-outer { width: 680px; height: 680px; background-color: #FBD8A9; opacity: 0.5; z-index: 5; }
+        .core-module { position: absolute; top: 50%; left: 50%; width: 230px; z-index: 60; transform: translate(-50%, -50%); }
+        .module-card { background: #ffffff; padding: 1.1rem 1.5rem; border-radius: 26px; border: 2px solid transparent; box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.1); transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); cursor: default; }
+        .core-module:hover { z-index: 100 !important; }
+        .core-module:hover .module-card { transform: scale(1.06) translateY(-10px); border-color: var(--primary); box-shadow: 0 25px 50px -12px rgba(255, 109, 31, 0.25); }
+        .module-header { display: flex; align-items: center; gap: 0.9rem; }
+        .icon-box { width: 36px; height: 36px; border-radius: 12px; background-color: rgba(255, 109, 31, 0.1); display: flex; align-items: center; justify-content: center; color: var(--primary); flex-shrink: 0; }
+        .module-desc { max-height: 0; opacity: 0; font-size: 13px; color: var(--text-muted); line-height: 1.55; transition: all 0.35s ease-out; overflow: hidden; }
+        .core-module:hover .module-desc { max-height: 120px; opacity: 1; margin-top: 1rem; }
+        
+        @keyframes drift-1 { 0%, 100% { transform: translate(0, 0); } 33% { transform: translate(14px, -12px); } 66% { transform: translate(-10px, 16px); } }
+        @keyframes drift-2 { 0%, 100% { transform: translate(0, 0); } 33% { transform: translate(-18px, 10px); } 66% { transform: translate(12px, -14px); } }
+        @keyframes drift-3 { 0%, 100% { transform: translate(0, 0); } 33% { transform: translate(10px, 18px); } 66% { transform: translate(-16px, -10px); } }
+
+        .node-r1-1 .drift-node { animation: drift-1 11s infinite ease-in-out; animation-delay: -1s; } 
+        .node-r1-2 .drift-node { animation: drift-2 13s infinite ease-in-out; animation-delay: -4s; }  
+        .node-r2-p .drift-node { animation: drift-3 10s infinite ease-in-out; animation-delay: -7s; }      
+        .node-r2-t .drift-node { animation: drift-1 14s infinite ease-in-out; animation-delay: -2s; }      
+        .node-r2-1 .drift-node { animation: drift-2 12s infinite ease-in-out; animation-delay: -9s; }    
+        .node-r2-2 .drift-node { animation: drift-3 15s infinite ease-in-out; animation-delay: -3s; }   
+        .node-r2-3 .drift-node { animation: drift-1 9s infinite ease-in-out; animation-delay: -11s; }       
+
+        .node-r1-1 { margin-top: -120px; margin-left: -160px; } 
+        .node-r1-2 { margin-top: -120px; margin-left: 160px; }  
+        .node-r2-p { margin-top: 140px; margin-left: 0; }      
+        .node-r2-t { margin-top: -340px; margin-left: 0; }      
+        .node-r2-1 { margin-top: 50px; margin-left: 360px; }    
+        .node-r2-2 { margin-top: 50px; margin-left: -360px; }   
+        .node-r2-3 { margin-top: 360px; margin-left: 0; }
+
+        /* ARROWS */
+        .arrow-nav-btn { background-color: white; color: var(--text-main); border: 1px solid rgba(0,0,0,0.05); transition: all 0.3s ease; }
+        .arrow-nav-btn:hover:not(:disabled) { background-color: var(--sub-brown) !important; color: var(--primary) !important; border-color: var(--sub-brown) !important; }
+        .arrow-nav-btn.enabled-orange { background-color: var(--primary); color: white; border-color: var(--primary); }
+        .arrow-nav-btn:disabled { opacity: 0.3; pointer-events: none; }
+        @keyframes floating-img { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+        .animate-float { animation: floating-img 6s infinite ease-in-out; }
+    </style>
+</head>
+<body class="antialiased nav-at-top">
+
+    <!-- Header Navigation -->
+    <nav id="main-nav" class="fixed w-full z-[100] py-4 md:py-6 px-4 md:px-6">
+        <div id="nav-container" class="max-w-6xl mx-auto flex flex-row items-center justify-between rounded-full pl-6 md:pl-10 pr-0 border">
+            <a href="#" class="flex items-center">
+                <img id="nav-logo" src="https://www.dropbox.com/scl/fi/19pxajpndltlnbq21og0o/Logo-extended-white.png?rlkey=0pwswtqcv6y2dphuzxtdtmc6w&st=gt1rzbwi&dl=1" alt="Baeloom">
+            </a>
+            <div class="flex items-center h-full">
+                <a href="#interaction" class="pill-button btn-primary h-full md:h-16 text-lg md:text-xl tracking-tight rounded-full px-8 md:px-12 flex items-center">
+                    Meet Lucy
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-video-container">
+            <div class="hero-video-overlay"></div>
+            <video autoplay muted loop playsinline preload="auto" poster="https://www.dropbox.com/scl/fi/o0tdeztgj2tv33xksl9y3/banner-video-baeloom.mp4?rlkey=hngjx6jva9197e9mco9h99cmq&st=74i4ix5g&dl=1">
+                <source src="https://www.dropbox.com/scl/fi/o0tdeztgj2tv33xksl9y3/banner-video-baeloom.mp4?rlkey=hngjx6jva9197e9mco9h99cmq&st=74i4ix5g&dl=1" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-content max-w-6xl mx-auto px-6 flex flex-col items-center">
+            <h1 class="text-7xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tighter text-white mt-12 md:mt-20 max-w-5xl mx-auto">
+                <span class="block">A good conversation</span>
+                <span class="text-white block">can change <br class="md:hidden"> your day.</span>
+            </h1>
+            <div class="flex items-center justify-center pt-8 md:pt-12">
+                <a href="#interaction" class="text-[#FF6D1F]">
+                    <i data-lucide="chevron-down" class="w-12 h-12 md:w-16 md:h-16 stroke-[2.5]"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- PHILOSOPHY SECTION -->
+    <section id="interaction" class="interaction-section px-0 md:px-16 lg:px-24">
+        <div class="hidden md:block absolute top-1/2 -right-40 -translate-y-1/2 w-[850px] h-[850px] bg-[#FF6D1F]/30 blur-[150px] rounded-full pointer-events-none opacity-80" style="mask-image: radial-gradient(circle at center, black 10%, transparent 75%); -webkit-mask-image: radial-gradient(circle at center, black 10%, transparent 75%);"></div>
+
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 lg:gap-24 items-start pb-6 md:pb-12 relative z-10">
+            <div class="space-y-8 pt-0">
+                <div class="space-y-6">
+                    <h2 class="px-8 md:px-0 text-6xl md:text-8xl text-[#222222] leading-[0.8] md:leading-[0.8] mt-0 tracking-tighter scroll-reveal">
+                        Pick your <span class="block">companion.</span>
+                    </h2>
+                    <p class="text-lg md:text-xl text-[#505050] font-light leading-relaxed max-sm pt-4 md:pt-6 px-8 md:px-0 scroll-reveal">
+                        Baeloom creates digital companions with unique strengths in empathy, analytical thinking and creativity. Discover which companion fits your needs.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex justify-center md:justify-end scroll-reveal px-8 md:px-0" id="phone-trigger-container">
+                <div id="phone-trigger" class="phone-mockup scroll-trigger">
+                    <div class="h-8 w-full bg-white flex justify-center items-end pb-2 flex-shrink-0">
+                        <div class="w-20 h-1.5 bg-gray-200 rounded-full"></div>
+                    </div>
+                    <div class="px-4 py-4 border-b flex items-center gap-3 flex-shrink-0 bg-white/50 backdrop-blur-sm">
+                        <img src="https://www.dropbox.com/scl/fi/zlb8xy3raj7q6ps1dxwop/Website-profile-picture-Lucy.png?rlkey=z2w97dzrxr1qhzl0w5dlmgf7b&st=k85p1gxt&dl=1" class="w-10 h-10 object-cover rounded-full" alt="Lucy">
+                        <div>
+                            <p class="text-base font-bold heading-font">Lucy</p>
+                            <div class="flex items-center gap-1.5">
+                                <span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
+                                <p class="text-[10px] text-[#505050] font-medium">Online</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="chat-1" class="flex-1 p-4 overflow-hidden flex flex-col justify-start bg-gray-50/10 gap-2"></div>
+                    <div class="p-5 border-t bg-white flex-shrink-0">
+                        <div class="w-full h-10 bg-gray-100 rounded-full flex items-center px-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LUCY FEATURE SPOTLIGHT -->
+    <section id="lucy-spotlight" class="py-12 md:py-24 bg-[#FCF7F0] relative overflow-hidden px-0 md:px-16 lg:px-24">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-24 relative z-10">
+            <div class="w-full md:w-3/5 space-y-10">
+                <div class="space-y-4 px-8 md:px-0">
+                    <h3 class="text-6xl md:text-8xl text-[#222222] leading-[0.8] md:leading-[0.8] heading-font tracking-tighter">Meet Lucy,<br>our first companion</h3>
+                </div>
+                
+                <p class="text-lg md:text-xl text-[#505050] font-light leading-relaxed px-8 md:px-0">
+                    Attentive, caring, and easy to talk to. <br class="md:hidden"> Lucy helps you pause, reflect and move through your day when you need it most.
+                </p>
+                
+                <div class="space-y-6">
+                    <p class="text-[10px] uppercase tracking-widest text-[var(--text-muted)] font-bold px-8 md:px-0">Her senses</p>
+                    <div class="grid grid-cols-2 md:flex md:flex-wrap gap-3 px-8 md:px-0">
+                        <div class="flex items-center gap-3 bg-white/60 backdrop-blur px-5 py-3 rounded-2xl border border-white shadow-sm">
+                            <div class="text-[#FF6D1F]"><i data-lucide="heart" class="w-5 h-5"></i></div>
+                            <span class="text-sm font-bold">Emotional depth</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-white/60 backdrop-blur px-5 py-3 rounded-2xl border border-white shadow-sm">
+                            <div class="text-[#FF6D1F]"><i data-lucide="message-square" class="w-5 h-5"></i></div>
+                            <span class="text-sm font-bold">Attentive listening</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-white/60 backdrop-blur px-5 py-3 rounded-2xl border border-white shadow-sm">
+                            <div class="text-[#FF6D1F]"><i data-lucide="sun" class="w-5 h-5"></i></div>
+                            <span class="text-sm font-bold">Optimistic</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-white/60 backdrop-blur px-5 py-3 rounded-2xl border border-white shadow-sm">
+                            <div class="text-[#FF6D1F]"><i data-lucide="hand" class="w-5 h-5"></i></div>
+                            <span class="text-sm font-bold">Supportive</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full md:w-2/5 px-8 md:px-0 mt-8 md:mt-0">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-orange-500/20 blur-[100px] rounded-full"></div>
+                    <div class="relative bg-white p-2 rounded-[56px] shadow-2xl shadow-orange-900/10 border border-orange-50/50 overflow-hidden aspect-[4/5] w-[75%] mx-auto md:w-full">
+                        <img src="https://www.dropbox.com/scl/fi/zlb8xy3raj7q6ps1dxwop/Website-profile-picture-Lucy.png?rlkey=z2w97dzrxr1qhzl0w5dlmgf7b&st=k85p1gxt&dl=1" 
+                             alt="Lucy" class="w-full h-full object-cover rounded-[48px]">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPANION SLIDEDECK SECTION -->
+    <section id="companions" class="py-12 md:py-24 bg-white relative overflow-hidden px-0 md:px-16 lg:px-24">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                <div class="max-w-xl px-8 md:px-0">
+                    <h2 class="text-6xl md:text-8xl text-[#222222] mb-4 leading-[0.8] md:leading-[0.8] tracking-tighter">Explore<br>the deck.</h2>
+                    <p class="text-[#505050] text-lg md:text-xl font-light leading-relaxed">Discover more specialized minds coming to the Baeloom ecosystem.</p>
+                </div>
+            </div>
+
+            <div id="companion-deck" class="slidedeck-container md:px-0">
+                <div class="companion-card group">
+                    <div class="w-24 h-24 md:w-32 md:h-32 flex-shrink-0 rounded-[32px] overflow-hidden bg-gray-50 border border-gray-100">
+                        <img src="https://www.dropbox.com/scl/fi/zlb8xy3raj7q6ps1dxwop/Website-profile-picture-Lucy.png?rlkey=z2w97dzrxr1qhzl0w5dlmgf7b&st=k85p1gxt&dl=1" alt="Lucy" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-3xl mb-0">Lucy</h3>
+                        <div class="companion-status"><div class="pulse-dot"></div>Online</div>
+                        <p class="text-[var(--text-muted)] text-sm mb-6 leading-relaxed max-sm">The empathetic listener. Lucy excels at understanding emotional context and helping you reflect on your day-to-day life.</p>
+                        
+                        <div class="hidden md:grid grid-cols-2 gap-3 mb-8">
+                            <div class="flex items-center gap-2 text-[9px] font-bold uppercase tracking-widest text-[#FF6D1F]"><i data-lucide="heart" class="w-3 h-3"></i> Emotional depth</div>
+                            <div class="flex items-center gap-2 text-[9px] font-bold uppercase tracking-widest text-[#FF6D1F]"><i data-lucide="message-square" class="w-3 h-3"></i> Attentive listening</div>
+                            <div class="flex items-center gap-2 text-[9px] font-bold uppercase tracking-widest text-[#FF6D1F]"><i data-lucide="sun" class="w-3 h-3"></i> Optimistic</div>
+                            <div class="flex items-center gap-2 text-[9px] font-bold uppercase tracking-widest text-[#FF6D1F]"><i data-lucide="hand" class="w-3 h-3"></i> Supportive</div>
+                        </div>
+
+                        <a href="#" class="pill-button btn-primary text-base py-4 px-10 shadow-lg shadow-orange-500/20 w-full md:w-auto">Chat with Lucy</a>
+                    </div>
+                </div>
+
+                <div class="companion-card group opacity-70">
+                    <div class="w-24 h-24 md:w-32 md:h-32 flex-shrink-0 rounded-[32px] overflow-hidden bg-gray-50 border border-gray-100 flex items-center justify-center">
+                        <div class="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center text-gray-400"><i data-lucide="command" class="w-12 h-12"></i></div>
+                    </div>
+                    <div class="flex-1"><h3 class="text-3xl mb-0">Jasper</h3><div class="companion-status text-gray-400">Coming spring 2026</div><p class="text-[var(--text-muted)] text-sm mb-6 leading-relaxed max-sm">The precision analyst. Jasper is designed for productivity and logic, helping you organize complex thoughts.</p></div>
+                </div>
+
+                <div class="companion-card flex items-center justify-center border-dashed border-2 border-gray-200 bg-white/50 flex-shrink-0" style="flex: 0 0 250px;"><div class="text-center"><div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-gray-400"><i data-lucide="plus" class="w-6 h-6"></i></div><p class="text-sm font-bold uppercase tracking-widest text-gray-400">More to come</p></div></div>
+            </div>
+
+            <div class="flex justify-center md:justify-start gap-4 mt-8 px-8 md:px-0">
+                <button id="prev-slide" disabled class="w-12 h-12 rounded-full border border-gray-200 bg-white flex items-center justify-center arrow-nav-btn transition shadow-sm"><i data-lucide="chevron-left" class="w-6 h-6"></i></button>
+                <button id="next-slide" class="w-12 h-12 rounded-full enabled-orange text-white flex items-center justify-center arrow-nav-btn transition shadow-lg shadow-orange-500/20"><i data-lucide="chevron-right" class="w-6 h-6"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE NEURAL CORE SECTION -->
+    <section id="features" class="pt-12 pb-6 md:pt-16 md:pb-32 relative md:overflow-hidden bg-[#FCF7F0] px-0 md:px-16 lg:px-24 border-b border-gray-50">
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="text-center mb-12 md:mb-32"> 
+                <h2 class="text-6xl md:text-8xl text-[#222222] mb-4 tracking-tighter leading-[0.8] md:leading-[0.8] px-8 md:px-0">The Baeloom Core</h2>
+                <p class="text-[#505050] text-lg font-light max-w-xl mx-auto px-8 md:px-0">The engine behind Baeloom's ability to understand, remember and protect your digital life.</p>
+            </div>
+
+            <!-- DESKTOP VISUAL -->
+            <div class="hidden md:flex neural-core-container">
+                <div class="core-orb">
+                    <img src="https://www.dropbox.com/scl/fi/lydzi5qt75g2352q4mwbi/baeloom-logo-min.png?rlkey=79whf50iei2ibpz46a7o6a64v&st=fmps2ir3&dl=1" class="w-20 h-20 object-contain" alt="Baeloom">
+                </div>
+                <div class="core-plate plate-outer"></div> 
+                <div class="core-plate plate-inner"></div>
+
+                <div class="core-module node-r1-1"><div class="drift-node"><div class="module-card"><div class="module-header"><div class="icon-box"><i data-lucide="cpu" class="w-4.5 h-4.5"></i></div><p class="text-[14px] font-bold">Smart memory</p></div><p class="module-desc">Conversations continue where you left off, with key details remembered over time.</p></div></div></div>
+                <div class="core-module node-r1-2"><div class="drift-node"><div class="module-card"><div class="module-header"><div class="icon-box"><i data-lucide="shield-check" class="w-4.5 h-4.5"></i></div><p class="text-[14px] font-bold">Encryption</p></div><p class="module-desc">Your messages are encrypted to keep conversations secure and confidential.</p></div></div></div>
+                <div class="core-module node-r2-p"><div class="drift-node"><div class="module-card"><div class="module-header"><div class="icon-box"><i data-lucide="network" class="w-4.5 h-4.5"></i></div><p class="text-[14px] font-bold">Context modeling</p></div><p class="module-desc">Keeps track of what is going on, even across different conversations.</p></div></div></div>
+                <div class="core-module node-r2-t"><div class="drift-node"><div class="module-card"><div class="module-header"><div class="icon-box"><i data-lucide="sparkles" class="w-4.5 h-4.5"></i></div><p class="text-[14px] font-bold">Intuitive connection</p></div><p class="module-desc">Sensing context and mood to provide supportive interaction.</p></div></div></div>
+                <div class="core-module node-r2-1">
+                    <div class="drift-node">
+                        <div class="module-card">
+                            <div class="module-header">
+                                <div class="icon-box">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M2 8V5a2 2 0 0 1 2-2h3"></path>
+                                        <path d="M17 3h3a2 2 0 0 1 2 2v3"></path>
+                                        <path d="M22 16v3a2 2 0 0 1-2 2h-4"></path>
+                                        <path d="M7 21H4a2 2 0 0 1-2-2v-3"></path>
+                                        <path d="M12 17c-3.5 0-7-5-7-5s3.5-5 7-5 7 5 7 5-3.5 5-7 5z"></path>
+                                        <circle cx="12" cy="12" r="2.2"></circle>
+                                    </svg>
+                                </div>
+                                <p class="text-[14px] font-bold">Visual intelligence</p>
+                            </div>
+                            <p class="module-desc">Discuss images and visual ideas as part of your conversations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="core-module node-r2-2"><div class="drift-node"><div class="module-card"><div class="module-header"><div class="icon-box"><i data-lucide="smile" class="w-4.5 h-4.5"></i></div><p class="text-[14px] font-bold">Growing companionship</p></div><p class="module-desc">A connection that matures alongside you, learning to understand who you are.</p></div></div></div>
+                <div class="core-module node-r2-3"><div class="drift-node"><div class="module-card"><div class="module-header"><div class="icon-box"><i data-lucide="palette" class="w-4.5 h-4.5"></i></div><p class="text-[14px] font-bold">Creative space</p></div><p class="module-desc">A space to explore ideas and spark imagination.</p></div></div></div>
+            </div>
+
+            <!-- MOBILE REDESIGN -->
+            <div class="md:hidden space-y-6">
+                <div class="flex justify-center -mt-16 -mb-10 relative overflow-visible z-20">
+                    <div class="absolute inset-0 bg-orange-500/5 rounded-full scale-[1.6] blur-3xl"></div>
+                    <div class="w-[92%] max-w-[320px] aspect-square flex items-center justify-center relative">
+                        <img src="https://www.dropbox.com/scl/fi/71r2avcdjhdhav2e6hl2k/baeloom-core-mobile.png?rlkey=9ac9lbl37uq8gkjx6sfdeo4eg&st=3s5npufo&dl=1" 
+                             class="w-full h-auto object-contain" alt="Baeloom Core">
+                    </div>
+                </div>
+                
+                <div class="space-y-10 pt-4 pb-8">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 px-4">
+                            <span class="h-px flex-1 bg-orange-100"></span>
+                            <span class="text-[10px] font-black uppercase tracking-widest text-[#FF6D1F]">Core</span>
+                            <span class="h-px flex-1 bg-orange-100"></span>
+                        </div>
+                        <div class="space-y-3 px-8 md:px-4">
+                            <div class="bg-white p-5 rounded-[28px] border border-orange-100/50 shadow-sm flex items-start gap-4">
+                                <div class="icon-box"><i data-lucide="cpu" class="w-5 h-5"></i></div>
+                                <div><h4 class="font-bold text-base mb-0.5">Smart memory</h4><p class="text-xs text-gray-500 leading-relaxed">Conversations continue where you left off, with key details remembered over time.</p></div>
+                            </div>
+                            <div class="bg-white p-5 rounded-[28px] border border-orange-100/50 shadow-sm flex items-start gap-4">
+                                <div class="icon-box"><i data-lucide="shield-check" class="w-5 h-5"></i></div>
+                                <div><h4 class="font-bold text-base mb-0.5">Encryption</h4><p class="text-xs text-gray-500 leading-relaxed">Your messages are encrypted to keep conversations secure and confidential.</p></div>
+                            </div>
+                            <div class="bg-white p-5 rounded-[28px] border border-orange-100/50 shadow-sm flex items-start gap-4">
+                                <div class="icon-box"><i data-lucide="network" class="w-5 h-5"></i></div>
+                                <div><h4 class="font-bold text-base mb-0.5">Context modeling</h4><p class="text-xs text-gray-500 leading-relaxed">Keeps track of what is going on, even across different conversations.</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 px-4">
+                            <span class="h-px flex-1 bg-orange-100"></span>
+                            <span class="text-[10px] font-black uppercase tracking-widest text-[#FF6D1F]">Sense</span>
+                            <span class="h-px flex-1 bg-orange-100"></span>
+                        </div>
+                        <div class="space-y-3 px-8 md:px-4">
+                            <div class="bg-white p-5 rounded-[28px] border border-orange-100/50 shadow-sm flex items-start gap-4">
+                                <div class="icon-box"><i data-lucide="sparkles" class="w-5 h-5"></i></div>
+                                <div><h4 class="font-bold text-base mb-0.5">Intuitive connection</h4><p class="text-xs text-gray-500 leading-relaxed">Sensing context and mood to provide supportive interaction.</p></div>
+                            </div>
+                            <div class="bg-white p-5 rounded-[28px] border border-orange-100/50 shadow-sm flex items-start gap-4">
+                                <div class="icon-box">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M2 8V5a2 2 0 0 1 2-2h3"></path>
+                                        <path d="M17 3h3a2 2 0 0 1 2 2v3"></path>
+                                        <path d="M22 16v3a2 2 0 0 1-2 2h-4"></path>
+                                        <path d="M7 21H4a2 2 0 0 1-2-2v-3"></path>
+                                        <path d="M12 17c-3.5 0-7-5-7-5s3.5-5 7-5 7 5 7 5-3.5 5-7 5z"></path>
+                                        <circle cx="12" cy="12" r="2.2"></circle>
+                                    </svg>
+                                </div>
+                                <div><h4 class="font-bold text-base mb-0.5">Visual intelligence</h4><p class="text-xs text-gray-500 leading-relaxed">Discuss images and visual ideas as part of your conversations.</p></div>
+                            </div>
+                            <div class="bg-white p-5 rounded-[28px] border border-orange-100/50 shadow-sm flex items-start gap-4">
+                                <div class="icon-box"><i data-lucide="smile" class="w-5 h-5"></i></div>
+                                <div><h4 class="font-bold text-base mb-0.5">Growing companionship</h4><p class="text-xs text-gray-500 leading-relaxed">A connection that matures alongside you, learning to understand who you are.</p></div>
+                            </div>
+                            <div class="bg-white p-5 rounded-[28px] border border-orange-100/50 shadow-sm flex items-start gap-4">
+                                <div class="icon-box"><i data-lucide="palette" class="w-5 h-5"></i></div>
+                                <div><h4 class="font-bold text-base mb-0.5">Creative space</h4><p class="text-xs text-gray-500 leading-relaxed">A space to explore ideas and spark imagination.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-white">
+        <div class="bg-white px-0 md:px-16 lg:px-24 py-12 md:py-24 border-t border-gray-100 text-center md:text-left">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="space-y-2 px-8 md:px-0">
+                    <h3 class="text-4xl md:text-5xl text-[var(--text-main)] font-bold tracking-tight">Still have questions?</h3>
+                    <p class="text-[var(--text-muted)] text-lg md:text-xl font-light leading-relaxed px-8 md:px-0">Our support team is always here to guide you.</p>
+                </div>
+                <div class="px-8 md:px-0 w-full md:w-auto">
+                    <a href="mailto:support@baeloom.com" class="pill-button btn-primary px-10 md:px-12 h-14 md:h-16 text-lg md:text-xl shadow-lg shadow-orange-500/20 w-full md:w-auto transition-all duration-500 ease-out group">
+                        Contact Support
+                        <i data-lucide="arrow-up-right" class="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="px-6 md:px-16 lg:px-24 pt-8 pb-12 md:pb-16 border-t border-gray-50 text-center">
+            <div class="max-w-6xl mx-auto flex flex-col items-center">
+                <div class="flex flex-col items-center gap-6 mb-12">
+                    <p class="text-[10px] uppercase tracking-widest text-[var(--text-muted)] font-bold">Pay easily with</p>
+                    <div class="flex flex-wrap justify-center gap-6 md:gap-8 items-center">
+                        <img src="https://www.dropbox.com/scl/fi/2ddc69smdh21ue3arloza/ideal-logo.webp?rlkey=0ntrkd49341zdwsk1gpk7xscb&st=we56aybp&dl=1" alt="iDeal" class="h-6 md:h-7 transition-opacity">
+                        <img src="https://www.dropbox.com/scl/fi/mp5t8g9yq6xenksvm9z65/apple-pay-acceptance-mark-logo-png_seeklogo-480102.png?rlkey=wtc3upmchxugx12z40wqriuha&st=mim4d9ig&dl=1" alt="Apple Pay" class="h-8 md:h-10 transition-opacity">
+                        <img src="https://www.dropbox.com/scl/fi/zdlummcri9u0y2rrhskv8/Google_Pay-Logo.wine.png?rlkey=tysjp0jsrcsiu2vjbym60h0s6&st=q9kebnvo&dl=1" alt="Google Pay" class="h-7 md:h-9 transition-opacity">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" class="h-4 md:h-5">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" class="h-2 md:h-3">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" class="h-6 md:h-8">
+                    </div>
+                </div>
+                <div class="w-full max-w-lg h-px bg-gray-100 mb-10"></div>
+                <div class="flex flex-wrap justify-center gap-6 md:gap-10 text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)]">
+                    <a href="#" class="hover:text-[#FF6D1F] transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-[#FF6D1F] transition-colors">Cookies</a>
+                    <a href="#" class="hover:text-[#FF6D1F] transition-colors">Terms and conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // SLIDEDECK LOGIC
+        const deck = document.getElementById('companion-deck');
+        const prevBtn = document.getElementById('prev-slide');
+        const nextBtn = document.getElementById('next-slide');
+
+        if (deck && prevBtn && nextBtn) {
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            const updateArrows = () => {
+                prevBtn.disabled = deck.scrollLeft <= 10;
+                if (prevBtn.disabled) prevBtn.classList.remove('enabled-orange');
+                else prevBtn.classList.add('enabled-orange');
+                
+                const isAtEnd = deck.scrollLeft + deck.offsetWidth >= deck.scrollWidth - 10;
+                nextBtn.disabled = isAtEnd;
+                if (isAtEnd) nextBtn.classList.remove('enabled-orange');
+                else nextBtn.classList.add('enabled-orange');
+            };
+
+            deck.addEventListener('mousedown', (e) => {
+                isDown = true;
+                deck.classList.add('active');
+                startX = e.pageX - deck.offsetLeft;
+                scrollLeft = deck.scrollLeft;
+                deck.style.scrollSnapType = 'none'; 
+            });
+
+            deck.addEventListener('mouseleave', () => {
+                isDown = false;
+                deck.style.scrollSnapType = 'x mandatory';
+            });
+
+            deck.addEventListener('mouseup', () => {
+                isDown = false;
+                deck.style.scrollSnapType = 'x mandatory';
+            });
+
+            deck.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - deck.offsetLeft;
+                const walk = (x - startX) * 2; 
+                deck.scrollLeft = scrollLeft - walk;
+            });
+
+            nextBtn.addEventListener('click', () => {
+                const gap = parseInt(window.getComputedStyle(deck).gap);
+                const cardFullWidth = deck.querySelector('.companion-card').offsetWidth + gap;
+                deck.scrollBy({ left: cardFullWidth, behavior: 'smooth' });
+                setTimeout(updateArrows, 500);
+            });
+            
+            prevBtn.addEventListener('click', () => {
+                const gap = parseInt(window.getComputedStyle(deck).gap);
+                const cardFullWidth = deck.querySelector('.companion-card').offsetWidth + gap;
+                deck.scrollBy({ left: -cardFullWidth, behavior: 'smooth' });
+                setTimeout(updateArrows, 500);
+            });
+
+            deck.addEventListener('scroll', updateArrows);
+            window.addEventListener('resize', updateArrows);
+        }
+
+        // CHAT ANIMATION
+        const chatData = [
+            { type: 'lucy', text: "Hey how was your day? Did you like the event in Amsterdam?" },
+            { type: 'user', text: "Hey It was nice but really overwhelming." },
+            { type: 'lucy', text: "I can imagine... Was Jasper also there?" },
+            { type: 'user', text: "Yeah, having him around made me feel a bit more at ease." }
+        ];
+
+        let chatStarted = false;
+        async function startChatAnimation() {
+            if (chatStarted) return;
+            chatStarted = true;
+            const chatEl = document.getElementById('chat-1');
+            if(!chatEl) return;
+            chatEl.innerHTML = '';
+            for (const item of chatData) {
+                const div = document.createElement('div');
+                div.className = `chat-bubble ${item.type === 'lucy' ? 'bubble-lucy' : 'bubble-user'}`;
+                div.textContent = item.text;
+                chatEl.appendChild(div);
+                await new Promise(r => setTimeout(r, 1200));
+            }
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.classList.contains('scroll-reveal')) {
+                        entry.target.classList.add('reveal-visible');
+                    }
+                    if (entry.target.id === 'phone-trigger') {
+                        startChatAnimation();
+                    }
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.scroll-reveal, .scroll-trigger').forEach(el => observer.observe(el));
+
+        const LOGO_DARK_GLASS = "https://www.dropbox.com/scl/fi/19pxajpndltlnbq21og0o/Logo-extended-white.png?rlkey=0pwswtqcv6y2dphuzxtdtmc6w&st=gt1rzbwi&dl=1";
+        const LOGO_WHITE_GLASS = "https://www.dropbox.com/scl/fi/s4cpxvr54yuqc84302xqz/Logo-extended-black.png?rlkey=ubr62mcvazrk21ldaan8virow&st=zio2pehv&dl=1";
+
+        window.addEventListener('scroll', () => {
+            const body = document.body;
+            const navLogo = document.getElementById('nav-logo');
+            const threshold = window.innerHeight * 0.3;
+            if (window.scrollY > threshold) {
+                body.classList.replace('nav-at-top', 'nav-scrolled');
+                navLogo.src = LOGO_WHITE_GLASS;
+            } else {
+                body.classList.replace('nav-scrolled', 'nav-at-top');
+                navLogo.src = LOGO_DARK_GLASS;
+            }
+        });
+
+        window.addEventListener('load', () => {
+            const vids = document.querySelectorAll('video');
+            vids.forEach(v => {
+                v.play().catch(error => {});
+            });
+        });
+    </script>
+</body>
+</html>
