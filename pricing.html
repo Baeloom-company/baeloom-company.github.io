@@ -272,7 +272,7 @@
     <div class="card">
       <div class="card-plan">Free</div>
       <div class="card-tagline">Get a feel for it</div>
-      <div class="card-price">€0</div>
+      <div class="card-price" id="price-free">€0</div>
       <div class="btn-current">Your current plan</div>
       <ul class="features">
         <li>
@@ -294,7 +294,7 @@
     <div class="card">
       <div class="card-plan">Pro</div>
       <div class="card-tagline">For daily, deeper use</div>
-      <div class="card-price">€20 <span class="period">/ month</span></div>
+      <div class="card-price"><span id="price-pro">€20</span> <span class="period">/ month</span></div>
       <a href="https://chat.baeloom.com" class="btn-get-pro">Get Pro</a>
       <div class="btn-note">Cancel anytime · Secure checkout via Stripe</div>
       <ul class="features">
@@ -338,6 +338,39 @@
   © 2026 Baeloom &nbsp;·&nbsp; <a href="./privacy.html" target="_blank" rel="noopener">Privacy Policy</a> &nbsp;·&nbsp; <a href="./terms.html" target="_blank" rel="noopener">Terms & Conditions</a> &nbsp;·&nbsp; <a href="./cookies.html" target="_blank" rel="noopener">Cookies Policy</a>
 </footer>
 
+<script>
+  const PRICES = {
+    gb:  { pro: '£17',       free: '£0' },
+    dk:  { pro: '149 kr.',   free: '0 kr.' },
+    jp:  { pro: '¥3,720',    free: '¥0' },
+    ca:  { pro: 'CA$32',     free: 'CA$0' },
+    au:  { pro: 'A$33',      free: 'A$0' },
+    nz:  { pro: 'NZ$39',     free: 'NZ$0' },
+    kr:  { pro: '₩34,000',   free: '₩0' },
+    us:  { pro: '$20',       free: '$0' }
+  };
+  const EURO = { pro: '€20', free: '€0' };
+  ['at','be','hr','cy','ee','fi','fr','de','gr','ie','it','lv','lt','lu','mt','nl','pt','sk','si','es']
+    .forEach(c => { PRICES[c] = EURO; });
+
+  function applyPrices(cc) {
+    const p = PRICES[cc] || { pro: '$20', free: '$0' };
+    document.getElementById('price-pro').textContent  = p.pro;
+    document.getElementById('price-free').textContent = p.free;
+  }
+
+  (async function () {
+    const cached = localStorage.getItem('baeloom_country_cc');
+    if (cached) { applyPrices(cached); return; }
+    try {
+      const res  = await fetch('https://ipapi.co/json/');
+      const data = await res.json();
+      const cc   = (data.country_code || '').toLowerCase();
+      if (cc) localStorage.setItem('baeloom_country_cc', cc);
+      applyPrices(cc);
+    } catch (e) { /* keep €20 default */ }
+  })();
+</script>
 <script src="./cookie-banner.js"></script>
 </body>
 </html>
