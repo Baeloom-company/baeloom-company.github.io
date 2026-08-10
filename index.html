@@ -244,21 +244,32 @@
             #hamburger { display: flex; }
             #mobile-menu { display: flex; }
 
-            /* Hero on mobile: the full-height video header plus a big serif
-               headline, subline and CTA ran past the bottom of the screen and
-               under the browser chrome. Pull everything up, shrink the headline
-               and drop the scroll chevron (the CTA replaces it). */
+            /* Hero on mobile. A fixed height + centred content meant that when
+               the browser address bar reappeared on scroll-up, the viewport
+               shrank and the top of the headline was clipped behind the sticky
+               nav with no way to reach it. Letting the section GROW past the
+               viewport (height auto + min-height) and padding it clear of the
+               nav means nothing can ever be cut off. */
+            .hero-section {
+                height: auto !important;
+                min-height: 100svh;
+                align-items: flex-start !important;
+                padding-top: 104px !important;
+                padding-bottom: 48px !important;
+            }
             .hero-content h1 {
-                font-size: 2.6rem !important;
-                line-height: 1.05 !important;
-                margin-top: 8px !important;
+                font-size: 3.1rem !important;
+                line-height: 1.02 !important;
+                margin-top: 0 !important;
             }
             .hero-content > p {
-                font-size: 0.98rem !important;
-                margin-top: 14px !important;
+                font-size: 0.88rem !important;
+                line-height: 1.5 !important;
+                margin-top: 16px !important;
+                max-width: 21rem !important;
             }
-            .hero-content > div { margin-top: 20px !important; }
-            #hero-chevron { padding-top: 14px !important; }
+            .hero-content > div { margin-top: 22px !important; }
+            #hero-chevron { padding-top: 18px !important; }
             #hero-chevron svg { width: 2.25rem !important; height: 2.25rem !important; }
             /* Tighten the app-notify section's vertical padding on mobile so the
                gap above the icon and below the form isn't oversized. */
