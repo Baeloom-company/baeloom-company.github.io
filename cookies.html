@@ -231,8 +231,10 @@
 
   
     /* ===== NAV + MOBILE DRAWER — copied from the landing page ===== */
-    nav { position: fixed; top: 0; left: 0; width: 100%; z-index: 100; }
-    body { padding-top: 64px; }
+    /* In normal flow (NOT fixed/sticky) so page scrolling behaves exactly as
+       it did before. relative + z-index only controls paint order, so the nav
+       still sits above the drawer overlay. */
+    nav { position: relative; z-index: 100; background: #FCF7F0 !important; }
     #hamburger {
       display: none; flex-direction: column; justify-content: center; align-items: center;
       gap: 5px; width: 44px; height: 44px; cursor: pointer; margin-right: 10px;
