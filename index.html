@@ -243,6 +243,22 @@
         @media (max-width: 640px) {
             #hamburger { display: flex; }
             #mobile-menu { display: flex; }
+
+            /* Hero on mobile: the full-height video header plus a big serif
+               headline, subline and CTA ran past the bottom of the screen and
+               under the browser chrome. Pull everything up, shrink the headline
+               and drop the scroll chevron (the CTA replaces it). */
+            .hero-content h1 {
+                font-size: 2.6rem !important;
+                line-height: 1.05 !important;
+                margin-top: 8px !important;
+            }
+            .hero-content > p {
+                font-size: 0.98rem !important;
+                margin-top: 14px !important;
+            }
+            .hero-content > div { margin-top: 20px !important; }
+            #hero-chevron { display: none !important; }
             /* Tighten the app-notify section's vertical padding on mobile so the
                gap above the icon and below the form isn't oversized. */
             #app-notify { padding-top: 48px !important; padding-bottom: 56px !important; }
@@ -575,7 +591,7 @@
                 </a>
                 <span class="text-white/80 text-sm" style="font-family:'Albert Sans',sans-serif;">Free to start. No card needed.</span>
             </div>
-            <div class="flex items-center justify-center pt-8 md:pt-12">
+            <div id="hero-chevron" class="flex items-center justify-center pt-8 md:pt-12">
                 <a href="#interaction" class="text-[#FF6D1F]">
                     <i data-lucide="chevron-down" class="w-12 h-12 md:w-16 md:h-16 stroke-[2.5]"></i>
                 </a>
