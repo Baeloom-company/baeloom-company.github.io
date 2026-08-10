@@ -258,7 +258,8 @@
                 margin-top: 14px !important;
             }
             .hero-content > div { margin-top: 20px !important; }
-            #hero-chevron { display: none !important; }
+            #hero-chevron { padding-top: 14px !important; }
+            #hero-chevron svg { width: 2.25rem !important; height: 2.25rem !important; }
             /* Tighten the app-notify section's vertical padding on mobile so the
                gap above the icon and below the form isn't oversized. */
             #app-notify { padding-top: 48px !important; padding-bottom: 56px !important; }
@@ -269,6 +270,11 @@
             position: relative;
             width: 100%;
             height: 100vh;
+            /* svh = "small viewport height": the height WITH the mobile browser
+               bars showing. Plain 100vh ignores them, so the hero was taller
+               than the visible screen and content shifted when the address bar
+               collapsed on scroll. svh stays put. */
+            height: 100svh;
             text-align: center;
             display: flex;
             align-items: center; 
@@ -589,7 +595,7 @@
                 <a href="https://chat.baeloom.com" class="inline-flex items-center justify-center px-9 py-4 rounded-full text-base font-semibold text-white bg-[#FF6D1F] hover:bg-[#6A2500] hover:text-[#FF6D1F] transition-colors no-underline" style="font-family:'Albert Sans',sans-serif;">
                     Try Baeloom free
                 </a>
-                <span class="text-white/80 text-sm" style="font-family:'Albert Sans',sans-serif;">Free to start. No card needed.</span>
+                <span class="text-white/75" style="font-family:'Albert Sans',sans-serif;font-size:12px;">Free to start. No card needed.</span>
             </div>
             <div id="hero-chevron" class="flex items-center justify-center pt-8 md:pt-12">
                 <a href="#interaction" class="text-[#FF6D1F]">
@@ -615,11 +621,11 @@
                 <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed scroll-reveal">
                     Noah can be that other way. She's Baeloom's digital companion and has her own personality and opinions. She does not mirror you, but instead listens, memorizes, reflects, gives insight and pushes back when you need it.
                 </p>
-                <div class="hidden md:block scroll-reveal mt-6">
+                <div class="hidden md:inline-flex flex-col items-center scroll-reveal mt-6">
                     <a href="https://chat.baeloom.com" class="pill-button btn-primary h-14 text-lg shadow-lg shadow-orange-500/20 px-10" style="font-weight:700;letter-spacing:-0.01em;">
                         Chat with Noah
                     </a>
-                    <p class="text-sm text-[#8a857c] mt-3" style="font-family:'Albert Sans',sans-serif;">Free to start. No card needed.</p>
+                    <p class="text-[#a8a29a] mt-2" style="font-family:'Albert Sans',sans-serif;font-size:12px;">Free to start. No card needed.</p>
                 </div>
             </div>
 
@@ -640,7 +646,7 @@
                         <a href="https://chat.baeloom.com" class="pill-button btn-primary h-14 text-lg shadow-lg shadow-orange-500/20 px-10" style="font-weight:700;letter-spacing:-0.01em;">
                             Try it yourself
                         </a>
-                        <p class="text-sm text-[#8a857c] mt-3" style="font-family:'Albert Sans',sans-serif;">Free to start. No card needed.</p>
+                        <p class="text-[#a8a29a] mt-2" style="font-family:'Albert Sans',sans-serif;font-size:12px;">Free to start. No card needed.</p>
                     </div>
                 </div>
             </div>
