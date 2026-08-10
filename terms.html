@@ -9,8 +9,9 @@
   <link rel="icon" type="image/png" sizes="48x48" href="/Images/favicon-48x48.png" />
   <link rel="icon" type="image/svg+xml" href="/Images/baeloom-favicon.svg" />
   <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Albert+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Albert+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
+    body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scrollbar-gutter: stable; }
     body {
@@ -228,9 +229,9 @@
       transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
       box-shadow: 0 20px 40px rgba(0,0,0,0.1);
     }
-    #mobile-menu.open { transform: translateY(0); }
+    #mobile-menu.open { display: flex; transform: translateY(0); }
     #mobile-menu a.mobile-link {
-      font-family: 'Albert Sans', sans-serif; font-size: 1.25rem; font-weight: 600;
+      font-family: 'Albert Sans', sans-serif; font-size: 1.25rem; font-weight: 500;
       color: #6A2500; text-decoration: none; padding: 22px 0;
       border-bottom: 1px solid rgba(106,37,0,0.1); display: block; transition: color 0.2s;
     }
@@ -252,7 +253,6 @@
     #mobile-menu .mobile-cta:hover { background: #6A2500; }
     @media (max-width: 640px) {
       #hamburger { display: flex; }
-      #mobile-menu { display: flex; }
       .nav-link-item, .nav-contact, .nav-cta { display: none !important; }
     }
 
@@ -424,13 +424,11 @@ function toggleMenu() {
   const m = document.getElementById('mobile-menu');
   h.classList.toggle('open');
   m.classList.toggle('open');
-  document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
 }
 document.querySelectorAll('#mobile-menu a').forEach(l => {
   l.addEventListener('click', () => {
     document.getElementById('hamburger').classList.remove('open');
     document.getElementById('mobile-menu').classList.remove('open');
-    document.body.style.overflow = '';
   });
 });
 </script>
