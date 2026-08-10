@@ -19,11 +19,14 @@
       font-weight: 400;
       background: #FAF9F7;
       color: #1a1a1a;
-      min-height: 100vh;
+      min-height: 100svh;
       display: flex;
       flex-direction: column;
     }
-    nav { background: #FCF7F0; border-bottom: 1px solid rgba(0,0,0,0.07); }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 50; background: #FCF7F0; border-bottom: 1px solid rgba(0,0,0,0.07); }
     .nav-inner { max-width: 1152px; margin: 0 auto; padding: 0 48px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
     .nav-logo img { height: 28px; width: auto; display: block; }
     .nav-right { display: flex; align-items: center; gap: 24px; }
