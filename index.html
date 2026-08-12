@@ -150,6 +150,20 @@
             #nav-container { padding: 0 20px; }
         }
 
+
+        /* Language switch: shows the flag of the language you'd switch TO. */
+        .lang-switch {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 6px 12px; border-radius: 100px;
+            border: 1px solid rgba(0,0,0,0.15);
+            font-family: 'Albert Sans', sans-serif;
+            font-size: 0.82rem; font-weight: 600; color: #505050;
+            text-decoration: none; line-height: 1;
+            transition: border-color .2s, color .2s;
+        }
+        .lang-switch:hover { border-color: #FF6D1F; color: #FF6D1F; }
+        .lang-switch .flag { font-size: 1rem; line-height: 1; }
+
         /* Hamburger */
         #hamburger {
             display: none;
@@ -568,7 +582,7 @@
                     <a href="./pricing.html" class="nav-link">Pricing</a>
                     <a href="./faq.html" class="nav-link">FAQ</a>
                 </div>
-                <a href="/nl/" class="nav-link" hreflang="nl" onclick="try{localStorage.setItem('bae-lang','nl')}catch(e){}">NL</a>
+                <a href="/nl/" class="lang-switch hidden sm:inline-flex" hreflang="nl" aria-label="Switch language" onclick="try{localStorage.setItem('bae-lang','nl')}catch(e){}"><span class="flag">🇳🇱</span>NL</a>
                 <a href="https://chat.baeloom.com" class="nav-link hidden sm:inline-flex">Log in</a>
                 <a id="nav-cta" href="https://chat.baeloom.com" class="nav-cta-btn hidden sm:inline-flex">Try free</a>
                 <button id="hamburger" aria-label="Open menu" onclick="toggleMenu()">

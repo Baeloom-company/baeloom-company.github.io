@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baeloom | Maak kennis met Noah, jouw AI-gesprekspartner</title>
-    <meta name="description" content="Maak kennis met Noah, een AI-gesprekspartner die luistert, onthoudt en je helpt om naar binnen te denken en vooruit te leven.">
+    <meta name="description" content="Maak kennis met Noah, jouw dagboek companion die helpt dieper te reflecteren en dichter bij je doelen te komen.">
     <link rel="canonical" href="https://www.baeloom.com/nl/">
     <link rel="alternate" hreflang="en" href="https://www.baeloom.com/">
     <link rel="alternate" hreflang="nl" href="https://www.baeloom.com/nl/">
@@ -14,7 +14,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Baeloom">
     <meta property="og:title" content="Baeloom | Maak kennis met Noah, jouw AI-gesprekspartner">
-    <meta property="og:description" content="Maak kennis met Noah, een AI-gesprekspartner die luistert, onthoudt en je helpt om naar binnen te denken en vooruit te leven.">
+    <meta property="og:description" content="Maak kennis met Noah, jouw dagboek companion die helpt dieper te reflecteren en dichter bij je doelen te komen.">
     <meta property="og:url" content="https://www.baeloom.com/nl/">
     <meta property="og:image" content="https://www.baeloom.com/Images/og-image-v2.png">
     <meta property="og:image:width" content="1200">
@@ -24,7 +24,7 @@
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Baeloom | Maak kennis met Noah, jouw AI-gesprekspartner">
-    <meta name="twitter:description" content="Maak kennis met Noah, een AI-gesprekspartner die luistert, onthoudt en je helpt om naar binnen te denken en vooruit te leven.">
+    <meta name="twitter:description" content="Maak kennis met Noah, jouw dagboek companion die helpt dieper te reflecteren en dichter bij je doelen te komen.">
     <meta name="twitter:image" content="https://www.baeloom.com/Images/og-image-v2.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -150,6 +150,20 @@
             #nav-container { padding: 0 20px; }
         }
 
+
+        /* Language switch: shows the flag of the language you'd switch TO. */
+        .lang-switch {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 6px 12px; border-radius: 100px;
+            border: 1px solid rgba(0,0,0,0.15);
+            font-family: 'Albert Sans', sans-serif;
+            font-size: 0.82rem; font-weight: 600; color: #505050;
+            text-decoration: none; line-height: 1;
+            transition: border-color .2s, color .2s;
+        }
+        .lang-switch:hover { border-color: #FF6D1F; color: #FF6D1F; }
+        .lang-switch .flag { font-size: 1rem; line-height: 1; }
+
         /* Hamburger */
         #hamburger {
             display: none;
@@ -253,7 +267,7 @@
                nav means nothing can ever be cut off. */
             .hero-content h1 {
                 font-size: 3.1rem !important;
-                line-height: 1.02 !important;
+                line-height: 1.14 !important;
                 margin-top: 0 !important;
             }
             .hero-content > p {
@@ -555,7 +569,7 @@
                     <a href="../pricing.html" class="nav-link">Prijzen</a>
                     <a href="../faq.html" class="nav-link">FAQ</a>
                 </div>
-                <a href="/" class="nav-link" hreflang="en" onclick="try{localStorage.setItem('bae-lang','en')}catch(e){}">EN</a>
+                <a href="/" class="lang-switch hidden sm:inline-flex" hreflang="en" aria-label="Switch language" onclick="try{localStorage.setItem('bae-lang','en')}catch(e){}"><span class="flag">🇬🇧</span>EN</a>
                 <a href="https://chat.baeloom.com" class="nav-link hidden sm:inline-flex">Inloggen</a>
                 <a id="nav-cta" href="https://chat.baeloom.com" class="nav-cta-btn hidden sm:inline-flex">Gratis proberen</a>
                 <button id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
@@ -585,12 +599,12 @@
             </video>
         </div>
         <div class="hero-content max-w-6xl mx-auto px-6 flex flex-col items-center">
-            <h1 class="text-5xl md:text-7xl lg:text-8xl leading-[1.0] tracking-tighter text-white mt-12 md:mt-20 max-w-5xl mx-auto px-4 md:px-0 text-center">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl leading-[1.14] tracking-tighter text-white mt-12 md:mt-20 max-w-5xl mx-auto px-4 md:px-0 text-center">
                 <span class="block">Een goed gesprek</span>
                 <span class="text-white block">kan je dag veranderen.</span>
             </h1>
             <p class="text-white/90 text-base md:text-xl text-center max-w-xl mx-auto mt-6 px-6" style="font-family:'Albert Sans',sans-serif;font-weight:400;line-height:1.55;">
-                Maak kennis met Noah, een AI-gesprekspartner die luistert, onthoudt en je helpt om naar binnen te denken en vooruit te leven.
+                Maak kennis met Noah, jouw dagboek companion die helpt dieper te reflecteren en dichter bij je doelen te komen.
             </p>
             <div class="flex flex-col items-center gap-3 mt-8">
                 <a href="https://chat.baeloom.com" class="inline-flex items-center justify-center px-9 py-4 rounded-full text-base font-semibold text-white bg-[#FF6D1F] hover:bg-[#6A2500] hover:text-[#FF6D1F] transition-colors no-underline" style="font-family:'Albert Sans',sans-serif;">
@@ -677,10 +691,10 @@
                 <!-- Description: 2nd on mobile, left col 2nd on desktop -->
                 <div class="order-2 md:col-start-1 md:row-start-2 px-8 md:px-0 space-y-6">
                     <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed scroll-reveal">
-                        Ken je dat gevoel dat hetzelfde steeds terugkomt? Baeloom geeft je de ruimte om er echt doorheen te werken. Noah onthoudt alles wat je deelt, bouwt daar sessie na sessie op voort en geeft je na verloop van tijd een helderder beeld van wat er echt speelt.
+                        Ken je dat gevoel dat hetzelfde steeds terugkomt? Dezelfde patronen, dezelfde gevoelens, dezelfde vragen. Dat betekent niet dat je vastzit, zo werkt groei nou eenmaal.
                     </p>
                     <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed scroll-reveal">
-                        Je hebt vast gemerkt dat je steeds bij dezelfde dingen uitkomt. Dezelfde patronen, dezelfde gevoelens, dezelfde vragen. Dat betekent niet dat je vastzit. Zo werkt groei nou eenmaal. Baeloom geeft je dat laatste zetje richting helderheid. Denk naar binnen, leef vooruit.
+                        Baeloom geeft je de ruimte om er echt doorheen te werken. Noah onthoudt alles wat je deelt, bouwt daar sessie na sessie op voort en geeft je na verloop van tijd een helderder beeld van wat er echt speelt. Denk naar binnen, leef vooruit.
                     </p>
                 </div>
 
@@ -875,28 +889,28 @@
         // FLOATING CHAT ANIMATION
         const allChats = {
             playful: [
-                { type: 'user', text: "I literally just burned my pizza in the oven" },
-                { type: 'lucy', text: "noooooo not the pizza. how did you manage that? 😩" },
-                { type: 'user', text: "I forgot to set a timer lmao" },
-                { type: 'lucy', text: "how do you forget a timer on a pizza?? that's like the one thing you actually need a timer for. is it still edible or are you ordering takeout now?" },
-                { type: 'user', text: "it's like a solid brick rn" },
-                { type: 'lucy', text: "that's disgusting" },
+                { type: 'user', text: "Ik heb net letterlijk mijn pizza verbrand in de oven" },
+                { type: 'lucy', text: "Nooooo niet de pizza. Hoe heb je dat voor elkaar gekregen? 😩" },
+                { type: 'user', text: "Ik vergat een timer te zetten lol" },
+                { type: 'lucy', text: "Hoe vergeet je nou een timer bij een pizza?? Dat is nou net het ene ding waar je echt een timer voor nodig hebt. Is hij nog eetbaar of bestel je nu maar iets?" },
+                { type: 'user', text: "Het is echt een baksteen" },
+                { type: 'lucy', text: "Gadverdamme, gooi het weg!" },
             ],
             honest: [
-                { type: 'user', text: "I've been really productive lately but i still feel kind of empty" },
-                { type: 'lucy', text: "that actually sucks. what's missing, you think?" },
-                { type: 'user', text: "I really have no idea, I sometimes miss a bit of validation from the work im doing" },
-                { type: 'lucy', text: "that makes total sense. what kind of validation would make you feel better right now?" },
-                { type: 'user', text: "I think someone just acknowledging you're doing a lot would make a huge difference." },
-                { type: 'lucy', text: "yeah, that's not asking for much at all. is there anyone around you that could give you that acknowledgement?" },
+                { type: 'user', text: "Ik ben de laatste tijd best productief geweest, maar toch voel ik me leeg" },
+                { type: 'lucy', text: "Dat is balen. Wat mist er denk je?" },
+                { type: 'user', text: "Geen idee, soms mis ik een beetje erkenning voor het werk dat ik doe" },
+                { type: 'lucy', text: "Ja dat snap ik. Wat voor soort erkenning zou jou nu beter laten voelen?" },
+                { type: 'user', text: "Ik denk als iemand gewoon die erkenning geeft, dat zou een groot verschil maken." },
+                { type: 'lucy', text: "Ja, dat is niet teveel gevraagd. Is er iemand in je omgeving die jou die erkenning zou kunnen geven?" },
             ],
             sharp: [
-                { type: 'user', text: "I keep saying i'll start tomorrow and then tomorrow comes and i do the same thing" },
-                { type: 'lucy', text: "thats so relatable tho. what part of it feels like a wall?" },
-                { type: 'user', text: "idk it just feels pointless before i even start" },
-                { type: 'lucy', text: "pointless like it won't matter, or pointless like why even bother?" },
-                { type: 'user', text: "like why even bother i guess" },
-                { type: 'lucy', text: "okay but you've felt that before and still did the thing. what's different this time?" },
+                { type: 'user', text: "Ik blijf zeggen dat ik morgen begin en dan komt morgen en dan doe ik hetzelfde" },
+                { type: 'lucy', text: "Dat is erg herkenbaar. Wat voel je dan als dit gebeurt?" },
+                { type: 'user', text: "Geen idee, ik voel me gewoon zinloos en dan blijf ik in die zinloosheid zitten en dan doe ik niks." },
+                { type: 'lucy', text: "Zinloos als in het maakt niks uit, of zinloos als in waarom zou ik de moeite nemen?" },
+                { type: 'user', text: "Waarom zou ik de moeite nemen denk ik" },
+                { type: 'lucy', text: "Oké, maar je hebt dat eerder gevoeld en het toch gedaan. Wat is er nu anders?" },
             ],
         };
 
