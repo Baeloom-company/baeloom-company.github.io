@@ -8,4 +8,7 @@
   <url><loc>https://www.baeloom.com/privacy</loc><priority>0.3</priority></url>
   <url><loc>https://www.baeloom.com/terms</loc><priority>0.3</priority></url>
   <url><loc>https://www.baeloom.com/cookies</loc><priority>0.3</priority></url>
+  <url><loc>https://www.baeloom.com/nl/pricing</loc><priority>0.7</priority></url>
+  <url><loc>https://www.baeloom.com/nl/faq</loc><priority>0.7</priority></url>
+  <url><loc>https://www.baeloom.com/nl/contact</loc><priority>0.7</priority></url>
 </urlset>
