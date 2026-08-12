@@ -553,19 +553,6 @@
 
         
     </style>
-<script>
-(function(){
-  // First visit only: if the browser is set to Dutch and the visitor has never
-  // chosen a language, send them to the Dutch site. Any manual choice via the
-  // EN/NL toggle is remembered and always wins.
-  try {
-    if (localStorage.getItem('bae-lang')) return;
-    if (location.pathname.indexOf('/nl') === 0) return;
-    var l = (navigator.language || '').toLowerCase();
-    if (l.indexOf('nl') === 0) { location.replace('/nl/'); }
-  } catch(e){}
-}());
-</script>
 </head>
 <body class="antialiased">
 
@@ -597,6 +584,7 @@
         <a href="./pricing.html" class="mobile-link">Pricing</a>
         <a href="./faq.html" class="mobile-link">FAQ</a>
         <a href="./contact.html" class="mobile-link">Contact support</a>
+        <a href="/nl/" class="mobile-link mobile-lang" onclick="try{localStorage.setItem('bae-lang','nl')}catch(e){}"><span style="margin-right:8px">🇳🇱</span>Nederlands</a>
         <div class="menu-bottom">
             <a href="https://chat.baeloom.com" class="mobile-support">Log in</a>
             <a href="https://chat.baeloom.com" class="mobile-cta">Try free</a>
@@ -617,7 +605,7 @@
                 <span class="text-white block">can change your day.</span>
             </h1>
             <p class="text-white/90 text-base md:text-xl text-center max-w-xl mx-auto mt-6 px-6" style="font-family:'Albert Sans',sans-serif;font-weight:400;line-height:1.55;">
-                Meet Noah, your journaling companion.<br>She helps you reflect deeper and get closer to your goals.
+                Meet Noah, your journaling companion. She helps you reflect deeper and get closer to your goals.
             </p>
             <div class="flex flex-col items-center gap-3 mt-8">
                 <a href="https://chat.baeloom.com" class="inline-flex items-center justify-center px-9 py-4 rounded-full text-base font-semibold text-white bg-[#FF6D1F] hover:bg-[#6A2500] hover:text-[#FF6D1F] transition-colors no-underline" style="font-family:'Albert Sans',sans-serif;">
