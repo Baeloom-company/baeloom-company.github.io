@@ -372,7 +372,7 @@
       const res = await fetch(CONTACT_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, message, recaptchaToken })
+        body: JSON.stringify({ name, email, message, recaptchaToken, lang: 'en' })
       });
 
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
