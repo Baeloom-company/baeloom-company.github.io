@@ -759,7 +759,13 @@
                     <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed">In elke sessie is Noah actief bezig om jou te begrijpen. Ze merkt patronen op, stelt de juiste vragen en brengt nieuwe invalshoeken wanneer je die nodig hebt.</p>
                 </div>
                 <div class="order-1 md:order-2 scroll-reveal">
-                    <img src="../Images/voorbeeld-1v1.png" alt="Noah in conversation" class="w-full h-auto block rounded-2xl">
+                    <!-- Height-capped instead of w-full: the Dutch screenshot is far squarer
+                         than the English one (1.46 vs 2.50), so stretching it to the column
+                         width made it tower over the text beside it. Resizing the export does
+                         nothing here, only the ratio or this cap does. -->
+                    <img src="../Images/voorbeeld-1v1.png" alt="Noah in gesprek"
+                         class="h-auto block rounded-2xl mx-auto"
+                         style="max-height:400px; width:auto; max-width:100%;">
                 </div>
             </div>
 
