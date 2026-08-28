@@ -40,12 +40,29 @@ function loadMetaPixel() {
 // a signup that can be measured without putting a pixel (and a second consent
 // banner) on chat.baeloom.com. Per-ad it answers: which creative sent people
 // who actually wanted in.
-function trackAppClick() {
-  if (window.fbq) fbq('trackCustom', 'ClickToApp');
+function trackAppClick(e) {
+  if (!window.fbq) return;
+  fbq('trackCustom', 'ClickToApp');
+
+  // A plain left click navigates away immediately, which can kill the request
+  // to Meta before it leaves the browser. Hold the navigation for a moment so
+  // the beacon gets out, then go. Modified clicks (new tab, middle click) are
+  // left alone: the page stays open, so the request completes on its own.
+  const plainClick = e && e.button === 0 &&
+    !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey &&
+    !(this.target && this.target === '_blank');
+  if (!plainClick) return;
+
+  const href = this.href;
+  if (!href) return;
+  e.preventDefault();
+  setTimeout(function () { window.location.href = href; }, 180);
 }
 
 function wireAppLinks() {
   document.querySelectorAll('a[href*="chat.baeloom.com"]').forEach((a) => {
+    if (a.dataset.appClickWired) return;
+    a.dataset.appClickWired = '1';
     a.addEventListener('click', trackAppClick);
   });
 }
