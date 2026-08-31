@@ -265,10 +265,16 @@
                nav with no way to reach it. Letting the section GROW past the
                viewport (height auto + min-height) and padding it clear of the
                nav means nothing can ever be cut off. */
+            /* 3.1rem was sized for the old two-word headline. The new one is a
+               full sentence, and at that size it ran off both edges of the
+               screen. overflow-wrap keeps a long word like sparringspartner
+               inside the page whatever happens. */
             .hero-content h1 {
-                font-size: 3.1rem !important;
-                line-height: 1.08 !important;
+                font-size: 2.4rem !important;
+                line-height: 1 !important;
                 margin-top: 0 !important;
+                overflow-wrap: break-word;
+                word-break: break-word;
             }
             .hero-content > p {
                 font-size: 0.88rem !important;
@@ -276,7 +282,7 @@
                 margin-top: 16px !important;
                 max-width: 23rem !important;
             }
-            .hero-content > div { margin-top: 22px !important; }
+            .hero-content > div { margin-top: 30px !important; }
             #hero-chevron { padding-top: 18px !important; }
             #hero-chevron svg { width: 2.25rem !important; height: 2.25rem !important; }
             /* Tighten the app-notify section's vertical padding on mobile so the
