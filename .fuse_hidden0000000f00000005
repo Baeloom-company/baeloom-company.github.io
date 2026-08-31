@@ -570,7 +570,7 @@
                     <a href="./faq.html" class="nav-link">FAQ</a>
                 </div>
                 <a href="https://chat.baeloom.com" class="nav-link hidden sm:inline-flex">Log in</a>
-                <a id="nav-cta" href="https://chat.baeloom.com" class="nav-cta-btn hidden sm:inline-flex">Try Noah for free</a>
+                <a id="nav-cta" href="https://chat.baeloom.com" class="nav-cta-btn hidden sm:inline-flex">Try free</a>
                 <a href="/nl/" class="lang-switch hidden sm:inline-flex" hreflang="nl" aria-label="Switch language" onclick="try{localStorage.setItem('bae-lang','nl')}catch(e){}"><span class="flag">🇳🇱</span>NL</a>
                 <button id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
                     <span></span><span></span><span></span>
@@ -587,7 +587,7 @@
         <a href="/nl/" class="mobile-link mobile-lang" onclick="try{localStorage.setItem('bae-lang','nl')}catch(e){}"><span style="margin-right:8px">🇳🇱</span>Nederlands</a>
         <div class="menu-bottom">
             <a href="https://chat.baeloom.com" class="mobile-support">Log in</a>
-            <a href="https://chat.baeloom.com" class="mobile-cta">Try Noah for free</a>
+            <a href="https://chat.baeloom.com" class="mobile-cta">Try free</a>
         </div>
     </div>
 
@@ -600,17 +600,15 @@
             </video>
         </div>
         <div class="hero-content max-w-6xl mx-auto px-6 flex flex-col items-center">
-            <h1 class="text-3xl md:text-5xl lg:text-6xl leading-[1.2] md:leading-[1.15] tracking-tighter text-white mt-12 md:mt-20 max-w-4xl mx-auto px-8 md:px-0 text-center">
-                Meet Noah, <span class="inline-block">your personal sparring partner.</span>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl leading-[1.15] tracking-tighter text-white mt-12 md:mt-20 max-w-4xl mx-auto px-4 md:px-0 text-center">
+                Meet Noah, your personal sparring partner.
             </h1>
             <div class="flex flex-col items-center gap-3 mt-8">
                 <a href="https://chat.baeloom.com" class="inline-flex items-center justify-center px-9 py-4 rounded-full text-base font-semibold text-white bg-[#FF6D1F] hover:bg-[#6A2500] hover:text-[#FF6D1F] transition-colors no-underline" style="font-family:'Albert Sans',sans-serif;">
-                    Chat with Noah for free
+                    Ask Noah your first question
                 </a>
-                <div class="flex flex-col items-center gap-1">
-                    <span class="text-white/75" style="font-family:'Albert Sans',sans-serif;font-size:12px;">Free to try. No credit card required.</span>
-                    <a href="./pricing.html" class="text-white/75 hover:text-white underline underline-offset-4 transition-colors" style="font-family:'Albert Sans',sans-serif;font-size:12px;">View pricing</a>
-                </div>
+                <span class="text-white/75" style="font-family:'Albert Sans',sans-serif;font-size:12px;">Free to try. No credit card required.</span>
+                <a href="./pricing.html" class="text-white/70 hover:text-white underline underline-offset-4 transition-colors" style="font-family:'Albert Sans',sans-serif;font-size:13px;">View pricing</a>
             </div>
             <div id="hero-chevron" class="flex items-center justify-center pt-8 md:pt-12">
                 <a href="#interaction" class="text-[#FF6D1F]">

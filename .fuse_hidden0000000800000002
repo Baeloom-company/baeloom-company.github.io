@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms and Conditions | Baeloom</title>
-  <meta name="description" content="The terms and conditions for using Baeloom and talking with Noah.">
-  <link rel="canonical" href="https://www.baeloom.com/terms">
+  <title>Privacy Policy | Baeloom</title>
+  <meta name="description" content="How Baeloom collects, uses and protects your data, and the rights you have over it.">
+  <link rel="canonical" href="https://www.baeloom.com/privacy">
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="96x96" href="/Images/favicon-96x96.png" />
   <link rel="icon" type="image/png" sizes="48x48" href="/Images/favicon-48x48.png" />
@@ -135,6 +135,30 @@
       margin-bottom: 12px;
     }
     p:last-child { margin-bottom: 0; }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0 0;
+    }
+    ul li {
+      padding: 6px 0 6px 20px;
+      position: relative;
+      font-size: 0.975rem;
+    }
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 15px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #FF6D1F;
+    }
+    ul li strong {
+      color: #6A2500;
+      font-weight: 500;
+    }
     a {
       color: #FF6D1F;
       text-decoration: none;
@@ -282,7 +306,7 @@
       <a href="./pricing.html" class="nav-link-item">Pricing</a>
       <a href="./faq.html" class="nav-link-item">FAQ</a>
       <a href="https://chat.baeloom.com" class="nav-link-item">Log in</a>
-      <a href="https://chat.baeloom.com" class="nav-cta">Try Noah for free</a>
+      <a href="https://chat.baeloom.com" class="nav-cta">Try free</a>
       <button id="hamburger" aria-label="Open menu" onclick="toggleMenu()"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -293,108 +317,118 @@
   <a href="./contact.html" class="mobile-link">Contact support</a>
   <div class="menu-bottom">
     <a href="https://chat.baeloom.com" class="mobile-support">Log in</a>
-    <a href="https://chat.baeloom.com" class="mobile-cta">Try Noah for free</a>
+    <a href="https://chat.baeloom.com" class="mobile-cta">Try free</a>
   </div>
 </div>
 
 
 <main>
-<h1 class="page-title">Terms and Conditions</h1>
+<h1 class="page-title">Privacy Policy</h1>
   <p class="last-updated">Last updated: 24 July, 2026</p>
-  <p class="intro">Welcome to Baeloom. By accessing our website or interacting with our digital companions, you agree to be bound by the following terms. Please read them carefully.</p>
+  <p class="intro">At Baeloom, we believe your private conversations should stay private. This policy outlines how we handle your data.</p>
   <p class="lang-note"><strong>Let op:</strong> dit document is alleen in het Engels beschikbaar. De Engelse tekst is de geldende versie. Vragen in het Nederlands? Mail ons gerust via <a href="mailto:legal@baeloom.com">legal@baeloom.com</a>.</p>
   
 
   <section>
-    <h2>1. Acceptance of terms</h2>
-    <p>By creating an account or using our services, you agree to these Terms and Conditions and our <a href="/privacy">Privacy Policy</a>. If you do not agree, you may not use our service.</p>
+    <h2>1. Data we collect</h2>
+    <h3>Account Info</h3>
+    <p>Email address and basic profile data provided via Google or Email sign-up.</p>
+    <h3>Chat history</h3>
+    <p>We store your conversations so our digital companions can maintain context, emotional continuity and memory.</p>
+    <h3>Visual data</h3>
+    <p>If you send photos, they are processed to allow our digital companions to respond. We do not use your photos for advertising or share them with third-parties.</p>
+    <h3>Feedback you choose to send</h3>
+    <p>If you rate one of Noah's replies using the thumbs up or thumbs down buttons, we receive that rating along with any reason or comment you add, the reply you rated, and a short excerpt of the surrounding messages (up to six) so we can understand what happened. This is only ever sent when you choose to submit it, and you are told so before submitting. We use it solely to improve how Noah responds. You can use Baeloom fully without ever sending feedback.</p>
   </section>
 
   <section>
-    <h2>2. Eligibility &amp; conduct</h2>
-    <h3>Age requirement</h3>
-    <p>You must be at least 18 years of age to use Baeloom. Our services are intended for adult audiences.</p>
-    <h3>Prohibited use</h3>
-    <p>You agree not to use our digital companions for any illegal activities or to generate content that promotes real-world harm, illegal acts, or hate speech.</p>
+    <h2>2. Privacy</h2>
+    <p>Unlike other AI platforms that archive your data indefinitely, Baeloom prioritizes a 'clean slate' approach to honor your privacy after your companionship with one of our digital companions concludes.</p>
+    <h3>Unsubscribing</h3>
+    <p>If you cancel your subscription, all your Smart Memory and Chat History data is permanently deleted from our servers at the end of your billing cycle.</p>
+    <h3>Account deletion</h3>
+    <p>You may request full account deletion at any time via <a href="mailto:legal@baeloom.com">legal@baeloom.com</a>.</p>
   </section>
 
   <section>
-    <h2>3. Nature of digital companionship</h2>
-    <h3>AI interaction</h3>
-    <p>You acknowledge that you are interacting with Artificial Intelligence. While our companions are designed for emotional continuity and realism, their responses are generated by a model and do not reflect the views of Baeloom.</p>
-    <h3>No professional advice</h3>
-    <p>Responses from our digital companions should not be taken as medical, legal, financial, or professional advice.</p>
+    <h2>3. Third-party processing</h2>
+    <p>We utilize Google Gemini (Vertex AI) for high-performance AI processing and Stripe for secure payment handling. These partners are industry leaders in security and are contractually prohibited from using your personal data for their own marketing or model training.</p>
   </section>
 
   <section>
-    <h2>4. Subscriptions and payments</h2>
-    <h3>Overall subscription</h3>
-    <p>Subscription fees are billed on a monthly basis. All payments are processed securely via Stripe. Your billing cycle begins on the day of your first successful payment.</p>
-    <h3>Cancellation</h3>
-    <p>You may cancel your subscription at any time. You will retain access to premium features until the end of your current billing cycle.</p>
-    <h3>Refunds</h3>
-    <p>Due to the nature of digital goods and the immediate costs associated with AI processing, all sales are final. No refunds are provided.</p>
+    <h2>4. Security</h2>
+    <p>We employ enterprise-grade standards to ensure your interactions remain confidential:</p>
+    <ul>
+      <li><strong>Encryption in transit</strong> — Data is protected using TLS 1.2+ (SSL) during transmission.</li>
+      <li><strong>Encryption at rest</strong> — Your data is stored using 256-bit AES encryption within Google Cloud's secure infrastructure.</li>
+      <li><strong>AI privacy</strong> — Your inputs are processed in a secure environment and are not used to train foundation models.</li>
+    </ul>
   </section>
 
   <section>
-    <h2>5. The 'clean slate' policy</h2>
-    <p>In accordance with our <a href="/privacy">Privacy Policy</a>, Baeloom reserves the right to permanently purge Chat History and Smart Memory data upon the conclusion of a companionship (subscription termination) to protect user privacy.</p>
+    <h2>5. Legal basis for processing (GDPR)</h2>
+    <p>We process your personal data on the following legal bases:</p>
+    <ul>
+      <li><strong>Contract performance</strong> — Account data and chat history are processed to deliver the Baeloom service you signed up for.</li>
+      <li><strong>Legitimate interest</strong> — We process usage data to maintain security, prevent abuse, and improve reliability.</li>
+      <li><strong>Consent</strong> — When we ask for optional permissions (such as photo access or voice input), we rely on your consent, which you may withdraw at any time.</li>
+    </ul>
   </section>
 
   <section>
-    <h2>6. Limitation of liability</h2>
-    <p>Baeloom and its creators shall not be liable for any indirect, incidental, or consequential damages arising out of your use of the service. The service is provided on an "as-is" and "as-available" basis.</p>
+    <h2>6. Your rights</h2>
+    <p>If you are based in the European Economic Area, you have the following rights regarding your personal data:</p>
+    <ul>
+      <li><strong>Right to access</strong> — You can download a copy of the personal data we hold about you at any time from Settings &rarr; Privacy &rarr; Download my data, or request one from us.</li>
+      <li><strong>Right to rectification</strong> — You can ask us to correct any inaccurate or incomplete data.</li>
+      <li><strong>Right to erasure</strong> — You can request that we delete your data. See Section 2 for how to do this.</li>
+      <li><strong>Right to data portability</strong> — You can export your data yourself in a structured, machine-readable format (a JSON file) from Settings &rarr; Privacy &rarr; Download my data, or request it from us.</li>
+      <li><strong>Right to object</strong> — You can object to certain types of processing, including processing based on legitimate interest.</li>
+      <li><strong>Right to restrict processing</strong> — You can ask us to pause processing of your data in certain circumstances.</li>
+    </ul>
+    <p style="margin-top:16px;">You can access, export, and delete your data yourself directly in the app under Settings &rarr; Privacy. To exercise any other right, or if you'd prefer we handle it for you, contact us at <a href="mailto:legal@baeloom.com">legal@baeloom.com</a>. We will respond within 30 days.</p>
   </section>
 
   <section>
-    <h2>7. Changes to terms</h2>
-    <p>We reserve the right to modify these terms at any time. We will notify you by email or through an in-app notice before the changes take effect. The "Last Updated" date at the top of this page will always reflect the most recent version.</p>
+    <h2>7. Supervisory authority</h2>
+    <p>If you believe we are handling your data unlawfully, you have the right to lodge a complaint with the Dutch Data Protection Authority:</p>
+    <p><strong style="color:#6A2500;">Autoriteit Persoonsgegevens</strong><br />
+    Website: <a href="https://autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener">autoriteitpersoonsgegevens.nl</a><br />
+    Phone: +31 (0)70 888 85 00</p>
   </section>
 
   <section>
-    <h2>8. EU Right of withdrawal</h2>
-    <p>Under EU consumer law, you ordinarily have the right to withdraw from a digital service contract within 14 days of purchase without giving a reason.</p>
-    <p>However, by completing your purchase you explicitly request that Baeloom begins providing the service immediately. You acknowledge that by doing so, you waive your 14-day right of withdrawal once the service has begun.</p>
+    <h2>8. Data retention</h2>
+    <p>We keep your data for as long as your account is active. Specifically:</p>
+    <ul>
+      <li><strong>Chat history and Smart Memory</strong> — Retained for the duration of your active subscription and permanently deleted at the end of your billing cycle if you cancel.</li>
+      <li><strong>Account information</strong> — Retained until you request full account deletion.</li>
+      <li><strong>Photos</strong> — Processed in real time and not stored beyond what is necessary to generate a response.</li>
+    </ul>
   </section>
 
   <section>
-    <h2>9. Intellectual Property</h2>
-    <h3>Baeloom's content</h3>
-    <p>All content on the Baeloom platform, including the website, app design, branding, artwork, and the Noah digital companion are the intellectual property of Baeloom and may not be copied, reproduced, or distributed without written permission.</p>
-    <h3>Your content</h3>
-    <p>You retain ownership of everything you share with Baeloom, including messages and photos. By using the service, you grant Baeloom a limited licence to process your content solely for the purpose of delivering the service to you. We will never use your conversations or personal content to train AI models.</p>
+    <h2>9. Voice data</h2>
+    <p>If you use Baeloom's voice input feature, your audio is converted to text for processing. We do not store raw audio recordings. Transcribed text is handled the same way as regular chat input under Section 1.</p>
   </section>
 
   <section>
-    <h2>10. Account Termination</h2>
-    <h3>By you</h3>
-    <p>You may close your account at any time by contacting <a href="mailto:support@baeloom.com">support@baeloom.com</a>. Upon deletion, your data will be permanently removed in accordance with our <a href="/privacy">Privacy Policy</a>.</p>
-    <h3>By Baeloom</h3>
-    <p>We reserve the right to suspend or permanently terminate your account without notice if you violate these terms, engage in prohibited conduct, or if we have reason to believe your use of the service poses a risk to other users or to Baeloom. In the event of termination by Baeloom without cause, you will receive a pro-rata refund for any unused portion of your billing cycle.</p>
+    <h2>10. Cookies and analytics</h2>
+    <p>Baeloom uses cookies and similar technologies to keep you logged in and maintain your session. We may also use analytics tools to understand how users interact with the app, such as which features are used most often. This data is aggregated and not linked to your personal identity.</p>
+    <p>You can disable cookies in your browser settings, though this may affect your ability to use certain features. For full details, see our <a href="/cookies">Cookies Policy</a>.</p>
   </section>
 
   <section>
-    <h2>11. Governing Law and Jurisdiction</h2>
-    <p>These Terms and Conditions are governed by the laws of the Netherlands. Any disputes arising from or related to your use of Baeloom shall be subject to the exclusive jurisdiction of the competent courts in the Netherlands, without prejudice to your rights as a consumer under the laws of your country of residence.</p>
+    <h2>11. International data transfers</h2>
+    <p>Our AI processing partner, Google Gemini (Vertex AI), operates infrastructure based in the United States. When your data is processed by these services, it is transferred outside the European Economic Area. We ensure these transfers are protected through Standard Contractual Clauses (SCCs) approved by the European Commission, which legally require the recipient to protect your data to EU standards.</p>
   </section>
 
   <section>
-    <h2>12. EU Online dispute resolution</h2>
-    <p>If you are an EU consumer and have a complaint that we have not resolved to your satisfaction, you may submit it through the European Commission's Online Dispute Resolution platform: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.</p>
-    <p>Our contact email for dispute resolution purposes is: <a href="mailto:legal@baeloom.com">legal@baeloom.com</a>.</p>
-  </section>
-
-  <section>
-    <h2>13. Severability</h2>
-    <p>If any provision of these Terms is found to be invalid or unenforceable under applicable law, that provision will be modified to the minimum extent necessary to make it enforceable, or removed if modification is not possible. The remaining provisions will continue in full force and effect.</p>
-  </section>
-
-  <section>
-    <h2>14. Contact</h2>
-    <p>For any questions about these Terms and Conditions, please contact us at: <a href="mailto:legal@baeloom.com">legal@baeloom.com</a>.</p>
+    <h2>12. Changes to this policy</h2>
+    <p>If we make material changes to this privacy policy, we will notify you by email or through an in-app notice before the changes take effect. The "Last Updated" date at the top of this page will always reflect the most recent version.</p>
   </section>
   <div class="doc-actions">
-    <a class="btn btn-primary" href="./Baeloom_Terms_and _Conditions.pdf" download>
+    <a class="btn btn-primary" href="./Baeloom_Privacy_policy_.pdf" download>
       <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3"/></svg>
       Download PDF
     </a>
@@ -411,7 +445,7 @@
 
   function shareDoc() {
     if (navigator.share) {
-      navigator.share({ title: 'Terms and Conditions | Baeloom', url: window.location.href });
+      navigator.share({ title: 'Privacy Policy | Baeloom', url: window.location.href });
     } else {
       navigator.clipboard.writeText(window.location.href).then(() => {
         const t = document.getElementById('toast');

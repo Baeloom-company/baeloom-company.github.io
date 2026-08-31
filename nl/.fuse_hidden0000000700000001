@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="nl" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baeloom | Meet Noah, your personal sparring partner</title>
-    <meta name="description" content="A good conversation can change your day. Noah is your personal sparring partner: she listens, remembers what you said and tells you what she thinks.">
-    <link rel="canonical" href="https://www.baeloom.com/">
+    <title>Baeloom | Noah, jouw persoonlijke sparringspartner</title>
+    <meta name="description" content="Een goed gesprek kan je dag veranderen. Noah is jouw persoonlijke sparringspartner: ze luistert, onthoudt wat je zei en zegt eerlijk wat ze denkt.">
+    <link rel="canonical" href="https://www.baeloom.com/nl/">
     <link rel="alternate" hreflang="en" href="https://www.baeloom.com/">
     <link rel="alternate" hreflang="nl" href="https://www.baeloom.com/nl/">
     <link rel="alternate" hreflang="x-default" href="https://www.baeloom.com/">
@@ -13,18 +13,18 @@
     <!-- Open Graph (Facebook, Instagram, WhatsApp, iMessage, LinkedIn) -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Baeloom">
-    <meta property="og:title" content="Baeloom | Meet Noah, your personal sparring partner">
-    <meta property="og:description" content="A good conversation can change your day. Noah is your personal sparring partner: she listens, remembers what you said and tells you what she thinks.">
-    <meta property="og:url" content="https://www.baeloom.com/">
+    <meta property="og:title" content="Baeloom | Noah, jouw persoonlijke sparringspartner">
+    <meta property="og:description" content="Een goed gesprek kan je dag veranderen. Noah is jouw persoonlijke sparringspartner: ze luistert, onthoudt wat je zei en zegt eerlijk wat ze denkt.">
+    <meta property="og:url" content="https://www.baeloom.com/nl/">
     <meta property="og:image" content="https://www.baeloom.com/Images/og-image-v2.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Baeloom — Think inward, live forward.">
+    <meta property="og:image:alt" content="Baeloom — Denk naar binnen, leef vooruit.">
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Baeloom | Meet Noah, your personal sparring partner">
-    <meta name="twitter:description" content="A good conversation can change your day. Noah is your personal sparring partner: she listens, remembers what you said and tells you what she thinks.">
+    <meta name="twitter:title" content="Baeloom | Noah, jouw persoonlijke sparringspartner">
+    <meta name="twitter:description" content="Een goed gesprek kan je dag veranderen. Noah is jouw persoonlijke sparringspartner: ze luistert, onthoudt wat je zei en zegt eerlijk wat ze denkt.">
     <meta name="twitter:image" content="https://www.baeloom.com/Images/og-image-v2.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -267,14 +267,14 @@
                nav means nothing can ever be cut off. */
             .hero-content h1 {
                 font-size: 3.1rem !important;
-                line-height: 1.02 !important;
+                line-height: 1.08 !important;
                 margin-top: 0 !important;
             }
             .hero-content > p {
                 font-size: 0.88rem !important;
                 line-height: 1.5 !important;
                 margin-top: 16px !important;
-                max-width: 21rem !important;
+                max-width: 23rem !important;
             }
             .hero-content > div { margin-top: 22px !important; }
             #hero-chevron { padding-top: 18px !important; }
@@ -560,18 +560,18 @@
     <nav id="main-nav" class="fixed w-full z-[100]">
         <div id="nav-container">
             <!-- Logo -->
-            <a href="/" class="flex items-center">
-                <img id="nav-logo" src="./Images/black-logo-baeloom.png" alt="Baeloom">
+            <a href="/nl/" class="flex items-center">
+                <img id="nav-logo" src="../Images/black-logo-baeloom.png" alt="Baeloom">
             </a>
             <!-- Right: links + buttons + hamburger -->
             <div class="flex items-center gap-6">
                 <div class="nav-links flex items-center gap-6">
-                    <a href="./pricing.html" class="nav-link">Pricing</a>
-                    <a href="./faq.html" class="nav-link">FAQ</a>
+                    <a href="./pricing.html" class="nav-link">Prijzen</a>
+                    <a href="./faq.html" class="nav-link">Hoe het werkt</a>
                 </div>
-                <a href="https://chat.baeloom.com" class="nav-link hidden sm:inline-flex">Log in</a>
-                <a id="nav-cta" href="https://chat.baeloom.com" class="nav-cta-btn hidden sm:inline-flex">Try Noah for free</a>
-                <a href="/nl/" class="lang-switch hidden sm:inline-flex" hreflang="nl" aria-label="Switch language" onclick="try{localStorage.setItem('bae-lang','nl')}catch(e){}"><span class="flag">🇳🇱</span>NL</a>
+                <a href="https://chat.baeloom.com/?lang=nl" class="nav-link hidden sm:inline-flex">Inloggen</a>
+                <a id="nav-cta" href="https://chat.baeloom.com/?lang=nl" class="nav-cta-btn hidden sm:inline-flex">Gratis proberen</a>
+                <a href="/" class="lang-switch hidden sm:inline-flex" hreflang="en" aria-label="Switch language" onclick="try{localStorage.setItem('bae-lang','en')}catch(e){}"><span class="flag">🇬🇧</span>EN</a>
                 <button id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
                     <span></span><span></span><span></span>
                 </button>
@@ -581,13 +581,13 @@
 
     <!-- Mobile menu drawer -->
     <div id="mobile-menu">
-        <a href="./pricing.html" class="mobile-link">Pricing</a>
-        <a href="./faq.html" class="mobile-link">FAQ</a>
-        <a href="./contact.html" class="mobile-link">Contact support</a>
-        <a href="/nl/" class="mobile-link mobile-lang" onclick="try{localStorage.setItem('bae-lang','nl')}catch(e){}"><span style="margin-right:8px">🇳🇱</span>Nederlands</a>
+        <a href="./pricing.html" class="mobile-link">Prijzen</a>
+        <a href="./faq.html" class="mobile-link">Hoe het werkt</a>
+        <a href="./contact.html" class="mobile-link">Contact</a>
+        <a href="/" class="mobile-link mobile-lang" onclick="try{localStorage.setItem('bae-lang','en')}catch(e){}"><span style="margin-right:8px">🇬🇧</span>English</a>
         <div class="menu-bottom">
-            <a href="https://chat.baeloom.com" class="mobile-support">Log in</a>
-            <a href="https://chat.baeloom.com" class="mobile-cta">Try Noah for free</a>
+            <a href="https://chat.baeloom.com/?lang=nl" class="mobile-support">Inloggen</a>
+            <a href="https://chat.baeloom.com/?lang=nl" class="mobile-cta">Gratis proberen</a>
         </div>
     </div>
 
@@ -596,21 +596,19 @@
         <div class="hero-video-container">
             <div class="hero-video-overlay"></div>
             <video autoplay muted loop playsinline preload="auto">
-                <source src="./Images/banner-video-baeloom.mp4" type="video/mp4">
+                <source src="../Images/banner-video-baeloom.mp4" type="video/mp4">
             </video>
         </div>
         <div class="hero-content max-w-6xl mx-auto px-6 flex flex-col items-center">
-            <h1 class="text-3xl md:text-5xl lg:text-6xl leading-[1.2] md:leading-[1.15] tracking-tighter text-white mt-12 md:mt-20 max-w-4xl mx-auto px-8 md:px-0 text-center">
-                Meet Noah, <span class="inline-block">your personal sparring partner.</span>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl leading-[1.15] tracking-tighter text-white mt-12 md:mt-20 max-w-4xl mx-auto px-4 md:px-0 text-center">
+                Maak kennis met Noah, jouw persoonlijke sparringspartner.
             </h1>
             <div class="flex flex-col items-center gap-3 mt-8">
-                <a href="https://chat.baeloom.com" class="inline-flex items-center justify-center px-9 py-4 rounded-full text-base font-semibold text-white bg-[#FF6D1F] hover:bg-[#6A2500] hover:text-[#FF6D1F] transition-colors no-underline" style="font-family:'Albert Sans',sans-serif;">
-                    Chat with Noah for free
+                <a href="https://chat.baeloom.com/?lang=nl" class="inline-flex items-center justify-center px-9 py-4 rounded-full text-base font-semibold text-white bg-[#FF6D1F] hover:bg-[#6A2500] hover:text-[#FF6D1F] transition-colors no-underline" style="font-family:'Albert Sans',sans-serif;">
+                    Stel Noah je eerste vraag
                 </a>
-                <div class="flex flex-col items-center gap-1">
-                    <span class="text-white/75" style="font-family:'Albert Sans',sans-serif;font-size:12px;">Free to try. No credit card required.</span>
-                    <a href="./pricing.html" class="text-white/75 hover:text-white underline underline-offset-4 transition-colors" style="font-family:'Albert Sans',sans-serif;font-size:12px;">View pricing</a>
-                </div>
+                <span class="text-white/75" style="font-family:'Albert Sans',sans-serif;font-size:12px;">Gratis te proberen. Geen creditcard nodig.</span>
+                <a href="./pricing.html" class="text-white/70 hover:text-white underline underline-offset-4 transition-colors" style="font-family:'Albert Sans',sans-serif;font-size:13px;">Bekijk tarieven</a>
             </div>
             <div id="hero-chevron" class="flex items-center justify-center pt-8 md:pt-12">
                 <a href="#interaction" class="text-[#FF6D1F]">
@@ -628,19 +626,19 @@
             <!-- LEFT: text grouped together -->
             <div class="space-y-8 px-8 md:px-0 order-1 md:order-1">
                 <h2 class="text-5xl md:text-7xl text-[#6A2500] leading-[1.05] md:leading-[0.9] mt-0 tracking-tight scroll-reveal">
-                    Someone who actually listens.
+                    Iemand die<br>echt luistert.
                 </h2>
                 <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed scroll-reveal">
-                    Some things are hard to bring up, even with people around you who love you. Not because they don't care, but because you don't want to burden them with your thoughts. There's no shame in sometimes finding another way to get things off your chest.
+                    Sommige dingen wil je even kwijt maar weet je niet goed hoe je dat moet doen, zelfs bij mensen die van je houden. Niet omdat het ze niks uitmaakt, maar omdat je ze niet wilt belasten met je gedachten. Het is niet erg om soms een andere manier te zoeken om je hoofd leeg te maken.
                 </p>
                 <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed scroll-reveal">
-                    Noah can be that other way. She's your personal sparring partner developed by Baeloom and has her own personality and opinions. She does not mirror you, but instead listens, memorizes, reflects, gives insight and pushes back when you need it.
+                    Noah kan die andere manier zijn. Zij is jouw persoonlijke sparringspartner ontwikkeld door Baeloom en heeft haar eigen karakter en meningen. Ze spiegelt je niet, maar luistert, onthoudt, reflecteert, geeft inzicht en spreekt je tegen wanneer dat nodig is.
                 </p>
                 <div class="hidden md:inline-flex flex-col items-center scroll-reveal mt-6">
-                    <a href="https://chat.baeloom.com" class="pill-button btn-primary h-14 text-lg shadow-lg shadow-orange-500/20 px-10" style="font-weight:700;letter-spacing:-0.01em;">
-                        Chat with Noah
+                    <a href="https://chat.baeloom.com/?lang=nl" class="pill-button btn-primary h-14 text-lg shadow-lg shadow-orange-500/20 px-10" style="font-weight:700;letter-spacing:-0.01em;">
+                        Praat met Noah
                     </a>
-                    <p class="text-[#a8a29a] mt-2" style="font-family:'Albert Sans',sans-serif;font-size:12px;">Free to start. No card needed.</p>
+                    <p class="text-[#a8a29a] mt-2" style="font-family:'Albert Sans',sans-serif;font-size:12px;">Gratis te proberen. Geen creditcard nodig.</p>
                 </div>
             </div>
 
@@ -649,19 +647,19 @@
                 <div style="width:100%;max-width:440px;display:flex;flex-direction:column;">
                     <!-- Tabs -->
                     <div style="display:flex;gap:8px;margin-bottom:20px;justify-content:center;flex-shrink:0;">
-                        <button onclick="switchTab('playful')" id="tab-playful" style="padding:7px 18px;border-radius:9999px;font-size:13px;font-weight:600;font-family:'Albert Sans',sans-serif;border:1.5px solid #FF6D1F;background:#FF6D1F;color:#fff;cursor:pointer;transition:all 0.2s;">invested</button>
-                        <button onclick="switchTab('honest')" id="tab-honest" style="padding:7px 18px;border-radius:9999px;font-size:13px;font-weight:600;font-family:'Albert Sans',sans-serif;border:1.5px solid #e8e0d5;background:transparent;color:#888;cursor:pointer;transition:all 0.2s;">honest</button>
-                        <button onclick="switchTab('sharp')" id="tab-sharp" style="padding:7px 18px;border-radius:9999px;font-size:13px;font-weight:600;font-family:'Albert Sans',sans-serif;border:1.5px solid #e8e0d5;background:transparent;color:#888;cursor:pointer;transition:all 0.2s;">candid</button>
+                        <button onclick="switchTab('playful')" id="tab-playful" style="padding:7px 18px;border-radius:9999px;font-size:13px;font-weight:600;font-family:'Albert Sans',sans-serif;border:1.5px solid #FF6D1F;background:#FF6D1F;color:#fff;cursor:pointer;transition:all 0.2s;">betrokken</button>
+                        <button onclick="switchTab('honest')" id="tab-honest" style="padding:7px 18px;border-radius:9999px;font-size:13px;font-weight:600;font-family:'Albert Sans',sans-serif;border:1.5px solid #e8e0d5;background:transparent;color:#888;cursor:pointer;transition:all 0.2s;">eerlijk</button>
+                        <button onclick="switchTab('sharp')" id="tab-sharp" style="padding:7px 18px;border-radius:9999px;font-size:13px;font-weight:600;font-family:'Albert Sans',sans-serif;border:1.5px solid #e8e0d5;background:transparent;color:#888;cursor:pointer;transition:all 0.2s;">openhartig</button>
                     </div>
                     <div id="float-chat" style="width:100%;display:flex;flex-direction:column;justify-content:flex-start;gap:6px;min-height:460px;">
                         <!-- bubbles injected by JS -->
                     </div>
-                    <p id="chat-caption" style="text-align:center;font-size:11px;color:#b0a898;font-family:'Albert Sans',sans-serif;letter-spacing:0.02em;opacity:0;transition:opacity 1s ease;margin-top:20px;">*based on how Noah actually talks</p>
+                    <p id="chat-caption" style="text-align:center;font-size:11px;color:#b0a898;font-family:'Albert Sans',sans-serif;letter-spacing:0.02em;opacity:0;transition:opacity 1s ease;margin-top:20px;">*gebaseerd op hoe Noah normaal praat</p>
                     <div class="md:hidden flex flex-col items-center" style="margin-top:24px;">
-                        <a href="https://chat.baeloom.com" class="pill-button btn-primary h-14 text-lg shadow-lg shadow-orange-500/20 px-10" style="font-weight:700;letter-spacing:-0.01em;">
-                            Try it yourself
+                        <a href="https://chat.baeloom.com/?lang=nl" class="pill-button btn-primary h-14 text-lg shadow-lg shadow-orange-500/20 px-10" style="font-weight:700;letter-spacing:-0.01em;">
+                            Probeer het zelf
                         </a>
-                        <p class="text-[#a8a29a] mt-2" style="font-family:'Albert Sans',sans-serif;font-size:12px;">Free to start. No card needed.</p>
+                        <p class="text-[#a8a29a] mt-2" style="font-family:'Albert Sans',sans-serif;font-size:12px;">Gratis te proberen. Geen creditcard nodig.</p>
                     </div>
                 </div>
             </div>
@@ -677,24 +675,24 @@
 
                 <!-- Heading: 1st on mobile, left col on desktop -->
                 <h2 class="order-1 md:col-start-1 md:row-start-1 px-8 md:px-0 text-5xl md:text-7xl text-[#6A2500] leading-[1.05] md:leading-[0.9] tracking-tight scroll-reveal">
-                    What if you actually understood yourself?
+                    Wat als je jezelf écht zou begrijpen?
                 </h2>
 
                 <!-- Spiral: 3rd on mobile, right col spanning on desktop -->
                 <div class="order-3 md:col-start-2 md:row-start-1 md:row-span-2 flex items-center justify-center px-8 md:px-0 scroll-reveal">
                     <div class="relative w-full max-w-[480px] mx-auto">
                         <div class="absolute inset-0 bg-orange-500/10 blur-[80px] rounded-full pointer-events-none"></div>
-                        <img src="./Images/spiral-core.png" alt="The Baeloom journey spiral" class="w-full h-auto object-contain relative z-10" style="mix-blend-mode:multiply;">
+                        <img src="../Images/spiral-core-nl.png" alt="De Baeloom-spiraal" class="w-full h-auto object-contain relative z-10" style="mix-blend-mode:multiply;">
                     </div>
                 </div>
 
                 <!-- Description: 2nd on mobile, left col 2nd on desktop -->
                 <div class="order-2 md:col-start-1 md:row-start-2 px-8 md:px-0 space-y-6">
                     <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed scroll-reveal">
-                        You know that feeling when the same thing keeps showing up? Baeloom gives you a space to actually work through it. Noah remembers everything you share, builds on it session by session, and over time starts giving you a clearer picture of what's really going on.
+                        Ken je dat gevoel dat hetzelfde steeds terugkomt? Dezelfde patronen, dezelfde gevoelens, dezelfde vragen. Dat betekent niet dat je vastzit, zo werkt groei nou eenmaal.
                     </p>
                     <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed scroll-reveal">
-                        You've probably noticed you keep coming back to the same things. Same patterns, same feelings, same questions. That's not a sign you're stuck. That's just how growth actually works. Baeloom gives you that last push into clarity. Think inward, live forward.
+                        Baeloom geeft je de ruimte om er echt doorheen te werken. Noah onthoudt alles wat je deelt, bouwt daar sessie na sessie op voort en geeft je na verloop van tijd een helderder beeld van wat er echt speelt. Denk naar binnen, leef vooruit.
                     </p>
                 </div>
 
@@ -707,103 +705,109 @@
     <section id="themes" class="relative py-0" style="background:#FDF6EE;">
 
         <!-- Artworks: free-floating, staggered, bleeding off edges -->
-        <img src="./Images/Growth.png"        alt="" class="pointer-events-none hidden md:block absolute opacity-90 rotate-[-8deg]"  style="width:480px;left:-150px;top:26%;z-index:1;">
-        <img src="./Images/Interests.png"     alt="" class="pointer-events-none hidden md:block absolute opacity-85 rotate-[5deg]"   style="width:460px;left:-140px;top:80%;z-index:1;">
-        <img src="./Images/Relationships.png" alt="" class="pointer-events-none hidden md:block absolute opacity-90 rotate-[8deg]"   style="width:440px;right:-120px;top:10%;z-index:1;">
-        <img src="./Images/Daily-life.png"   alt="" class="pointer-events-none hidden md:block absolute opacity-85 rotate-[-5deg]"  style="width:600px;right:-150px;top:52%;z-index:1;">
+        <img src="../Images/Growth.png"        alt="" class="pointer-events-none hidden md:block absolute opacity-90 rotate-[-8deg]"  style="width:480px;left:-150px;top:26%;z-index:1;">
+        <img src="../Images/Interests.png"     alt="" class="pointer-events-none hidden md:block absolute opacity-85 rotate-[5deg]"   style="width:460px;left:-140px;top:80%;z-index:1;">
+        <img src="../Images/Relationships.png" alt="" class="pointer-events-none hidden md:block absolute opacity-90 rotate-[8deg]"   style="width:440px;right:-120px;top:10%;z-index:1;">
+        <img src="../Images/Daily-life.png"   alt="" class="pointer-events-none hidden md:block absolute opacity-85 rotate-[-5deg]"  style="width:600px;right:-150px;top:52%;z-index:1;">
 
         <!-- Feature rows -->
         <div class="relative" style="z-index:2;">
 
             <!-- Intro bridge -->
             <div class="text-center pt-12 pb-6 md:pt-16 md:pb-8 px-8 scroll-reveal">
-                <h2 class="text-5xl md:text-7xl text-[#6A2500] leading-[1.05] md:leading-[0.9] tracking-tight max-w-3xl mx-auto">Every step of the way, Noah is with you.</h2>
+                <h2 class="text-5xl md:text-7xl text-[#6A2500] leading-[1.05] md:leading-[0.9] tracking-tight max-w-3xl mx-auto">Samen met Noah,<br>stap voor stap.</h2>
             </div>
 
             <!-- Row 1: text left, screenshot right -->
             <div class="max-w-6xl mx-auto px-8 md:px-24 py-8 md:py-14 grid md:grid-cols-[2fr_4fr] gap-10 md:gap-16 items-center">
                 <div class="space-y-5 order-2 md:order-1 scroll-reveal">
-                    <img src="./Images/1.png" alt="1" style="width:52px;height:auto;display:block;margin-bottom:12px;">
-                    <h2 class="text-4xl md:text-5xl text-[#6A2500] leading-tight tracking-tight">Choose what to work on.</h2>
-                    <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed">12 themes across every area of life. Pick what feels most suitable for you, whether that's finances, relationships, values or growth.</p>
+                    <img src="../Images/1.png" alt="1" style="width:52px;height:auto;display:block;margin-bottom:12px;">
+                    <h2 class="text-4xl md:text-5xl text-[#6A2500] leading-tight tracking-tight">Kies waar je aan wilt werken.</h2>
+                    <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed">12 thema's over elk gebied van je leven. Kies wat het beste bij je past, of dat nu geld, relaties, waarden of groei is.</p>
                 </div>
                 <div class="order-1 md:order-2 scroll-reveal">
-                    <img src="./Images/example-6.png" alt="Choose your themes" class="w-full h-auto block rounded-2xl">
+                    <img src="../Images/voorbeeld-6.png" alt="Choose your themes" class="w-full h-auto block rounded-2xl">
                 </div>
             </div>
 
             <div class="md:hidden px-8 py-2"><hr style="border:none;border-top:1px solid #e2d9cf;"></div>
-            <div class="hidden md:flex justify-center"><img src="./Images/right.png" alt="" class="w-full max-w-xl h-auto pointer-events-none"></div>
+            <div class="hidden md:flex justify-center"><img src="../Images/right.png" alt="" class="w-full max-w-xl h-auto pointer-events-none"></div>
 
             <!-- Row 2: screenshot left, text right -->
             <div class="max-w-6xl mx-auto px-8 md:px-24 py-8 md:py-14 grid md:grid-cols-[3fr_2fr] gap-10 md:gap-16 items-center">
                 <div class="scroll-reveal">
-                    <img src="./Images/example-5.png" alt="Set your goal" class="w-full h-auto block rounded-2xl">
+                    <img src="../Images/voorbeeld-5.png" alt="Set your goal" class="w-full h-auto block rounded-2xl">
                 </div>
                 <div class="space-y-5 scroll-reveal">
-                    <img src="./Images/2.png" alt="2" style="width:52px;height:auto;display:block;margin-bottom:12px;">
-                    <h2 class="text-4xl md:text-5xl text-[#6A2500] leading-tight tracking-tight">Tell Noah what you're trying to get to.</h2>
-                    <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed">Set a goal. Or let Noah help you figure out what the goal even is. Either way, she holds that thread and brings it back when you need it.</p>
+                    <img src="../Images/2.png" alt="2" style="width:52px;height:auto;display:block;margin-bottom:12px;">
+                    <h2 class="text-4xl md:text-5xl text-[#6A2500] leading-tight tracking-tight">Vertel Noah wat je wilt bereiken.</h2>
+                    <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed">Stel een doel. Of laat Noah je helpen ontdekken wat het doel eigenlijk is. Hoe dan ook, zij houdt die draad vast en brengt hem terug wanneer je het nodig hebt.</p>
                 </div>
             </div>
 
             <div class="md:hidden px-8 py-2"><hr style="border:none;border-top:1px solid #e2d9cf;"></div>
-            <div class="hidden md:flex justify-center"><img src="./Images/left.png" alt="" class="w-full max-w-xl h-auto pointer-events-none"></div>
+            <div class="hidden md:flex justify-center"><img src="../Images/left.png" alt="" class="w-full max-w-xl h-auto pointer-events-none"></div>
 
             <!-- Row 3: text left, screenshot right -->
             <div class="max-w-6xl mx-auto px-8 md:px-24 py-8 md:py-14 grid md:grid-cols-[2fr_4fr] gap-10 md:gap-16 items-center">
                 <div class="space-y-5 order-2 md:order-1 scroll-reveal">
-                    <img src="./Images/3.png" alt="3" style="width:52px;height:auto;display:block;margin-bottom:12px;">
-                    <h2 class="text-4xl md:text-5xl text-[#6A2500] leading-tight tracking-tight">Noah meets you where you are.</h2>
-                    <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed">In every session, Noah is actively working to understand you. She notices patterns, asks the right questions, and brings new perspectives when you need them.</p>
+                    <img src="../Images/3.png" alt="3" style="width:52px;height:auto;display:block;margin-bottom:12px;">
+                    <h2 class="text-4xl md:text-5xl text-[#6A2500] leading-tight tracking-tight">Noah sluit aan waar jij bent.</h2>
+                    <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed">In elke sessie is Noah actief bezig om jou te begrijpen. Ze merkt patronen op, stelt de juiste vragen en brengt nieuwe invalshoeken wanneer je die nodig hebt.</p>
                 </div>
                 <div class="order-1 md:order-2 scroll-reveal">
-                    <img src="./Images/example-1.png" alt="Noah in conversation" class="w-full h-auto block rounded-2xl">
+                    <!-- Height-capped instead of w-full: the Dutch screenshot is far squarer
+                         than the English one (1.46 vs 2.50), so stretching it to the column
+                         width made it tower over the text beside it. Resizing the export does
+                         nothing here, only the ratio or this cap does. -->
+                    <img src="../Images/voorbeeld-1v1.png" alt="Noah in gesprek"
+                         class="h-auto block rounded-2xl mx-auto"
+                         style="max-height:300px; width:auto; max-width:100%;">
                 </div>
             </div>
 
             <div class="md:hidden px-8 py-2"><hr style="border:none;border-top:1px solid #e2d9cf;"></div>
-            <div class="hidden md:flex justify-center"><img src="./Images/right.png" alt="" class="w-full max-w-xl h-auto pointer-events-none"></div>
+            <div class="hidden md:flex justify-center"><img src="../Images/right.png" alt="" class="w-full max-w-xl h-auto pointer-events-none"></div>
 
             <!-- Row 4: screenshot left, text right -->
             <div class="max-w-6xl mx-auto px-8 md:px-24 py-8 md:py-14 grid md:grid-cols-[3fr_2fr] gap-10 md:gap-16 items-center">
                 <div class="scroll-reveal">
-                    <img src="./Images/example-2.png" alt="Track your progress" class="w-full h-auto block rounded-2xl">
+                    <img src="../Images/voorbeeld-2.png" alt="Track your progress" class="w-full h-auto block rounded-2xl">
                 </div>
                 <div class="space-y-5 scroll-reveal">
-                    <img src="./Images/4.png" alt="4" style="width:52px;height:auto;display:block;margin-bottom:12px;">
-                    <h2 class="text-4xl md:text-5xl text-[#6A2500] leading-tight tracking-tight">See how deep you're going.</h2>
-                    <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed">Every conversation adds depth. You can see exactly where you are in your journey and what's coming next.</p>
+                    <img src="../Images/4.png" alt="4" style="width:52px;height:auto;display:block;margin-bottom:12px;">
+                    <h2 class="text-4xl md:text-5xl text-[#6A2500] leading-tight tracking-tight">Zie hoe diep je gaat.</h2>
+                    <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed">Elk gesprek voegt diepte toe. Je ziet precies waar je staat in je traject en wat er nog komt.</p>
                 </div>
             </div>
 
             <div class="md:hidden px-8 py-2"><hr style="border:none;border-top:1px solid #e2d9cf;"></div>
-            <div class="hidden md:flex justify-center"><img src="./Images/left.png" alt="" class="w-full max-w-xl h-auto pointer-events-none"></div>
+            <div class="hidden md:flex justify-center"><img src="../Images/left.png" alt="" class="w-full max-w-xl h-auto pointer-events-none"></div>
 
             <!-- Row 5: text left, session summary right -->
             <div class="max-w-6xl mx-auto px-8 md:px-24 py-8 md:py-14 grid md:grid-cols-[2fr_3fr] gap-10 md:gap-16 items-center">
                 <div class="space-y-5 order-2 md:order-1 scroll-reveal">
-                    <img src="./Images/5.png" alt="5" style="width:52px;height:auto;display:block;margin-bottom:12px;">
-                    <h2 class="text-4xl md:text-5xl text-[#6A2500] leading-tight tracking-tight">Tracking your growth.</h2>
-                    <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed">After every session, Noah summarizes. What you talked about and what changed. Every 24 hours there will be a new summary so you can track your growth.</p>
+                    <img src="../Images/5.png" alt="5" style="width:52px;height:auto;display:block;margin-bottom:12px;">
+                    <h2 class="text-4xl md:text-5xl text-[#6A2500] leading-tight tracking-tight">Je groei bijhouden.</h2>
+                    <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed">Na elke sessie vat Noah samen waar je het over had en wat er veranderde. Elke 24 uur komt er een nieuwe samenvatting, zodat je je groei kunt volgen.</p>
                 </div>
                 <div class="order-1 md:order-2 scroll-reveal flex justify-center">
-                    <img src="./Images/example-7.png" alt="Session summary" class="h-auto block rounded-2xl" style="max-width:420px;width:100%;">
+                    <img src="../Images/voorbeeld-7.png" alt="Session summary" class="h-auto block rounded-2xl" style="max-width:420px;width:100%;">
                 </div>
             </div>
 
             <div class="md:hidden px-8 py-2"><hr style="border:none;border-top:1px solid #e2d9cf;"></div>
-            <div class="hidden md:flex justify-center"><img src="./Images/right.png" alt="" class="w-full max-w-xl h-auto pointer-events-none"></div>
+            <div class="hidden md:flex justify-center"><img src="../Images/right.png" alt="" class="w-full max-w-xl h-auto pointer-events-none"></div>
 
             <!-- Row 6: image left, text right -->
             <div class="max-w-6xl mx-auto px-8 md:px-24 py-8 md:py-14 grid md:grid-cols-[3fr_2fr] gap-10 md:gap-16 items-center">
                 <div class="scroll-reveal">
-                    <img src="./Images/example3-4.png" alt="Level up cards" class="w-full h-auto block rounded-2xl">
+                    <img src="../Images/voorbeeld3-4.png" alt="Level up cards" class="w-full h-auto block rounded-2xl">
                 </div>
                 <div class="space-y-5 scroll-reveal">
-                    <img src="./Images/6.png" alt="6" style="width:52px;height:auto;display:block;margin-bottom:12px;">
-                    <h2 class="text-4xl md:text-5xl text-[#6A2500] leading-tight tracking-tight">Know when you've arrived.</h2>
-                    <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed">You can see yourself deepening in a theme, session by session. And when you've reached the end, Noah will let you know. You'll receive an insight card that captures what you worked through, what changed, and what to do next if you ever feel lost. It lives in your theme, so you can always come back to it.</p>
+                    <img src="../Images/6.png" alt="6" style="width:52px;height:auto;display:block;margin-bottom:12px;">
+                    <h2 class="text-4xl md:text-5xl text-[#6A2500] leading-tight tracking-tight">Weet wanneer je er bent.</h2>
+                    <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed">Sessie na sessie ga je dieper op een thema in, en wanneer je het einde bereikt hebt, laat Noah het je weten. Je krijgt een inzichtkaart met wat je hebt ontdekt, wat er is veranderd, en wat je kunt doen als je je ooit weer vastloopt. De kaart blijft bij je thema staan, zodat je er altijd naar terug kunt.</p>
                 </div>
             </div>
 
@@ -814,22 +818,22 @@
     <!-- Footer -->
     <!-- App notify section -->
     <section id="app-notify" style="background:#FAF9F7;padding:96px 24px;text-align:center;border-top:1px solid rgba(0,0,0,0.05);position:relative;">
-      <img src="./Images/app.png" alt="" aria-hidden="true" class="hidden md:block" style="position:absolute;right:40px;top:50%;transform:translateY(-45%) rotate(10deg);width:250px;opacity:0.9;pointer-events:none;user-select:none;z-index:10;">
+      <img src="../Images/app.png" alt="" aria-hidden="true" class="hidden md:block" style="position:absolute;right:40px;top:50%;transform:translateY(-45%) rotate(10deg);width:250px;opacity:0.9;pointer-events:none;user-select:none;z-index:10;">
       <div style="max-width:520px;margin:0 auto;position:relative;z-index:1;">
-        <img src="./Images/icon-app.png" alt="Baeloom app icon" class="block md:hidden" style="width:104px;height:auto;margin:0 auto 34px;display:block;">
-        <h2 class="text-4xl md:text-5xl text-[#6A2500] leading-tight tracking-tight" style="margin-bottom:16px;">Noah in your pocket.</h2>
-        <p style="font-family:'Albert Sans',sans-serif;font-size:1rem;color:#888;font-weight:400;line-height:1.65;margin-bottom:36px;">We're currently super busy building the Baeloom app. Want to be one of the first to know when it launches? Leave your email and we'll reach out the moment it's ready.</p>
+        <img src="../Images/icon-app.png" alt="Baeloom app icon" class="block md:hidden" style="width:104px;height:auto;margin:0 auto 34px;display:block;">
+        <h2 class="text-4xl md:text-5xl text-[#6A2500] leading-tight tracking-tight" style="margin-bottom:16px;">Noah in je broekzak.</h2>
+        <p style="font-family:'Albert Sans',sans-serif;font-size:1rem;color:#888;font-weight:400;line-height:1.65;margin-bottom:36px;">We zijn op dit moment druk bezig met het bouwen van de Baeloom-app. Wil je als eerste weten wanneer die live gaat? Laat je e-mail achter en we nemen contact op zodra hij klaar is.</p>
         <div id="notify-form" style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
-          <input id="notify-email" type="email" placeholder="your@email.com" aria-label="Your email address" autocomplete="email" style="font-family:'Albert Sans',sans-serif;font-size:0.95rem;padding:13px 22px;border-radius:100px;border:1.5px solid rgba(0,0,0,0.15);background:white;color:#1a1a1a;outline:none;width:260px;transition:border-color 0.2s;" onfocus="this.style.borderColor='#FF6D1F'" onblur="this.style.borderColor='rgba(0,0,0,0.15)'" />
-          <button id="notify-btn" onclick="submitNotify()" style="font-family:'Albert Sans',sans-serif;font-size:0.9rem;font-weight:600;padding:13px 32px;border-radius:100px;background:#FF6D1F;color:white;border:none;cursor:pointer;transition:background 0.2s;white-space:nowrap;" onmouseover="this.style.background='#6A2500';this.style.color='#FF6D1F'" onmouseout="this.style.background='#FF6D1F';this.style.color='white'">I'm in</button>
+          <input id="notify-email" type="email" placeholder="your@email.com" aria-label="Je e-mailadres" autocomplete="email" style="font-family:'Albert Sans',sans-serif;font-size:0.95rem;padding:13px 22px;border-radius:100px;border:1.5px solid rgba(0,0,0,0.15);background:white;color:#1a1a1a;outline:none;width:260px;transition:border-color 0.2s;" onfocus="this.style.borderColor='#FF6D1F'" onblur="this.style.borderColor='rgba(0,0,0,0.15)'" />
+          <button id="notify-btn" onclick="submitNotify()" style="font-family:'Albert Sans',sans-serif;font-size:0.9rem;font-weight:600;padding:13px 32px;border-radius:100px;background:#FF6D1F;color:white;border:none;cursor:pointer;transition:background 0.2s;white-space:nowrap;" onmouseover="this.style.background='#6A2500';this.style.color='#FF6D1F'" onmouseout="this.style.background='#FF6D1F';this.style.color='white'">Ik doe mee</button>
         </div>
         <div id="notify-success" style="display:none;margin-top:8px;">
-          <p style="font-family:'Albert Sans',sans-serif;font-size:0.95rem;color:#6A2500;font-weight:500;">You're on the list. We'll be in touch.</p>
+          <p style="font-family:'Albert Sans',sans-serif;font-size:0.95rem;color:#6A2500;font-weight:500;">Je staat op de lijst. We houden je op de hoogte.</p>
         </div>
         <div id="notify-error" style="display:none;margin-top:8px;">
-          <p style="font-family:'Albert Sans',sans-serif;font-size:0.875rem;color:#e55e14;" id="notify-error-text">Something went wrong. Try again.</p>
+          <p style="font-family:'Albert Sans',sans-serif;font-size:0.875rem;color:#e55e14;" id="notify-error-text">Er ging iets mis. Probeer het opnieuw.</p>
         </div>
-        <p style="font-family:'Albert Sans',sans-serif;font-size:0.78rem;color:#bbb;margin-top:20px;">No spam or other marketing stuff, we promise!</p>
+        <p style="font-family:'Albert Sans',sans-serif;font-size:0.78rem;color:#bbb;margin-top:20px;">Geen spam of andere marketingonzin, beloofd!</p>
       </div>
     </section>
 
@@ -837,12 +841,12 @@
         <div class="bg-white px-0 md:px-16 lg:px-24 py-12 md:py-24 border-t border-gray-100 text-center md:text-left">
             <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
                 <div class="space-y-2 px-8 md:px-0">
-                    <h3 class="text-4xl md:text-5xl text-[#6A2500]" style="font-weight:600;letter-spacing:-0.02em;">Still have questions?</h3>
-                    <p class="text-[var(--text-muted)] text-sm md:text-base font-light leading-relaxed px-8 md:px-0">Our support team is always here to guide you.</p>
+                    <h3 class="text-4xl md:text-5xl text-[#6A2500]" style="font-weight:600;letter-spacing:-0.02em;">Nog vragen?</h3>
+                    <p class="text-[var(--text-muted)] text-sm md:text-base font-light leading-relaxed px-8 md:px-0 mt-3">Ons supportteam staat altijd voor je klaar.</p>
                 </div>
                 <div class="px-8 md:px-0 w-full md:w-auto">
                     <a href="./contact.html" class="pill-button btn-primary px-10 md:px-12 h-14 md:h-16 text-lg md:text-xl shadow-lg shadow-orange-500/20 w-full md:w-auto transition-all duration-500 ease-out group">
-                        Contact us
+                        Neem contact op
                         <i data-lucide="arrow-up-right" class="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
                     </a>
                 </div>
@@ -852,14 +856,14 @@
         <div class="px-6 md:px-16 lg:px-24 pt-8 pb-12 md:pb-16 border-t border-gray-50 text-center">
             <div class="max-w-6xl mx-auto flex flex-col items-center">
                 <div class="flex flex-col items-center gap-6 mb-12">
-                    <p class="text-[10px] uppercase tracking-widest text-[var(--text-muted)] font-bold">Pay easily with</p>
+                    <p class="text-[10px] uppercase tracking-widest text-[var(--text-muted)] font-bold">Betaal eenvoudig met</p>
                     <div class="flex flex-wrap justify-center gap-6 md:gap-8 items-center">
-                        <img src="./Images/IDEAL.png" alt="iDeal" class="h-6 md:h-7 transition-opacity">
-                        <img src="./Images/Apple_pay.png" alt="Apple Pay" class="h-8 md:h-10 transition-opacity">
-                        <img src="./Images/Google_pay.png" alt="Google Pay" class="h-7 md:h-9 transition-opacity">
-                        <img src="./Images/PayPal.png" alt="PayPal" class="h-4 md:h-5">
-                        <img src="./Images/Visa.png" alt="Visa" class="h-2 md:h-3">
-                        <img src="./Images/Mastercard.png" alt="Mastercard" class="h-6 md:h-8">
+                        <img src="../Images/IDEAL.png" alt="iDeal" class="h-6 md:h-7 transition-opacity">
+                        <img src="../Images/Apple_pay.png" alt="Apple Pay" class="h-8 md:h-10 transition-opacity">
+                        <img src="../Images/Google_pay.png" alt="Google Pay" class="h-7 md:h-9 transition-opacity">
+                        <img src="../Images/PayPal.png" alt="PayPal" class="h-4 md:h-5">
+                        <img src="../Images/Visa.png" alt="Visa" class="h-2 md:h-3">
+                        <img src="../Images/Mastercard.png" alt="Mastercard" class="h-6 md:h-8">
                     </div>
                 </div>
                 <div class="w-full max-w-lg h-px bg-gray-100 mb-10"></div>
@@ -875,9 +879,9 @@
                     </a>
                 </div>
                 <div class="flex flex-wrap justify-center gap-6 md:gap-10 text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)]">
-    <a href="./privacy.html" class="hover:text-[#FF6D1F] transition-colors">Privacy Policy</a>
-    <a href="./cookies.html" class="hover:text-[#FF6D1F] transition-colors">Cookies Policy</a>
-    <a href="./terms.html" class="hover:text-[#FF6D1F] transition-colors">Terms and conditions</a>
+    <a href="../privacy.html" class="hover:text-[#FF6D1F] transition-colors">Privacybeleid</a>
+    <a href="../cookies.html" class="hover:text-[#FF6D1F] transition-colors">Cookiebeleid</a>
+    <a href="../terms.html" class="hover:text-[#FF6D1F] transition-colors">Algemene voorwaarden</a>
 </div>
             </div>
         </div>
@@ -889,28 +893,28 @@
         // FLOATING CHAT ANIMATION
         const allChats = {
             playful: [
-                { type: 'user', text: "The ikea cabinet is up but it wobbles and I'm not redoing it" },
-                { type: 'lucy', text: "Nah, that usually just means one leg isn't quite touching the floor. Stick a felt pad under it and you're done." },
-                { type: 'user', text: "I'm not buying felt pads specially for this" },
-                { type: 'lucy', text: "Don't most furniture sets come with them? Otherwise I'd push up one corner and feel where the play is." },
-                { type: 'user', text: "oh wait it does dip on the left side" },
-                { type: 'lucy', text: "Can you put something under it you already have lying around? A coin or something?" },
+                { type: 'user', text: "De ikea kast staat maar hij wiebelt en ik ga hem echt niet opnieuw doen" },
+                { type: 'lucy', text: "Nee joh, meestal ligt het aan een pootje dat de grond niet helemaal raakt. Duw er een viltje onder en je bent klaar." },
+                { type: 'user', text: "Ik ga daar echt niet speciaal viltjes voor kopen" },
+                { type: 'lucy', text: "Die zitten toch bij de meeste meubels? Anders zou ik even checken of je een hoekje van de kast omhoog kan duwen en dan voelen waar de speling zit." },
+                { type: 'user', text: "oh wacht hij zakt inderdaad aan de linkerkant" },
+                { type: 'lucy', text: "Kan je daar iets onder leggen wat je wel in huis hebt? Een muntje of zo?" },
             ],
             honest: [
-                { type: 'user', text: "I think I should just work less. I'm tired all the time." },
-                { type: 'lucy', text: "Maybe. It could also be that the work itself is draining you. Fewer hours doesn't fix that on its own." },
-                { type: 'user', text: "Yeah, but I just feel like I have too little time for myself." },
-                { type: 'lucy', text: "Could be. Though if you fill that time with the same things that are draining you now, does anything actually change?" },
-                { type: 'user', text: "Maybe not. I think I'm mostly trying to make my life easier." },
-                { type: 'lucy', text: "I think so too. Only, the way I see it, you're solving the effect right now, not the reason you're so tired." },
+                { type: 'user', text: "Ik denk dat ik gewoon minder moet werken. Ik ben de hele tijd moe." },
+                { type: 'lucy', text: "Misschien. Het kan ook zijn dat je werk je leegtrekt. Minder uren lost dat niet vanzelf op." },
+                { type: 'user', text: "Ja, maar ik heb gewoon het gevoel dat ik te weinig tijd voor mezelf heb." },
+                { type: 'lucy', text: "Dat kan. Alleen: als je die tijd straks vult met dezelfde dingen die je nu al leegtrekken, verandert er dan echt iets?" },
+                { type: 'user', text: "Misschien niet. Ik denk dat ik vooral probeer mijn leven makkelijker te maken." },
+                { type: 'lucy', text: "Dat denk ik ook. Alleen volgens mij probeer je nu het gevolg op te lossen, niet de reden waarom je zo moe bent." },
             ],
             sharp: [
-                { type: 'user', text: "I was secretly relieved when my colleague went home sick." },
-                { type: 'lucy', text: "Why did you feel relieved?" },
-                { type: 'user', text: "Because I always feel a bit insecure around her." },
-                { type: 'lucy', text: "Because you keep comparing yourself to her?" },
-                { type: 'user', text: "Yeah. She doesn't actually do anything wrong, but it still feels like I'm behind." },
-                { type: 'lucy', text: "Then maybe you're not jealous of her, but of where you think you should be by now." },
+                { type: 'user', text: "Ik was stiekem opgelucht toen mijn collega ziek naar huis ging." },
+                { type: 'lucy', text: "Waarom voelde je je opgelucht?" },
+                { type: 'user', text: "Omdat ik me naast haar altijd een beetje onzeker voel." },
+                { type: 'lucy', text: "Omdat je jezelf steeds met haar vergelijkt?" },
+                { type: 'user', text: "Ja. Zij doet eigenlijk niks verkeerd, maar toch voelt het soms alsof ik achterloop." },
+                { type: 'lucy', text: "Misschien ben je dan niet jaloers op h\u00e1\u00e1r, maar op waar jij denkt dat je zelf zou moeten zijn." },
             ],
         };
 
@@ -1156,7 +1160,7 @@
                 btn.textContent = "I'm in";
                 btn.style.background = '#FF6D1F';
                 btn.style.color = 'white';
-                errorText.textContent = 'Something went wrong. Try again.';
+                errorText.textContent = 'Er ging iets mis. Probeer het opnieuw.';
                 errorEl.style.display = 'block';
                 console.error(err);
             }
@@ -1170,6 +1174,6 @@
             });
         });
     </script>
-<script src="./cookie-banner.js"></script>
+<script src="../cookie-banner.js"></script>
 </body>
 </html>
