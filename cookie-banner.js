@@ -20,7 +20,13 @@ function loadGA() {
 // Meta Pixel, loaded on the same consent as GA. Nothing fires before the
 // visitor accepts: the script tag itself is only injected from here, so a
 // declined visitor never contacts Meta at all.
-const META_PIXEL_ID = '1512250620726066';
+// Swapped 31 Aug 2026. The first pixel (1512250620726066) was created while Meta
+// had switched us into the personal account context, so it ended up owned by ad
+// account 2012074556156937 while the campaign runs in 111252691440747. A pixel
+// owned by an ad account cannot be claimed by a business portfolio, so the only
+// way out was a new one, created inside the portfolio and connected to the right
+// ad account on the way in.
+const META_PIXEL_ID = '2016987715681287';
 
 function loadMetaPixel() {
   if (!META_PIXEL_ID || window.fbq) return;
