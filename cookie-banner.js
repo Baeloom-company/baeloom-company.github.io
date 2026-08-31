@@ -47,6 +47,18 @@ function loadMetaPixel() {
 // banner) on chat.baeloom.com. Per-ad it answers: which creative sent people
 // who actually wanted in.
 function trackAppClick(e) {
+  // Analytics first, and outside the fbq guard on purpose. A blocked Meta pixel
+  // used to mean this whole function returned before recording anything, so a
+  // click was invisible in both places. chat.baeloom.com is a subdomain, which
+  // GA4 usually treats as internal, so its automatic outbound-click measurement
+  // does not catch these either. This is the only place they get counted.
+  if (window.gtag) {
+    gtag('event', 'click_to_app', {
+      event_category: 'engagement',
+      event_label: window.location.pathname
+    });
+  }
+
   if (!window.fbq) return;
   fbq('trackCustom', 'ClickToApp');
 
