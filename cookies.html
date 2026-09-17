@@ -261,16 +261,16 @@
       border-bottom: 1px solid rgba(106,37,0,0.1); display: block; transition: color 0.2s;
     }
     #mobile-menu a.mobile-link:hover { color: #FF6D1F; }
-    #mobile-menu .menu-bottom { margin-top: 32px; display: flex; gap: 12px; }
+    #mobile-menu .menu-bottom { margin-top: 32px; display: flex; flex-direction: column; gap: 10px; }
     #mobile-menu .mobile-support {
-      flex: 1; display: flex; align-items: center; justify-content: center; padding: 16px;
+      width: 100%; white-space: nowrap; display: flex; align-items: center; justify-content: center; padding: 16px;
       border-radius: 10px; font-family: 'Albert Sans', sans-serif; font-size: 0.95rem;
       font-weight: 600; text-decoration: none; color: #6A2500;
       border: 1.5px solid rgba(106,37,0,0.2); transition: all 0.2s;
     }
     #mobile-menu .mobile-support:hover { border-color: #FF6D1F; color: #FF6D1F; }
     #mobile-menu .mobile-cta {
-      flex: 1; display: flex; align-items: center; justify-content: center;
+      width: 100%; white-space: nowrap; display: flex; align-items: center; justify-content: center;
       background: #FF6D1F; color: white; text-align: center; padding: 16px;
       border-radius: 10px; font-family: 'Albert Sans', sans-serif; font-size: 0.95rem;
       font-weight: 600; text-decoration: none; transition: background 0.2s;
@@ -315,8 +315,8 @@
   <a href="./faq.html" class="mobile-link">FAQ</a>
   <a href="./contact.html" class="mobile-link">Contact support</a>
   <div class="menu-bottom">
-    <a href="https://chat.baeloom.com" class="mobile-support">Log in</a>
     <a href="https://chat.baeloom.com" class="mobile-cta">Try Noah for free</a>
+    <a href="https://chat.baeloom.com" class="mobile-support">Log in</a>
   </div>
 </div>
 

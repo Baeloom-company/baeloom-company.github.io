@@ -221,14 +221,16 @@
         #mobile-menu .menu-bottom {
             margin-top: 32px;
             display: flex;
-            gap: 12px;
+            flex-direction: column;
+            gap: 10px;
         }
         #mobile-menu .mobile-support {
-            flex: 1;
+            width: 100%;
+            white-space: nowrap;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 16px;
+            padding: 15px;
             border-radius: 10px;
             font-family: 'Albert Sans', sans-serif;
             font-size: 0.95rem;
@@ -240,7 +242,8 @@
         }
         #mobile-menu .mobile-support:hover { border-color: #FF6D1F; color: #FF6D1F; }
         #mobile-menu .mobile-cta {
-            flex: 1;
+            width: 100%;
+            white-space: nowrap;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -281,7 +284,6 @@
                 padding-right: 0 !important;
                 margin-top: 0 !important;
                 overflow-wrap: break-word;
-                word-break: break-word;
             }
             .hero-content > p {
                 font-size: 1rem !important;
@@ -604,8 +606,8 @@
         <a href="./contact.html" class="mobile-link">Contact</a>
         <a href="/" class="mobile-link mobile-lang" onclick="try{localStorage.setItem('bae-lang','en')}catch(e){}"><span style="margin-right:8px">🇬🇧</span>English</a>
         <div class="menu-bottom">
-            <a href="https://chat.baeloom.com/?lang=nl" class="mobile-support">Inloggen</a>
             <a href="https://chat.baeloom.com/?lang=nl" class="mobile-cta">Probeer Noah gratis</a>
+            <a href="https://chat.baeloom.com/?lang=nl" class="mobile-support">Inloggen</a>
         </div>
     </div>
 

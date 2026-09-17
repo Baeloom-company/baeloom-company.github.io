@@ -221,14 +221,16 @@
         #mobile-menu .menu-bottom {
             margin-top: 32px;
             display: flex;
-            gap: 12px;
+            flex-direction: column;
+            gap: 10px;
         }
         #mobile-menu .mobile-support {
-            flex: 1;
+            width: 100%;
+            white-space: nowrap;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 16px;
+            padding: 15px;
             border-radius: 10px;
             font-family: 'Albert Sans', sans-serif;
             font-size: 0.95rem;
@@ -240,7 +242,8 @@
         }
         #mobile-menu .mobile-support:hover { border-color: #FF6D1F; color: #FF6D1F; }
         #mobile-menu .mobile-cta {
-            flex: 1;
+            width: 100%;
+            white-space: nowrap;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -274,14 +277,13 @@
                    groei". Scales with the screen so the second line never
                    wraps on narrow phones; the h1 drops its own side padding
                    so it can use the full width of the hero. */
-                font-size: min(3rem, calc((100vw - 40px) / 9.8)) !important;
+                font-size: min(3rem, calc((100vw - 40px) / 10.5)) !important;
                 line-height: 1.15 !important;
                 letter-spacing: -0.02em !important;
                 padding-left: 0 !important;
                 padding-right: 0 !important;
                 margin-top: 0 !important;
                 overflow-wrap: break-word;
-                word-break: break-word;
             }
             .hero-content > p {
                 font-size: 1rem !important;
@@ -604,8 +606,8 @@
         <a href="./contact.html" class="mobile-link">Contact support</a>
         <a href="/nl/" class="mobile-link mobile-lang" onclick="try{localStorage.setItem('bae-lang','nl')}catch(e){}"><span style="margin-right:8px">🇳🇱</span>Nederlands</a>
         <div class="menu-bottom">
-            <a href="https://chat.baeloom.com" class="mobile-support">Log in</a>
             <a href="https://chat.baeloom.com" class="mobile-cta">Try Noah for free</a>
+            <a href="https://chat.baeloom.com" class="mobile-support">Log in</a>
         </div>
     </div>
 
