@@ -132,14 +132,14 @@ function initCookieBanner() {
       </p>
       <div style="display:flex;gap:10px;flex-shrink:0;">
         <button onclick="setCookieChoice(false)" style="
-          padding:9px 22px;border-radius:100px;border:1px solid rgba(0,0,0,0.2);
+          padding:9px 22px;border-radius:10px;border:1px solid rgba(0,0,0,0.2);
           background:transparent;font-family:'Albert Sans',sans-serif;font-size:0.85rem;
           font-weight:500;color:#505050;cursor:pointer;transition:border-color 0.2s;
         " onmouseover="this.style.borderColor='#1a1a1a'" onmouseout="this.style.borderColor='rgba(0,0,0,0.2)'">
           ${COOKIE_TXT.decline}
         </button>
         <button onclick="setCookieChoice(true)" style="
-          padding:9px 22px;border-radius:100px;border:none;
+          padding:9px 22px;border-radius:10px;border:none;
           background:#FF6D1F;font-family:'Albert Sans',sans-serif;font-size:0.85rem;
           font-weight:600;color:white;cursor:pointer;transition:background 0.2s;
         " onmouseover="this.style.background='#6A2500'" onmouseout="this.style.background='#FF6D1F'">
