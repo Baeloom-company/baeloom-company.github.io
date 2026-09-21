@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baeloom | Noah, jouw persoonlijke sparringpartner</title>
-    <meta name="description" content="Een goed gesprek kan je dag veranderen. Noah is jouw persoonlijke sparringpartner: ze luistert, onthoudt wat je zei en zegt eerlijk wat ze denkt.">
+    <title>Baeloom | Jouw sparringpartner voor persoonlijke groei</title>
+    <meta name="description" content="Maak kennis met Noah, jouw AI-sparringpartner. Verken wat er speelt, ontdek patronen en krijg meer inzicht in wat je bezighoudt. Gratis te proberen.">
     <link rel="canonical" href="https://www.baeloom.com/nl/">
     <link rel="alternate" hreflang="en" href="https://www.baeloom.com/">
     <link rel="alternate" hreflang="nl" href="https://www.baeloom.com/nl/">
@@ -13,19 +13,19 @@
     <!-- Open Graph (Facebook, Instagram, WhatsApp, iMessage, LinkedIn) -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Baeloom">
-    <meta property="og:title" content="Baeloom | Noah, jouw persoonlijke sparringpartner">
-    <meta property="og:description" content="Een goed gesprek kan je dag veranderen. Noah is jouw persoonlijke sparringpartner: ze luistert, onthoudt wat je zei en zegt eerlijk wat ze denkt.">
+    <meta property="og:title" content="Baeloom | Jouw sparringpartner voor persoonlijke groei">
+    <meta property="og:description" content="Maak kennis met Noah, jouw AI-sparringpartner. Verken wat er speelt, ontdek patronen en krijg meer inzicht in wat je bezighoudt. Gratis te proberen.">
     <meta property="og:url" content="https://www.baeloom.com/nl/">
-    <meta property="og:image" content="https://www.baeloom.com/Images/og-image-v2.png">
+    <meta property="og:image" content="https://www.baeloom.com/Images/og-image-v3.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Baeloom — Denk naar binnen, leef vooruit.">
+    <meta property="og:image:alt" content="Baeloom — jouw sparringpartner voor persoonlijke groei.">
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Baeloom | Noah, jouw persoonlijke sparringpartner">
-    <meta name="twitter:description" content="Een goed gesprek kan je dag veranderen. Noah is jouw persoonlijke sparringpartner: ze luistert, onthoudt wat je zei en zegt eerlijk wat ze denkt.">
-    <meta name="twitter:image" content="https://www.baeloom.com/Images/og-image-v2.png">
+    <meta name="twitter:title" content="Baeloom | Jouw sparringpartner voor persoonlijke groei">
+    <meta name="twitter:description" content="Maak kennis met Noah, jouw AI-sparringpartner. Verken wat er speelt, ontdek patronen en krijg meer inzicht in wat je bezighoudt. Gratis te proberen.">
+    <meta name="twitter:image" content="https://www.baeloom.com/Images/og-image-v3.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="icon" href="/favicon.ico" sizes="any">
@@ -101,10 +101,15 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            max-width: 1152px;
+            /* Zelfde marges als de secties eronder, zodat het logo links
+               uitlijnt met de inhoud. */
+            max-width: 1344px;
             margin: 0 auto;
-            padding: 0 48px;
+            padding: 0 96px;
+            box-sizing: border-box;
         }
+        @media (max-width: 1023px) { #nav-container { max-width: 1280px; padding: 0 64px; } }
+        @media (max-width: 767px)  { #nav-container { max-width: 100%; padding: 0 24px; } }
         #nav-logo { height: 28px; width: auto; display: block; }
         .nav-link {
             font-family: 'Albert Sans', sans-serif;
@@ -147,7 +152,6 @@
         .nav-cta-btn:hover { background: #6A2500; color: #FF6D1F; }
         @media (max-width: 640px) {
             .nav-links { display: none !important; }
-            #nav-container { padding: 0 20px; }
         }
 
 
@@ -258,7 +262,7 @@
             text-decoration: none;
             transition: background 0.2s;
         }
-        #mobile-menu .mobile-cta:hover { background: #6A2500; }
+        #mobile-menu .mobile-cta:hover { background: #6A2500; color: #FF6D1F; }
         @media (max-width: 640px) {
             #hamburger { display: flex; }
       
@@ -337,17 +341,6 @@
             z-index: 2; 
             width: 100%; 
             padding-top: 80px; 
-        }
-
-        /* INTERACTION */
-        .interaction-section {
-            padding: 4rem 0 3rem 0;
-            background-color: var(--white);
-            position: relative;
-            overflow: hidden;
-        }
-        @media (min-width: 768px) {
-            .interaction-section { padding: 8rem 0 4rem 0; }
         }
 
         .phone-mockup {
@@ -573,6 +566,28 @@
 
         
     </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Baeloom | Jouw sparringpartner voor persoonlijke groei",
+      "url": "https://www.baeloom.com/nl/",
+      "inLanguage": "nl-NL",
+      "description": "Maak kennis met Noah, jouw AI-sparringpartner. Verken wat er speelt, ontdek patronen en krijg meer inzicht in wat je bezighoudt.",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.baeloom.com/Images/og-image-v3.png",
+        "width": 1200,
+        "height": 630
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Baeloom",
+        "url": "https://www.baeloom.com/",
+        "logo": "https://www.baeloom.com/Images/baeloom-logo-only.png"
+      }
+    }
+    </script>
 </head>
 <body class="antialiased">
 
@@ -630,60 +645,182 @@
                 </a>
             </div>
             <div id="hero-chevron" class="flex items-center justify-center pt-8 md:pt-12">
-                <a href="#interaction" class="text-[#FF6D1F]">
+                <a href="#highlights" class="text-[#FF6D1F]">
                     <i data-lucide="chevron-down" class="w-12 h-12 md:w-16 md:h-16 stroke-[2.5]"></i>
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- MEET NOAH SECTION -->
-    <section id="interaction" class="interaction-section px-0 md:px-16 lg:px-24 pt-16 md:pt-24" style="background:#FCF7F0;">
 
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 lg:gap-24 md:items-start pb-6 md:pb-12 relative z-10">
+    <!-- ── HIGHLIGHTS: zes kaarten, drie kolommen ──────────────────── -->
+    <style>
+      #highlights {
+        background: url('../Images/paper-bg.jpg') center/cover no-repeat, #FBF6EE;
+        /* Dezelfde marge-trap als de andere secties (px-0 / md:px-16 / lg:px-24)
+           zodat de kaarten links uitlijnen met het logo in de navigatie. */
+        padding: 80px 96px 96px;
+      }
+      @media (max-width: 1023px) { #highlights { padding: 72px 64px 84px; } }
+      @media (max-width: 767px)  { #highlights { padding: 60px 24px 72px; } }
+      #highlights .hl-inner { max-width: 1152px; margin: 0 auto; }
+      #highlights .hl-title {
+        font-family: 'Albert Sans', sans-serif;
+        font-weight: 700;
+        font-size: clamp(30px, 4.4vw, 52px);
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        color: #644737;
+        text-align: center;
+        margin: 0 0 18px;
+      }
+      #highlights .hl-sub {
+        font-family: 'Albert Sans', sans-serif;
+        font-size: 15px;
+        line-height: 1.6;
+        color: #7b6455;
+        text-align: center;
+        max-width: 470px;
+        margin: 0 auto 54px;
+      }
+      #highlights .hl-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+        align-items: stretch;
+      }
+      /* Kolommen even hoog en de kaarten tegen boven- en onderkant: alle
+         kolommen beginnen en eindigen op dezelfde lijn. */
+      #highlights .hl-col {
+        display: flex; flex-direction: column;
+        justify-content: space-between;
+        gap: 22px; height: 100%;
+      }
+      #highlights .hl-card {
+        background: #fff;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 1px 3px rgba(100, 71, 55, 0.06);
+      }
+      /* Dezelfde padding overal, zodat koppen en regels uitlijnen. */
+      #highlights .hl-copy { padding: 28px 28px 0; }
+      #highlights .hl-card-text .hl-copy,
+      #highlights .hl-card-voice .hl-copy { padding: 28px 28px 32px; }
+      #highlights .hl-card h3 {
+        font-family: 'Albert Sans', sans-serif;
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 1.25;
+        letter-spacing: -0.01em;
+        color: #644737;
+        margin: 0 0 12px;
+      }
+      #highlights .hl-card p {
+        font-family: 'Albert Sans', sans-serif;
+        font-size: 14px;
+        line-height: 1.55;
+        color: #8a7365;
+        margin: 0;
+      }
+      /* De telefoons zijn Esmee's eigen SVG's: het witte vlak eromheen loopt
+         gelijk met de kaart, de telefoon loopt over de rand heen. */
+      #highlights .hl-shot { display: block; width: 100%; height: auto; }
+      #highlights .hl-shot-bottom { margin-top: 20px; }
 
-            <!-- LEFT: text grouped together -->
-            <div class="space-y-8 px-8 md:px-0 order-1 md:order-1">
-                <h2 class="text-5xl md:text-7xl text-[#6A2500] leading-[1.05] md:leading-[0.9] mt-0 tracking-tight scroll-reveal">
-                    Iemand die<br>echt luistert.
-                </h2>
-                <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed scroll-reveal">
-                    Sommige dingen wil je even kwijt maar weet je niet goed hoe je dat moet doen, zelfs bij mensen die van je houden. Niet omdat het ze niks uitmaakt, maar omdat je ze niet wilt belasten met je gedachten. Het is niet erg om soms een andere manier te zoeken om je hoofd leeg te maken.
-                </p>
-                <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed scroll-reveal">
-                    Noah kan die andere manier zijn. Zij is jouw persoonlijke sparringpartner ontwikkeld door Baeloom en heeft haar eigen karakter en meningen. Ze spiegelt je niet, maar luistert, onthoudt, reflecteert, geeft inzicht en spreekt je tegen wanneer dat nodig is.
-                </p>
-                <div class="hidden md:inline-flex flex-col items-center scroll-reveal mt-6">
-                    <a href="https://chat.baeloom.com/?lang=nl" class="pill-button btn-primary h-14 text-lg shadow-lg shadow-orange-500/20 px-10" style="font-weight:700;letter-spacing:-0.01em;">
-                        Praat met Noah
-                    </a>
-                </div>
-            </div>
+      #highlights .hl-cta-wrap { display: flex; justify-content: center; margin-top: 54px; }
+      #highlights .hl-cta {
+        display: inline-flex; align-items: center; justify-content: center;
+        height: 56px; padding: 0 34px;
+        border-radius: 10px;
+        background: #FF6D1F;
+        color: #fff;
+        font-family: 'Albert Sans', sans-serif;
+        font-size: 17px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: background 0.2s ease;
+      }
+      #highlights .hl-cta:hover { background: #6A2500; color: #FF6D1F; }
 
-            <!-- RIGHT: chat -->
-            <div class="order-2 md:order-2 flex items-center justify-center px-8 md:px-0 scroll-trigger" id="phone-trigger-container">
-                <div style="width:100%;max-width:440px;display:flex;flex-direction:column;">
-                    <!-- Tabs -->
-                    <div style="display:flex;gap:8px;margin-bottom:20px;justify-content:center;flex-shrink:0;">
-                        <button onclick="switchTab('playful')" id="tab-playful" style="padding:7px 18px;border-radius:10px;font-size:13px;font-weight:600;font-family:'Albert Sans',sans-serif;border:1.5px solid #FF6D1F;background:#FF6D1F;color:#fff;cursor:pointer;transition:all 0.2s;">betrokken</button>
-                        <button onclick="switchTab('honest')" id="tab-honest" style="padding:7px 18px;border-radius:10px;font-size:13px;font-weight:600;font-family:'Albert Sans',sans-serif;border:1.5px solid #e8e0d5;background:transparent;color:#888;cursor:pointer;transition:all 0.2s;">eerlijk</button>
-                        <button onclick="switchTab('sharp')" id="tab-sharp" style="padding:7px 18px;border-radius:10px;font-size:13px;font-weight:600;font-family:'Albert Sans',sans-serif;border:1.5px solid #e8e0d5;background:transparent;color:#888;cursor:pointer;transition:all 0.2s;">openhartig</button>
-                    </div>
-                    <div id="float-chat" style="width:100%;display:flex;flex-direction:column;justify-content:flex-start;gap:6px;min-height:460px;">
-                        <!-- bubbles injected by JS -->
-                    </div>
-                    <p id="chat-caption" style="text-align:center;font-size:11px;color:#b0a898;font-family:'Albert Sans',sans-serif;letter-spacing:0.02em;opacity:0;transition:opacity 1s ease;margin-top:20px;">*gebaseerd op hoe Noah normaal praat</p>
-                    <div class="md:hidden flex flex-col items-center" style="margin-top:24px;">
-                        <a href="https://chat.baeloom.com/?lang=nl" class="pill-button btn-primary h-14 text-lg shadow-lg shadow-orange-500/20 px-10" style="font-weight:700;letter-spacing:-0.01em;">
-                            Probeer het zelf
-                        </a>
-                    </div>
-                </div>
-            </div>
+      @media (max-width: 900px) {
+        #highlights .hl-grid { grid-template-columns: 1fr; gap: 16px; }
+        #highlights .hl-col { display: contents; height: auto; }
+        #highlights .hl-sub { margin-bottom: 38px; }
+        #highlights .hl-card-memory { order: 1; }
+        #highlights .hl-card-push   { order: 2; }
+        #highlights .hl-card-voice  { order: 3; }
+        #highlights .hl-card-themes { order: 4; }
+        #highlights .hl-card-spar   { order: 5; }
+        #highlights .hl-card-privacy{ order: 6; }
+        #highlights .hl-cta { width: 100%; }
+        #highlights .hl-cta-wrap { margin-top: 38px; }
+      }
+    </style>
 
+    <!-- HIGHLIGHTS -->
+    <section id="highlights">
+      <div class="hl-inner">
+        <h2 class="hl-title">Persoonlijke groei, op jouw manier</h2>
+        <p class="hl-sub">Baeloom brengt gesprekken, thema’s, inzichten en geheugen samen in één persoonlijke partner.</p>
+
+        <div class="hl-grid">
+          <!-- kolom 1 -->
+          <div class="hl-col">
+            <article class="hl-card hl-card-memory">
+              <div class="hl-copy">
+                <h3>Onthoud wat je deelt</h3>
+                <p>Bouw stap voor stap een geheugen op dat met je meegroeit.</p>
+              </div>
+              <img class="hl-shot hl-shot-bottom" src="../Images/mobiel1.svg" alt="Gesprek in Baeloom waarin Noah onthoudt wat je eerder deelde" width="1313" height="1116" loading="lazy">
+            </article>
+            <article class="hl-card hl-card-text hl-card-spar">
+              <div class="hl-copy">
+                <h3>Kies hoe je wilt sparren</h3>
+                <p>Kies voor inzicht, perspectief of uitdaging. Wissel wanneer je wilt.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- kolom 2 -->
+          <div class="hl-col">
+            <article class="hl-card hl-card-text hl-card-push">
+              <div class="hl-copy">
+                <h3>Krijg eerlijk tegengas</h3>
+                <p>Noah heeft een eigen kijk, luistert, stelt vragen en daagt je uit.</p>
+              </div>
+            </article>
+            <article class="hl-card hl-card-voice">
+              <img class="hl-shot" src="../Images/mobiel2.svg" alt="Spraakbericht opnemen in Baeloom" width="1313" height="1116" loading="lazy">
+              <div class="hl-copy">
+                <h3>Zeg wat je denkt</h3>
+                <p>Spreek je gedachten in, zonder alles eerst uit te hoeven typen.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- kolom 3 -->
+          <div class="hl-col">
+            <article class="hl-card hl-card-themes">
+              <div class="hl-copy">
+                <h3>Ontdek thema’s</h3>
+                <p>Van werk en geld tot relaties en dromen. Jij bepaalt per thema waar je naartoe wilt.</p>
+              </div>
+              <img class="hl-shot hl-shot-bottom" src="../Images/mobiel3.svg" alt="Thema’s kiezen in Baeloom: dagelijks, mensen, ikzelf, toekomst" width="1313" height="1116" loading="lazy">
+            </article>
+            <article class="hl-card hl-card-text hl-card-privacy">
+              <div class="hl-copy">
+                <h3>Privé en beveiligd</h3>
+                <p>Versleuteld, niet gebruikt voor AI-training. Je gegevens blijven van jou.</p>
+              </div>
+            </article>
+          </div>
         </div>
-    </section>
 
+        <div class="hl-cta-wrap">
+          <a class="hl-cta" href="Probeer Baeloom gratis_HREF">Probeer Baeloom gratis</a>
+        </div>
+      </div>
+    </section>
 
     <!-- SPIRAL / JOURNEY SECTION -->
     <section id="features" class="py-16 md:py-32 relative overflow-hidden bg-[#FFFFFF] px-0 md:px-16 lg:px-24 border-b border-orange-50">
@@ -706,133 +843,360 @@
                 <!-- Description: 2nd on mobile, left col 2nd on desktop -->
                 <div class="order-2 md:col-start-1 md:row-start-2 px-8 md:px-0 space-y-6">
                     <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed scroll-reveal">
-                        Ken je dat gevoel dat hetzelfde steeds terugkomt? Dezelfde patronen, dezelfde gevoelens, dezelfde vragen. Dat betekent niet dat je vastzit, zo werkt groei nou eenmaal.
-                    </p>
-                    <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed scroll-reveal">
-                        Baeloom geeft je de ruimte om er echt doorheen te werken. Noah onthoudt alles wat je deelt, bouwt daar sessie na sessie op voort en geeft je na verloop van tijd een helderder beeld van wat er echt speelt. Denk naar binnen, leef vooruit.
+                        Ken je dat gevoel dat hetzelfde steeds terugkomt? Dezelfde patronen, dezelfde vragen. Dat betekent niet dat je vastzit, zo werkt groei nou eenmaal. Noah onthoudt wat je deelt, bouwt daar sessie na sessie op voort en geeft je na verloop van tijd een helderder beeld van wat er echt speelt. Denk naar binnen, leef vooruit.
                     </p>
                 </div>
 
             </div>
-        </div>
-    </section>
-
-
-    <!-- Themes Section -->
-    <section id="themes" class="relative py-0" style="background:#FDF6EE;">
-
-        <!-- Artworks: free-floating, staggered, bleeding off edges -->
-        <img src="../Images/Growth.png"        alt="" class="pointer-events-none hidden md:block absolute opacity-90 rotate-[-8deg]"  style="width:480px;left:-150px;top:26%;z-index:1;">
-        <img src="../Images/Interests.png"     alt="" class="pointer-events-none hidden md:block absolute opacity-85 rotate-[5deg]"   style="width:460px;left:-140px;top:80%;z-index:1;">
-        <img src="../Images/Relationships.png" alt="" class="pointer-events-none hidden md:block absolute opacity-90 rotate-[8deg]"   style="width:440px;right:-120px;top:10%;z-index:1;">
-        <img src="../Images/Daily-life.png"   alt="" class="pointer-events-none hidden md:block absolute opacity-85 rotate-[-5deg]"  style="width:600px;right:-150px;top:52%;z-index:1;">
-
-        <!-- Feature rows -->
-        <div class="relative" style="z-index:2;">
-
-            <!-- Intro bridge -->
-            <div class="text-center pt-12 pb-6 md:pt-16 md:pb-8 px-8 scroll-reveal">
-                <h2 class="text-5xl md:text-7xl text-[#6A2500] leading-[1.05] md:leading-[0.9] tracking-tight max-w-3xl mx-auto">Samen met Noah,<br>stap voor stap.</h2>
-            </div>
-
-            <!-- Row 1: text left, screenshot right -->
-            <div class="max-w-6xl mx-auto px-8 md:px-24 py-8 md:py-14 grid md:grid-cols-[2fr_4fr] gap-10 md:gap-16 items-center">
-                <div class="space-y-5 order-2 md:order-1 scroll-reveal">
-                    <img src="../Images/1.png" alt="1" style="width:52px;height:auto;display:block;margin-bottom:12px;">
-                    <h2 class="text-4xl md:text-5xl text-[#6A2500] leading-tight tracking-tight">Kies waar je aan wilt werken.</h2>
-                    <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed">12 thema's over elk gebied van je leven. Kies wat het beste bij je past, of dat nu geld, relaties, waarden of groei is.</p>
-                </div>
-                <div class="order-1 md:order-2 scroll-reveal">
-                    <img src="../Images/voorbeeld-6.png" alt="Choose your themes" class="w-full h-auto block rounded-2xl">
-                </div>
-            </div>
-
-            <div class="md:hidden px-8 py-2"><hr style="border:none;border-top:1px solid #e2d9cf;"></div>
-            <div class="hidden md:flex justify-center"><img src="../Images/right.png" alt="" class="w-full max-w-xl h-auto pointer-events-none"></div>
-
-            <!-- Row 2: screenshot left, text right -->
-            <div class="max-w-6xl mx-auto px-8 md:px-24 py-8 md:py-14 grid md:grid-cols-[3fr_2fr] gap-10 md:gap-16 items-center">
-                <div class="scroll-reveal">
-                    <img src="../Images/voorbeeld-5.png" alt="Set your goal" class="w-full h-auto block rounded-2xl">
-                </div>
-                <div class="space-y-5 scroll-reveal">
-                    <img src="../Images/2.png" alt="2" style="width:52px;height:auto;display:block;margin-bottom:12px;">
-                    <h2 class="text-4xl md:text-5xl text-[#6A2500] leading-tight tracking-tight">Vertel Noah wat je wilt bereiken.</h2>
-                    <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed">Stel een doel. Of laat Noah je helpen ontdekken wat het doel eigenlijk is. Hoe dan ook, zij houdt die draad vast en brengt hem terug wanneer je het nodig hebt.</p>
-                </div>
-            </div>
-
-            <div class="md:hidden px-8 py-2"><hr style="border:none;border-top:1px solid #e2d9cf;"></div>
-            <div class="hidden md:flex justify-center"><img src="../Images/left.png" alt="" class="w-full max-w-xl h-auto pointer-events-none"></div>
-
-            <!-- Row 3: text left, screenshot right -->
-            <div class="max-w-6xl mx-auto px-8 md:px-24 py-8 md:py-14 grid md:grid-cols-[2fr_4fr] gap-10 md:gap-16 items-center">
-                <div class="space-y-5 order-2 md:order-1 scroll-reveal">
-                    <img src="../Images/3.png" alt="3" style="width:52px;height:auto;display:block;margin-bottom:12px;">
-                    <h2 class="text-4xl md:text-5xl text-[#6A2500] leading-tight tracking-tight">Noah sluit aan waar jij bent.</h2>
-                    <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed">In elke sessie is Noah actief bezig om jou te begrijpen. Ze merkt patronen op, stelt de juiste vragen en brengt nieuwe invalshoeken wanneer je die nodig hebt.</p>
-                </div>
-                <div class="order-1 md:order-2 scroll-reveal">
-                    <!-- Height-capped instead of w-full: the Dutch screenshot is far squarer
-                         than the English one (1.46 vs 2.50), so stretching it to the column
-                         width made it tower over the text beside it. Resizing the export does
-                         nothing here, only the ratio or this cap does. -->
-                    <img src="../Images/voorbeeld-1v1.png" alt="Noah in gesprek"
-                         class="h-auto block rounded-2xl mx-auto"
-                         style="max-height:300px; width:auto; max-width:100%;">
-                </div>
-            </div>
-
-            <div class="md:hidden px-8 py-2"><hr style="border:none;border-top:1px solid #e2d9cf;"></div>
-            <div class="hidden md:flex justify-center"><img src="../Images/right.png" alt="" class="w-full max-w-xl h-auto pointer-events-none"></div>
-
-            <!-- Row 4: screenshot left, text right -->
-            <div class="max-w-6xl mx-auto px-8 md:px-24 py-8 md:py-14 grid md:grid-cols-[3fr_2fr] gap-10 md:gap-16 items-center">
-                <div class="scroll-reveal">
-                    <img src="../Images/voorbeeld-2.png" alt="Track your progress" class="w-full h-auto block rounded-2xl">
-                </div>
-                <div class="space-y-5 scroll-reveal">
-                    <img src="../Images/4.png" alt="4" style="width:52px;height:auto;display:block;margin-bottom:12px;">
-                    <h2 class="text-4xl md:text-5xl text-[#6A2500] leading-tight tracking-tight">Zie hoe diep je gaat.</h2>
-                    <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed">Elk gesprek voegt diepte toe. Je ziet precies waar je staat in je traject en wat er nog komt.</p>
-                </div>
-            </div>
-
-            <div class="md:hidden px-8 py-2"><hr style="border:none;border-top:1px solid #e2d9cf;"></div>
-            <div class="hidden md:flex justify-center"><img src="../Images/left.png" alt="" class="w-full max-w-xl h-auto pointer-events-none"></div>
-
-            <!-- Row 5: text left, session summary right -->
-            <div class="max-w-6xl mx-auto px-8 md:px-24 py-8 md:py-14 grid md:grid-cols-[2fr_3fr] gap-10 md:gap-16 items-center">
-                <div class="space-y-5 order-2 md:order-1 scroll-reveal">
-                    <img src="../Images/5.png" alt="5" style="width:52px;height:auto;display:block;margin-bottom:12px;">
-                    <h2 class="text-4xl md:text-5xl text-[#6A2500] leading-tight tracking-tight">Je groei bijhouden.</h2>
-                    <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed">Na elke sessie vat Noah samen waar je het over had en wat er veranderde. Elke 24 uur komt er een nieuwe samenvatting, zodat je je groei kunt volgen.</p>
-                </div>
-                <div class="order-1 md:order-2 scroll-reveal flex justify-center">
-                    <img src="../Images/voorbeeld-7.png" alt="Session summary" class="h-auto block rounded-2xl" style="max-width:420px;width:100%;">
-                </div>
-            </div>
-
-            <div class="md:hidden px-8 py-2"><hr style="border:none;border-top:1px solid #e2d9cf;"></div>
-            <div class="hidden md:flex justify-center"><img src="../Images/right.png" alt="" class="w-full max-w-xl h-auto pointer-events-none"></div>
-
-            <!-- Row 6: image left, text right -->
-            <div class="max-w-6xl mx-auto px-8 md:px-24 py-8 md:py-14 grid md:grid-cols-[3fr_2fr] gap-10 md:gap-16 items-center">
-                <div class="scroll-reveal">
-                    <img src="../Images/voorbeeld3-4.png" alt="Level up cards" class="w-full h-auto block rounded-2xl">
-                </div>
-                <div class="space-y-5 scroll-reveal">
-                    <img src="../Images/6.png" alt="6" style="width:52px;height:auto;display:block;margin-bottom:12px;">
-                    <h2 class="text-4xl md:text-5xl text-[#6A2500] leading-tight tracking-tight">Weet wanneer je er bent.</h2>
-                    <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed">Sessie na sessie ga je dieper op een thema in, en wanneer je het einde bereikt hebt, laat Noah het je weten. Je krijgt een inzichtkaart met wat je hebt ontdekt, wat er is veranderd, en wat je kunt doen als je je ooit weer vastloopt. De kaart blijft bij je thema staan, zodat je er altijd naar terug kunt.</p>
-                </div>
-            </div>
-
         </div>
     </section>
 
 
     <!-- Footer -->
+    <!-- ── APP-PREVIEW / PRIJZEN / FAQ ─────────────────────────── -->
+    <style>
+      /* Zelfde marge-trap en containerbreedte als de rest van de pagina. */
+      .sec-pad { padding: 88px 96px 96px; }
+      @media (max-width: 1023px) { .sec-pad { padding: 72px 64px 80px; } }
+      @media (max-width: 767px)  { .sec-pad { padding: 56px 24px 64px; } }
+      .sec-inner { max-width: 1152px; margin: 0 auto; }
+      .sec-title {
+        font-family: 'Albert Sans', sans-serif;
+        font-weight: 700;
+        font-size: clamp(30px, 4.4vw, 52px);
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        color: #644737;
+        text-align: center;
+        margin: 0 0 16px;
+      }
+      .sec-sub {
+        font-family: 'Albert Sans', sans-serif;
+        font-size: 15px;
+        line-height: 1.6;
+        color: #7b6455;
+        text-align: center;
+        max-width: 470px;
+        margin: 0 auto 52px;
+      }
+
+      /* ── App-preview: één toestel, de schermen schuiven ── */
+      #preview { background: #FCF7F0; }
+      #preview .pv-stage { display: flex; justify-content: center; }
+      #preview .pv-phone {
+        position: relative;
+        width: 286px;
+        aspect-ratio: 3 / 6.3;
+        flex: none;
+        border: 5px solid #B28B76;
+        border-radius: 38px;
+        background: #FBFAF6;
+        overflow: hidden;
+      }
+      #preview .pv-track {
+        display: flex;
+        height: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        overscroll-behavior-x: contain;
+      }
+      #preview .pv-track::-webkit-scrollbar { display: none; }
+      #preview .pv-slide {
+        position: relative;
+        flex: 0 0 100%;
+        height: 100%;
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+      }
+      #preview .pv-slide img {
+        position: relative; z-index: 1;
+        display: block; width: 100%; height: 100%;
+        object-fit: cover; object-position: top center;
+      }
+      /* Zolang een screenshot ontbreekt staat de bestandsnaam in beeld
+         in plaats van een kapot plaatje. */
+      #preview .pv-slide::after {
+        content: attr(data-todo);
+        position: absolute; inset: 0; z-index: 0;
+        display: flex; align-items: center; justify-content: center;
+        padding: 0 16px;
+        font-family: 'Albert Sans', sans-serif;
+        font-size: 12px; text-align: center; color: #c9b8aa;
+      }
+      #preview .pv-caption {
+        font-family: 'Albert Sans', sans-serif;
+        font-size: 15px; font-weight: 600; color: #644737;
+        text-align: center;
+        margin: 26px 0 0;
+        min-height: 22px;
+      }
+      @media (max-width: 767px) {
+        #preview .pv-phone { width: min(262px, 76vw); }
+      }
+      /* ── Prijzen ── */
+      #pricing { background: #fff; }
+      #pricing .pr-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+        max-width: 780px;
+        margin: 0 auto;
+        align-items: stretch;
+      }
+      #pricing .pr-card {
+        display: flex; flex-direction: column;
+        background: #FCF7F0;
+        border: 1px solid rgba(100, 71, 55, 0.10);
+        border-radius: 18px;
+        padding: 30px 30px 32px;
+      }
+      #pricing .pr-card.is-pro { background: #fff; border-color: #FF6D1F; }
+      #pricing .pr-name {
+        font-family: 'Albert Sans', sans-serif;
+        font-size: 14px; font-weight: 700; letter-spacing: 0.04em;
+        text-transform: uppercase; color: #FF6D1F; margin: 0 0 6px;
+      }
+      #pricing .pr-for {
+        font-family: 'Albert Sans', sans-serif;
+        font-size: 14px; color: #8a7365; margin: 0 0 18px;
+      }
+      #pricing .pr-price {
+        font-family: 'Albert Sans', sans-serif;
+        font-weight: 700; font-size: 40px; line-height: 1;
+        letter-spacing: -0.02em; color: #644737; margin: 0 0 24px;
+      }
+      #pricing .pr-price span { font-size: 15px; font-weight: 500; color: #8a7365; letter-spacing: 0; }
+      #pricing .pr-list { list-style: none; padding: 0; margin: 0 0 28px; }
+      #pricing .pr-list li {
+        position: relative;
+        padding-left: 26px;
+        font-family: 'Albert Sans', sans-serif;
+        font-size: 14px; line-height: 1.5; color: #6b5749;
+        margin-bottom: 11px;
+      }
+      #pricing .pr-list li::before {
+        content: ''; position: absolute; left: 4px; top: 6px;
+        width: 11px; height: 6px;
+        border-left: 2px solid #FF6D1F; border-bottom: 2px solid #FF6D1F;
+        transform: rotate(-45deg);
+      }
+      #pricing .pr-btn {
+        display: inline-flex; align-items: center; justify-content: center;
+        margin-top: auto;
+        height: 52px; border-radius: 10px;
+        font-family: 'Albert Sans', sans-serif;
+        font-size: 16px; font-weight: 700; text-decoration: none;
+        transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+      }
+      #pricing .pr-btn-free {
+        background: transparent; color: #644737;
+        border: 1.5px solid rgba(100, 71, 55, 0.25);
+      }
+      #pricing .pr-btn-free:hover { border-color: #FF6D1F; color: #FF6D1F; }
+      #pricing .pr-btn-pro { background: #FF6D1F; color: #fff; }
+      #pricing .pr-btn-pro:hover { background: #6A2500; color: #FF6D1F; }
+      #pricing .pr-fine {
+        font-family: 'Albert Sans', sans-serif;
+        font-size: 12px; color: #a3907f; text-align: center; margin: 14px 0 0;
+      }
+      #pricing .pr-more {
+        text-align: center; margin: 30px 0 0;
+        font-family: 'Albert Sans', sans-serif; font-size: 14px;
+      }
+      #pricing .pr-more a { color: #FF6D1F; text-decoration: none; font-weight: 600; }
+      #pricing .pr-more a:hover { text-decoration: underline; }
+      @media (max-width: 720px) {
+        #pricing .pr-grid { grid-template-columns: 1fr; }
+      }
+
+      /* ── FAQ ── */
+      #faq-short { background: #FCF7F0; }
+      #faq-short .fq-list { max-width: 720px; margin: 0 auto; }
+      #faq-short details {
+        border-bottom: 1px solid rgba(100, 71, 55, 0.12);
+      }
+      #faq-short details:first-of-type { border-top: 1px solid rgba(100, 71, 55, 0.12); }
+      #faq-short summary {
+        list-style: none;
+        cursor: pointer;
+        padding: 22px 34px 22px 0;
+        position: relative;
+        font-family: 'Albert Sans', sans-serif;
+        font-size: 16px; font-weight: 600; color: #644737;
+        transition: color 0.2s;
+      }
+      #faq-short summary::-webkit-details-marker { display: none; }
+      #faq-short summary:hover { color: #FF6D1F; }
+      #faq-short summary::after {
+        content: ''; position: absolute; right: 6px; top: 27px;
+        width: 9px; height: 9px;
+        border-right: 2px solid #b09a89; border-bottom: 2px solid #b09a89;
+        transform: rotate(45deg);
+        transition: transform 0.25s ease;
+      }
+      #faq-short details[open] summary::after { transform: rotate(-135deg); top: 31px; }
+      #faq-short .fq-a {
+        font-family: 'Albert Sans', sans-serif;
+        font-size: 14.5px; line-height: 1.65; color: #7b6455;
+        margin: 0; padding: 0 34px 24px 0;
+      }
+      #faq-short .fq-more { text-align: center; margin: 32px 0 0; font-family: 'Albert Sans', sans-serif; font-size: 14px; }
+      #faq-short .fq-more a { color: #FF6D1F; text-decoration: none; font-weight: 600; }
+      #faq-short .fq-more a:hover { text-decoration: underline; }
+    </style>
+
+    <!-- APP-PREVIEW -->
+    <section id="preview" class="sec-pad">
+      <div class="sec-inner">
+        <h2 class="sec-title">Zo ziet het eruit</h2>
+        <p class="sec-sub">Veeg door de app — geen mockups, dit zijn de echte schermen.</p>
+
+        <div class="pv-stage">
+
+          <div class="pv-phone">
+            <div class="pv-track" id="pv-track" tabindex="0" role="group" aria-roledescription="carousel" aria-label="Zo ziet het eruit">
+              <div class="pv-slide" data-caption="Vandaag" data-todo="app-vandaag.png"><img src="../Images/app-vandaag.png" alt="Het beginscherm Vandaag" loading="lazy" onerror="this.remove()"></div>
+              <div class="pv-slide" data-caption="Een gesprek met Noah" data-todo="app-gesprek.png"><img src="../Images/app-gesprek.png" alt="Een gesprek met Noah in de Baeloom-app" loading="lazy" onerror="this.remove()"></div>
+              <div class="pv-slide" data-caption="Thema’s" data-todo="app-themas.png"><img src="../Images/app-themas.png" alt="Het themascherm" loading="lazy" onerror="this.remove()"></div>
+              <div class="pv-slide" data-caption="Sessie samenvatting" data-todo="app-samenvatting.png"><img src="../Images/app-samenvatting.png" alt="Een sessie samenvatting" loading="lazy" onerror="this.remove()"></div>
+              <div class="pv-slide" data-caption="Je groei" data-todo="app-groei.png"><img src="../Images/app-groei.png" alt="Je groei bijhouden" loading="lazy" onerror="this.remove()"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="pv-caption" id="pv-caption" aria-live="polite">Vandaag</p>
+      </div>
+    </section>
+
+    <script>
+    /* App-preview: één toestel, de schermen schuiven er vanzelf doorheen.
+       Geen pijlen en geen bolletjes — het schuift automatisch. Het schuiven
+       zelf doet de browser via scroll-snap, dus vegen op een telefoon werkt
+       gewoon; de JS zet alleen het bijschrift en de timer. */
+    (function () {
+      var track = document.getElementById('pv-track');
+      if (!track) return;
+      var slides = Array.prototype.slice.call(track.querySelectorAll('.pv-slide'));
+      var capEl = document.getElementById('pv-caption');
+      var index = 0, timer = null, paused = false;
+      var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function paint() {
+        var cap = slides[index] && slides[index].getAttribute('data-caption');
+        if (capEl && cap) capEl.textContent = cap;
+      }
+
+      function go(i) {
+        index = (i + slides.length) % slides.length;
+        track.scrollTo({ left: slides[index].offsetLeft - track.offsetLeft, behavior: 'smooth' });
+        paint();
+      }
+
+      /* Ook bijhouden waar iemand zelf naartoe veegt. */
+      var settle;
+      track.addEventListener('scroll', function () {
+        clearTimeout(settle);
+        settle = setTimeout(function () {
+          var near = Math.round(track.scrollLeft / track.clientWidth);
+          if (near !== index && slides[near]) { index = near; paint(); }
+        }, 90);
+      }, { passive: true });
+
+      /* Veegt iemand zelf, dan even wachten voor we weer doorschuiven. */
+      var resume;
+      function hold() {
+        paused = true;
+        clearTimeout(resume);
+        resume = setTimeout(function () { paused = false; }, 9000);
+      }
+      track.addEventListener('touchstart', hold, { passive: true });
+      track.addEventListener('pointerdown', hold);
+
+      function tick() { if (!paused && !document.hidden) go(index + 1); }
+      function start() { if (!timer && !calm) timer = setInterval(tick, 4000); }
+      function stop() { clearInterval(timer); timer = null; }
+      document.addEventListener('visibilitychange', function () { if (document.hidden) stop(); else start(); });
+
+      /* Pas laten lopen als de sectie in beeld staat. */
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) { en.isIntersecting ? start() : stop(); });
+        }, { threshold: 0.25 }).observe(document.getElementById('preview'));
+      } else { start(); }
+
+      paint();
+    })();
+    </script>
+
+    <!-- PRIJZEN -->
+    <section id="pricing" class="sec-pad">
+      <div class="sec-inner">
+        <h2 class="sec-title">Begin gratis, ga verder als het klikt</h2>
+        <p class="sec-sub">Geen proefperiode die stiekem afloopt. Je begint gratis en stapt over wanneer jíj dat wilt.</p>
+        <div class="pr-grid">
+          <div class="pr-card">
+            <p class="pr-name">Gratis</p>
+            <p class="pr-for">Om te kijken of het bij je past</p>
+            <p class="pr-price">&euro;0</p>
+            <ul class="pr-list">
+              <li>60 berichten om te beginnen</li>
+              <li>Daarna elke 30 dagen 20 nieuwe berichten</li>
+              <li>Tot 2 actieve thema’s</li>
+              <li>Geen creditcard nodig</li>
+            </ul>
+            <a class="pr-btn pr-btn-free" href="https://chat.baeloom.com/?lang=nl">Begin gratis</a>
+            <p class="pr-fine" aria-hidden="true">&nbsp;</p>
+          </div>
+          <div class="pr-card is-pro">
+            <p class="pr-name">Pro</p>
+            <p class="pr-for">Voor dagelijks, dieper gebruik</p>
+            <p class="pr-price">&euro;12 <span>/ maand</span></p>
+            <ul class="pr-list">
+              <li>Ruime limieten voor dagelijks gebruik</li>
+              <li>Tot 5 actieve thema’s</li>
+              <li>Sessie samenvattingen en je voortgang</li>
+              <li>Geheugen dat met je meegroeit</li>
+              <li>Afbeeldingen uploaden</li>
+            </ul>
+            <a class="pr-btn pr-btn-pro" href="https://chat.baeloom.com/?lang=nl">Word Pro</a>
+            <p class="pr-fine">Altijd opzegbaar · Veilig afrekenen via Stripe</p>
+          </div>
+        </div>
+        <p class="pr-more"><a href="./pricing.html">Alle details op de prijzenpagina</a></p>
+      </div>
+    </section>
+
+    <!-- FAQ (kort) -->
+    <section id="faq-short" class="sec-pad">
+      <div class="sec-inner">
+        <h2 class="sec-title">Voordat je begint</h2>
+        <p class="sec-sub">De vier dingen die mensen ons het vaakst vragen.</p>
+        <div class="fq-list">
+          <details>
+            <summary>Kan Noah therapie vervangen?</summary>
+            <p class="fq-a">Nee, en dat probeert ze ook niet. Noah is er om mee te reflecteren, niet om te behandelen. Wat ze wél kan: je een plek geven om dingen door te denken, vooral de dingen die lastig zijn om met mensen om je heen te bespreken. Als je het zwaar hebt, praat dan alsjeblieft met een professional.</p>
+          </details>
+          <details>
+            <summary>Zijn mijn gegevens privé?</summary>
+            <p class="fq-a">Ja. Je gesprekken met Noah zijn privé en versleuteld. We gebruiken ze nooit om AI-modellen te trainen en we verkopen je gegevens nooit.</p>
+          </details>
+          <details>
+            <summary>Kan ik altijd opzeggen?</summary>
+            <p class="fq-a">Ja. Je kunt je abonnement op elk moment opzeggen. Je houdt toegang tot de Pro-functies tot het einde van je huidige factuurperiode.</p>
+          </details>
+          <details>
+            <summary>Wat gebeurt er als mijn gratis berichten op zijn?</summary>
+            <p class="fq-a">Dan krijg je elke 30 dagen 20 nieuwe berichten. Je gesprekken blijven gewoon staan. Wil je meer ruimte, dan stap je over op Pro.</p>
+          </details>
+        </div>
+        <p class="fq-more"><a href="./faq.html">Alle vragen en antwoorden</a></p>
+      </div>
+    </section>
+
     <!-- App notify section -->
     <section id="app-notify" style="background:#FAF9F7;padding:96px 24px;text-align:center;border-top:1px solid rgba(0,0,0,0.05);position:relative;">
       <img src="../Images/app.png" alt="" aria-hidden="true" class="hidden md:block" style="position:absolute;right:40px;top:50%;transform:translateY(-45%) rotate(10deg);width:250px;opacity:0.9;pointer-events:none;user-select:none;z-index:10;">
@@ -905,90 +1269,7 @@
     </footer>
 
     <script>
-        lucide.createIcons();
-
-        // FLOATING CHAT ANIMATION
-        const allChats = {
-            playful: [
-                { type: 'user', text: "De ikea kast staat maar hij wiebelt en ik ga hem echt niet opnieuw doen" },
-                { type: 'lucy', text: "Nee joh, meestal ligt het aan een pootje dat de grond niet helemaal raakt. Duw er een viltje onder en je bent klaar." },
-                { type: 'user', text: "Ik ga daar echt niet speciaal viltjes voor kopen" },
-                { type: 'lucy', text: "Die zitten toch bij de meeste meubels? Anders zou ik even checken of je een hoekje van de kast omhoog kan duwen en dan voelen waar de speling zit." },
-                { type: 'user', text: "oh wacht hij zakt inderdaad aan de linkerkant" },
-                { type: 'lucy', text: "Kan je daar iets onder leggen wat je wel in huis hebt? Een muntje of zo?" },
-            ],
-            honest: [
-                { type: 'user', text: "Ik denk dat ik gewoon minder moet werken. Ik ben de hele tijd moe." },
-                { type: 'lucy', text: "Misschien. Het kan ook zijn dat je werk je leegtrekt. Minder uren lost dat niet vanzelf op." },
-                { type: 'user', text: "Ja, maar ik heb gewoon het gevoel dat ik te weinig tijd voor mezelf heb." },
-                { type: 'lucy', text: "Dat kan. Alleen: als je die tijd straks vult met dezelfde dingen die je nu al leegtrekken, verandert er dan echt iets?" },
-                { type: 'user', text: "Misschien niet. Ik denk dat ik vooral probeer mijn leven makkelijker te maken." },
-                { type: 'lucy', text: "Dat denk ik ook. Alleen volgens mij probeer je nu het gevolg op te lossen, niet de reden waarom je zo moe bent." },
-            ],
-            sharp: [
-                { type: 'user', text: "Ik was stiekem opgelucht toen mijn collega ziek naar huis ging." },
-                { type: 'lucy', text: "Waarom voelde je je opgelucht?" },
-                { type: 'user', text: "Omdat ik me naast haar altijd een beetje onzeker voel." },
-                { type: 'lucy', text: "Omdat je jezelf steeds met haar vergelijkt?" },
-                { type: 'user', text: "Ja. Zij doet eigenlijk niks verkeerd, maar toch voelt het soms alsof ik achterloop." },
-                { type: 'lucy', text: "Misschien ben je dan niet jaloers op h\u00e1\u00e1r, maar op waar jij denkt dat je zelf zou moeten zijn." },
-            ],
-        };
-
-        let activeTab = 'playful';
-        let chatGen = 0; // increment to cancel any running animation
-
-        function switchTab(tab) {
-            activeTab = tab;
-            ['playful','honest','sharp'].forEach(t => {
-                const btn = document.getElementById('tab-' + t);
-                if (t === tab) {
-                    btn.style.background = '#FF6D1F';
-                    btn.style.borderColor = '#FF6D1F';
-                    btn.style.color = '#fff';
-                } else {
-                    btn.style.background = 'transparent';
-                    btn.style.borderColor = '#e8e0d5';
-                    btn.style.color = '#888';
-                }
-            });
-            const caption = document.getElementById('chat-caption');
-            if (caption) caption.style.opacity = '0';
-            runChat(allChats[tab]);
-        }
-
-        function runChat(chatData) {
-            ++chatGen;
-            const chatEl = document.getElementById('float-chat');
-            if (!chatEl) return;
-            chatEl.style.opacity = '0';
-            chatEl.style.transition = 'opacity 0.2s ease';
-            setTimeout(() => {
-                chatEl.innerHTML = '';
-                chatData.forEach((item, i) => {
-                    const isLucy = item.type === 'lucy';
-                    const prev = chatData[i - 1];
-                    const sameType = prev && prev.type === item.type;
-                    const wrapper = document.createElement('div');
-                    wrapper.style.cssText = `display:flex;flex-direction:column;align-items:${isLucy ? 'flex-start' : 'flex-end'};margin-bottom:${sameType ? '3px' : '10px'};flex-shrink:0;`;
-                    const bubble = document.createElement('div');
-                    bubble.textContent = item.text;
-                    bubble.style.cssText = `max-width:82%;padding:11px 16px;border-radius:${isLucy ? '18px 18px 18px 5px' : '18px 18px 5px 18px'};font-size:15px;line-height:1.55;font-family:'Albert Sans',sans-serif;background:${isLucy ? '#ffffff' : '#F5E7C6'};color:#222;`;
-                    wrapper.appendChild(bubble);
-                    chatEl.appendChild(wrapper);
-                });
-                chatEl.style.opacity = '1';
-                const caption = document.getElementById('chat-caption');
-                if (caption) caption.style.opacity = '1';
-            }, 220);
-        }
-
-        let chatStarted = false;
-        function startChatAnimation() {
-            if (chatStarted) return;
-            chatStarted = true;
-            runChat(allChats['playful']);
-        }
+        try { lucide.createIcons(); } catch (e) {}
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -996,14 +1277,11 @@
                     if (entry.target.classList.contains('scroll-reveal')) {
                         entry.target.classList.add('reveal-visible');
                     }
-                    if (entry.target.classList.contains('scroll-trigger')) {
-                        startChatAnimation();
-                    }
                 }
             });
         }, { threshold: 0.15 });
 
-        document.querySelectorAll('.scroll-reveal, .scroll-trigger').forEach(el => observer.observe(el));
+        document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
 
         // Hamburger menu
         function toggleMenu() {

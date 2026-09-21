@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baeloom | Meet Noah, your personal sparring partner</title>
-    <meta name="description" content="A good conversation can change your day. Noah is your personal sparring partner: she listens, remembers what you said and tells you what she thinks.">
+    <title>Baeloom | Your sparring partner for personal growth</title>
+    <meta name="description" content="Meet Noah, your AI sparring partner. Explore what’s going on, discover patterns and gain more insight into what’s on your mind. Free to try.">
     <link rel="canonical" href="https://www.baeloom.com/">
     <link rel="alternate" hreflang="en" href="https://www.baeloom.com/">
     <link rel="alternate" hreflang="nl" href="https://www.baeloom.com/nl/">
@@ -13,19 +13,19 @@
     <!-- Open Graph (Facebook, Instagram, WhatsApp, iMessage, LinkedIn) -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Baeloom">
-    <meta property="og:title" content="Baeloom | Meet Noah, your personal sparring partner">
-    <meta property="og:description" content="A good conversation can change your day. Noah is your personal sparring partner: she listens, remembers what you said and tells you what she thinks.">
+    <meta property="og:title" content="Baeloom | Your sparring partner for personal growth">
+    <meta property="og:description" content="Meet Noah, your AI sparring partner. Explore what’s going on, discover patterns and gain more insight into what’s on your mind. Free to try.">
     <meta property="og:url" content="https://www.baeloom.com/">
-    <meta property="og:image" content="https://www.baeloom.com/Images/og-image-v2.png">
+    <meta property="og:image" content="https://www.baeloom.com/Images/og-image-v3.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Baeloom — Think inward, live forward.">
+    <meta property="og:image:alt" content="Baeloom — your sparring partner for personal growth.">
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Baeloom | Meet Noah, your personal sparring partner">
-    <meta name="twitter:description" content="A good conversation can change your day. Noah is your personal sparring partner: she listens, remembers what you said and tells you what she thinks.">
-    <meta name="twitter:image" content="https://www.baeloom.com/Images/og-image-v2.png">
+    <meta name="twitter:title" content="Baeloom | Your sparring partner for personal growth">
+    <meta name="twitter:description" content="Meet Noah, your AI sparring partner. Explore what’s going on, discover patterns and gain more insight into what’s on your mind. Free to try.">
+    <meta name="twitter:image" content="https://www.baeloom.com/Images/og-image-v3.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="icon" href="/favicon.ico" sizes="any">
@@ -101,10 +101,15 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            max-width: 1152px;
+            /* Zelfde marges als de secties eronder, zodat het logo links
+               uitlijnt met de inhoud. */
+            max-width: 1344px;
             margin: 0 auto;
-            padding: 0 48px;
+            padding: 0 96px;
+            box-sizing: border-box;
         }
+        @media (max-width: 1023px) { #nav-container { max-width: 1280px; padding: 0 64px; } }
+        @media (max-width: 767px)  { #nav-container { max-width: 100%; padding: 0 24px; } }
         #nav-logo { height: 28px; width: auto; display: block; }
         .nav-link {
             font-family: 'Albert Sans', sans-serif;
@@ -147,7 +152,6 @@
         .nav-cta-btn:hover { background: #6A2500; color: #FF6D1F; }
         @media (max-width: 640px) {
             .nav-links { display: none !important; }
-            #nav-container { padding: 0 20px; }
         }
 
 
@@ -258,7 +262,7 @@
             text-decoration: none;
             transition: background 0.2s;
         }
-        #mobile-menu .mobile-cta:hover { background: #6A2500; }
+        #mobile-menu .mobile-cta:hover { background: #6A2500; color: #FF6D1F; }
         @media (max-width: 640px) {
             #hamburger { display: flex; }
       
@@ -337,17 +341,6 @@
             z-index: 2; 
             width: 100%; 
             padding-top: 80px; 
-        }
-
-        /* INTERACTION */
-        .interaction-section {
-            padding: 4rem 0 3rem 0;
-            background-color: var(--white);
-            position: relative;
-            overflow: hidden;
-        }
-        @media (min-width: 768px) {
-            .interaction-section { padding: 8rem 0 4rem 0; }
         }
 
         .phone-mockup {
@@ -573,6 +566,27 @@
 
         
     </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Baeloom | Your sparring partner for personal growth",
+      "url": "https://www.baeloom.com/",
+      "description": "Meet Noah, your AI sparring partner. Explore what\u2019s going on, discover patterns and gain more insight into what\u2019s on your mind.",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.baeloom.com/Images/og-image-v3.png",
+        "width": 1200,
+        "height": 630
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Baeloom",
+        "url": "https://www.baeloom.com/",
+        "logo": "https://www.baeloom.com/Images/baeloom-logo-only.png"
+      }
+    }
+    </script>
 </head>
 <body class="antialiased">
 
@@ -630,62 +644,182 @@
                 </a>
             </div>
             <div id="hero-chevron" class="flex items-center justify-center pt-8 md:pt-12">
-                <a href="#interaction" class="text-[#FF6D1F]">
+                <a href="#highlights" class="text-[#FF6D1F]">
                     <i data-lucide="chevron-down" class="w-12 h-12 md:w-16 md:h-16 stroke-[2.5]"></i>
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- MEET NOAH SECTION -->
-    <section id="interaction" class="interaction-section px-0 md:px-16 lg:px-24 pt-16 md:pt-24" style="background:#FCF7F0;">
 
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 lg:gap-24 md:items-start pb-6 md:pb-12 relative z-10">
+    <!-- ── HIGHLIGHTS: zes kaarten, drie kolommen ──────────────────── -->
+    <style>
+      #highlights {
+        background: url('./Images/paper-bg.jpg') center/cover no-repeat, #FBF6EE;
+        /* Dezelfde marge-trap als de andere secties (px-0 / md:px-16 / lg:px-24)
+           zodat de kaarten links uitlijnen met het logo in de navigatie. */
+        padding: 80px 96px 96px;
+      }
+      @media (max-width: 1023px) { #highlights { padding: 72px 64px 84px; } }
+      @media (max-width: 767px)  { #highlights { padding: 60px 24px 72px; } }
+      #highlights .hl-inner { max-width: 1152px; margin: 0 auto; }
+      #highlights .hl-title {
+        font-family: 'Albert Sans', sans-serif;
+        font-weight: 700;
+        font-size: clamp(30px, 4.4vw, 52px);
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        color: #644737;
+        text-align: center;
+        margin: 0 0 18px;
+      }
+      #highlights .hl-sub {
+        font-family: 'Albert Sans', sans-serif;
+        font-size: 15px;
+        line-height: 1.6;
+        color: #7b6455;
+        text-align: center;
+        max-width: 470px;
+        margin: 0 auto 54px;
+      }
+      #highlights .hl-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+        align-items: stretch;
+      }
+      /* Kolommen even hoog en de kaarten tegen boven- en onderkant: alle
+         kolommen beginnen en eindigen op dezelfde lijn. */
+      #highlights .hl-col {
+        display: flex; flex-direction: column;
+        justify-content: space-between;
+        gap: 22px; height: 100%;
+      }
+      #highlights .hl-card {
+        background: #fff;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 1px 3px rgba(100, 71, 55, 0.06);
+      }
+      /* Dezelfde padding overal, zodat koppen en regels uitlijnen. */
+      #highlights .hl-copy { padding: 28px 28px 0; }
+      #highlights .hl-card-text .hl-copy,
+      #highlights .hl-card-voice .hl-copy { padding: 28px 28px 32px; }
+      #highlights .hl-card h3 {
+        font-family: 'Albert Sans', sans-serif;
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 1.25;
+        letter-spacing: -0.01em;
+        color: #644737;
+        margin: 0 0 12px;
+      }
+      #highlights .hl-card p {
+        font-family: 'Albert Sans', sans-serif;
+        font-size: 14px;
+        line-height: 1.55;
+        color: #8a7365;
+        margin: 0;
+      }
+      /* De telefoons zijn Esmee's eigen SVG's: het witte vlak eromheen loopt
+         gelijk met de kaart, de telefoon loopt over de rand heen. */
+      #highlights .hl-shot { display: block; width: 100%; height: auto; }
+      #highlights .hl-shot-bottom { margin-top: 20px; }
 
-            <!-- LEFT: text grouped together -->
-            <div class="space-y-8 px-8 md:px-0 order-1 md:order-1">
-                <h2 class="text-5xl md:text-7xl text-[#6A2500] leading-[1.05] md:leading-[0.9] mt-0 tracking-tight scroll-reveal">
-                    Someone who actually listens.
-                </h2>
-                <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed scroll-reveal">
-                    Some things are hard to bring up, even with people around you who love you. Not because they don't care, but because you don't want to burden them with your thoughts. There's no shame in sometimes finding another way to get things off your chest.
-                </p>
-                <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed scroll-reveal">
-                    Noah can be that other way. She's your personal sparring partner developed by Baeloom and has her own personality and opinions. She does not mirror you, but instead listens, memorizes, reflects, gives insight and pushes back when you need it.
-                </p>
-                <div class="hidden md:inline-flex flex-col items-center scroll-reveal mt-6">
-                    <a href="https://chat.baeloom.com" class="pill-button btn-primary h-14 text-lg shadow-lg shadow-orange-500/20 px-10" style="font-weight:700;letter-spacing:-0.01em;">
-                        Chat with Noah
-                    </a>
-                    <p class="text-[#a8a29a] mt-2" style="font-family:'Albert Sans',sans-serif;font-size:12px;">Free to start. No card needed.</p>
-                </div>
-            </div>
+      #highlights .hl-cta-wrap { display: flex; justify-content: center; margin-top: 54px; }
+      #highlights .hl-cta {
+        display: inline-flex; align-items: center; justify-content: center;
+        height: 56px; padding: 0 34px;
+        border-radius: 10px;
+        background: #FF6D1F;
+        color: #fff;
+        font-family: 'Albert Sans', sans-serif;
+        font-size: 17px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: background 0.2s ease;
+      }
+      #highlights .hl-cta:hover { background: #6A2500; color: #FF6D1F; }
 
-            <!-- RIGHT: chat -->
-            <div class="order-2 md:order-2 flex items-center justify-center px-8 md:px-0 scroll-trigger" id="phone-trigger-container">
-                <div style="width:100%;max-width:440px;display:flex;flex-direction:column;">
-                    <!-- Tabs -->
-                    <div style="display:flex;gap:8px;margin-bottom:20px;justify-content:center;flex-shrink:0;">
-                        <button onclick="switchTab('playful')" id="tab-playful" style="padding:7px 18px;border-radius:10px;font-size:13px;font-weight:600;font-family:'Albert Sans',sans-serif;border:1.5px solid #FF6D1F;background:#FF6D1F;color:#fff;cursor:pointer;transition:all 0.2s;">invested</button>
-                        <button onclick="switchTab('honest')" id="tab-honest" style="padding:7px 18px;border-radius:10px;font-size:13px;font-weight:600;font-family:'Albert Sans',sans-serif;border:1.5px solid #e8e0d5;background:transparent;color:#888;cursor:pointer;transition:all 0.2s;">honest</button>
-                        <button onclick="switchTab('sharp')" id="tab-sharp" style="padding:7px 18px;border-radius:10px;font-size:13px;font-weight:600;font-family:'Albert Sans',sans-serif;border:1.5px solid #e8e0d5;background:transparent;color:#888;cursor:pointer;transition:all 0.2s;">candid</button>
-                    </div>
-                    <div id="float-chat" style="width:100%;display:flex;flex-direction:column;justify-content:flex-start;gap:6px;min-height:460px;">
-                        <!-- bubbles injected by JS -->
-                    </div>
-                    <p id="chat-caption" style="text-align:center;font-size:11px;color:#b0a898;font-family:'Albert Sans',sans-serif;letter-spacing:0.02em;opacity:0;transition:opacity 1s ease;margin-top:20px;">*based on how Noah actually talks</p>
-                    <div class="md:hidden flex flex-col items-center" style="margin-top:24px;">
-                        <a href="https://chat.baeloom.com" class="pill-button btn-primary h-14 text-lg shadow-lg shadow-orange-500/20 px-10" style="font-weight:700;letter-spacing:-0.01em;">
-                            Try it yourself
-                        </a>
-                        <p class="text-[#a8a29a] mt-2" style="font-family:'Albert Sans',sans-serif;font-size:12px;">Free to start. No card needed.</p>
-                    </div>
-                </div>
-            </div>
+      @media (max-width: 900px) {
+        #highlights .hl-grid { grid-template-columns: 1fr; gap: 16px; }
+        #highlights .hl-col { display: contents; height: auto; }
+        #highlights .hl-sub { margin-bottom: 38px; }
+        #highlights .hl-card-memory { order: 1; }
+        #highlights .hl-card-push   { order: 2; }
+        #highlights .hl-card-voice  { order: 3; }
+        #highlights .hl-card-themes { order: 4; }
+        #highlights .hl-card-spar   { order: 5; }
+        #highlights .hl-card-privacy{ order: 6; }
+        #highlights .hl-cta { width: 100%; }
+        #highlights .hl-cta-wrap { margin-top: 38px; }
+      }
+    </style>
 
+    <!-- HIGHLIGHTS -->
+    <section id="highlights">
+      <div class="hl-inner">
+        <h2 class="hl-title">Personal growth, your way</h2>
+        <p class="hl-sub">Baeloom brings conversations, themes, insights and memory together in one personal partner.</p>
+
+        <div class="hl-grid">
+          <!-- kolom 1 -->
+          <div class="hl-col">
+            <article class="hl-card hl-card-memory">
+              <div class="hl-copy">
+                <h3>Remembers what you share</h3>
+                <p>Build a memory step by step that grows with you.</p>
+              </div>
+              <img class="hl-shot hl-shot-bottom" src="./Images/mobiel1.svg" alt="A Baeloom conversation where Noah remembers what you shared earlier" width="1313" height="1116" loading="lazy">
+            </article>
+            <article class="hl-card hl-card-text hl-card-spar">
+              <div class="hl-copy">
+                <h3>Choose how you spar</h3>
+                <p>Pick insight, perspective or challenge. Switch whenever you like.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- kolom 2 -->
+          <div class="hl-col">
+            <article class="hl-card hl-card-text hl-card-push">
+              <div class="hl-copy">
+                <h3>Get honest pushback</h3>
+                <p>Noah has her own view, listens, asks questions and challenges you.</p>
+              </div>
+            </article>
+            <article class="hl-card hl-card-voice">
+              <img class="hl-shot" src="./Images/mobiel2.svg" alt="Recording a voice message in Baeloom" width="1313" height="1116" loading="lazy">
+              <div class="hl-copy">
+                <h3>Say what you think</h3>
+                <p>Speak your thoughts out loud, without typing it all out first.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- kolom 3 -->
+          <div class="hl-col">
+            <article class="hl-card hl-card-themes">
+              <div class="hl-copy">
+                <h3>Explore themes</h3>
+                <p>From work and money to relationships and dreams. You decide where each theme is heading.</p>
+              </div>
+              <img class="hl-shot hl-shot-bottom" src="./Images/mobiel3.svg" alt="Choosing themes in Baeloom: daily, people, myself, future" width="1313" height="1116" loading="lazy">
+            </article>
+            <article class="hl-card hl-card-text hl-card-privacy">
+              <div class="hl-copy">
+                <h3>Private and secure</h3>
+                <p>Encrypted, never used for AI training. Your data stays yours.</p>
+              </div>
+            </article>
+          </div>
         </div>
-    </section>
 
+        <div class="hl-cta-wrap">
+          <a class="hl-cta" href="Try Baeloom for free_HREF">Try Baeloom for free</a>
+        </div>
+      </div>
+    </section>
 
     <!-- SPIRAL / JOURNEY SECTION -->
     <section id="features" class="py-16 md:py-32 relative overflow-hidden bg-[#FFFFFF] px-0 md:px-16 lg:px-24 border-b border-orange-50">
@@ -708,127 +842,360 @@
                 <!-- Description: 2nd on mobile, left col 2nd on desktop -->
                 <div class="order-2 md:col-start-1 md:row-start-2 px-8 md:px-0 space-y-6">
                     <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed scroll-reveal">
-                        You know that feeling when the same thing keeps showing up? Baeloom gives you a space to actually work through it. Noah remembers everything you share, builds on it session by session, and over time starts giving you a clearer picture of what's really going on.
-                    </p>
-                    <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed scroll-reveal">
-                        You've probably noticed you keep coming back to the same things. Same patterns, same feelings, same questions. That's not a sign you're stuck. That's just how growth actually works. Baeloom gives you that last push into clarity. Think inward, live forward.
+                        You know that feeling when the same things keep coming back? Same patterns, same questions. That's not a sign you're stuck, that's just how growth works. Noah remembers what you share, builds on it session by session, and over time gives you a clearer picture of what's really going on. Think inward, live forward.
                     </p>
                 </div>
 
             </div>
-        </div>
-    </section>
-
-
-    <!-- Themes Section -->
-    <section id="themes" class="relative py-0" style="background:#FDF6EE;">
-
-        <!-- Artworks: free-floating, staggered, bleeding off edges -->
-        <img src="./Images/Growth.png"        alt="" class="pointer-events-none hidden md:block absolute opacity-90 rotate-[-8deg]"  style="width:480px;left:-150px;top:26%;z-index:1;">
-        <img src="./Images/Interests.png"     alt="" class="pointer-events-none hidden md:block absolute opacity-85 rotate-[5deg]"   style="width:460px;left:-140px;top:80%;z-index:1;">
-        <img src="./Images/Relationships.png" alt="" class="pointer-events-none hidden md:block absolute opacity-90 rotate-[8deg]"   style="width:440px;right:-120px;top:10%;z-index:1;">
-        <img src="./Images/Daily-life.png"   alt="" class="pointer-events-none hidden md:block absolute opacity-85 rotate-[-5deg]"  style="width:600px;right:-150px;top:52%;z-index:1;">
-
-        <!-- Feature rows -->
-        <div class="relative" style="z-index:2;">
-
-            <!-- Intro bridge -->
-            <div class="text-center pt-12 pb-6 md:pt-16 md:pb-8 px-8 scroll-reveal">
-                <h2 class="text-5xl md:text-7xl text-[#6A2500] leading-[1.05] md:leading-[0.9] tracking-tight max-w-3xl mx-auto">Every step of the way, Noah is with you.</h2>
-            </div>
-
-            <!-- Row 1: text left, screenshot right -->
-            <div class="max-w-6xl mx-auto px-8 md:px-24 py-8 md:py-14 grid md:grid-cols-[2fr_4fr] gap-10 md:gap-16 items-center">
-                <div class="space-y-5 order-2 md:order-1 scroll-reveal">
-                    <img src="./Images/1.png" alt="1" style="width:52px;height:auto;display:block;margin-bottom:12px;">
-                    <h2 class="text-4xl md:text-5xl text-[#6A2500] leading-tight tracking-tight">Choose what to work on.</h2>
-                    <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed">12 themes across every area of life. Pick what feels most suitable for you, whether that's finances, relationships, values or growth.</p>
-                </div>
-                <div class="order-1 md:order-2 scroll-reveal">
-                    <img src="./Images/example-6.png" alt="Choose your themes" class="w-full h-auto block rounded-2xl">
-                </div>
-            </div>
-
-            <div class="md:hidden px-8 py-2"><hr style="border:none;border-top:1px solid #e2d9cf;"></div>
-            <div class="hidden md:flex justify-center"><img src="./Images/right.png" alt="" class="w-full max-w-xl h-auto pointer-events-none"></div>
-
-            <!-- Row 2: screenshot left, text right -->
-            <div class="max-w-6xl mx-auto px-8 md:px-24 py-8 md:py-14 grid md:grid-cols-[3fr_2fr] gap-10 md:gap-16 items-center">
-                <div class="scroll-reveal">
-                    <img src="./Images/example-5.png" alt="Set your goal" class="w-full h-auto block rounded-2xl">
-                </div>
-                <div class="space-y-5 scroll-reveal">
-                    <img src="./Images/2.png" alt="2" style="width:52px;height:auto;display:block;margin-bottom:12px;">
-                    <h2 class="text-4xl md:text-5xl text-[#6A2500] leading-tight tracking-tight">Tell Noah what you're trying to get to.</h2>
-                    <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed">Set a goal. Or let Noah help you figure out what the goal even is. Either way, she holds that thread and brings it back when you need it.</p>
-                </div>
-            </div>
-
-            <div class="md:hidden px-8 py-2"><hr style="border:none;border-top:1px solid #e2d9cf;"></div>
-            <div class="hidden md:flex justify-center"><img src="./Images/left.png" alt="" class="w-full max-w-xl h-auto pointer-events-none"></div>
-
-            <!-- Row 3: text left, screenshot right -->
-            <div class="max-w-6xl mx-auto px-8 md:px-24 py-8 md:py-14 grid md:grid-cols-[2fr_4fr] gap-10 md:gap-16 items-center">
-                <div class="space-y-5 order-2 md:order-1 scroll-reveal">
-                    <img src="./Images/3.png" alt="3" style="width:52px;height:auto;display:block;margin-bottom:12px;">
-                    <h2 class="text-4xl md:text-5xl text-[#6A2500] leading-tight tracking-tight">Noah meets you where you are.</h2>
-                    <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed">In every session, Noah is actively working to understand you. She notices patterns, asks the right questions, and brings new perspectives when you need them.</p>
-                </div>
-                <div class="order-1 md:order-2 scroll-reveal">
-                    <img src="./Images/example-1.png" alt="Noah in conversation" class="w-full h-auto block rounded-2xl">
-                </div>
-            </div>
-
-            <div class="md:hidden px-8 py-2"><hr style="border:none;border-top:1px solid #e2d9cf;"></div>
-            <div class="hidden md:flex justify-center"><img src="./Images/right.png" alt="" class="w-full max-w-xl h-auto pointer-events-none"></div>
-
-            <!-- Row 4: screenshot left, text right -->
-            <div class="max-w-6xl mx-auto px-8 md:px-24 py-8 md:py-14 grid md:grid-cols-[3fr_2fr] gap-10 md:gap-16 items-center">
-                <div class="scroll-reveal">
-                    <img src="./Images/example-2.png" alt="Track your progress" class="w-full h-auto block rounded-2xl">
-                </div>
-                <div class="space-y-5 scroll-reveal">
-                    <img src="./Images/4.png" alt="4" style="width:52px;height:auto;display:block;margin-bottom:12px;">
-                    <h2 class="text-4xl md:text-5xl text-[#6A2500] leading-tight tracking-tight">See how deep you're going.</h2>
-                    <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed">Every conversation adds depth. You can see exactly where you are in your journey and what's coming next.</p>
-                </div>
-            </div>
-
-            <div class="md:hidden px-8 py-2"><hr style="border:none;border-top:1px solid #e2d9cf;"></div>
-            <div class="hidden md:flex justify-center"><img src="./Images/left.png" alt="" class="w-full max-w-xl h-auto pointer-events-none"></div>
-
-            <!-- Row 5: text left, session summary right -->
-            <div class="max-w-6xl mx-auto px-8 md:px-24 py-8 md:py-14 grid md:grid-cols-[2fr_3fr] gap-10 md:gap-16 items-center">
-                <div class="space-y-5 order-2 md:order-1 scroll-reveal">
-                    <img src="./Images/5.png" alt="5" style="width:52px;height:auto;display:block;margin-bottom:12px;">
-                    <h2 class="text-4xl md:text-5xl text-[#6A2500] leading-tight tracking-tight">Tracking your growth.</h2>
-                    <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed">After every session, Noah summarizes. What you talked about and what changed. Every 24 hours there will be a new summary so you can track your growth.</p>
-                </div>
-                <div class="order-1 md:order-2 scroll-reveal flex justify-center">
-                    <img src="./Images/example-7.png" alt="Session summary" class="h-auto block rounded-2xl" style="max-width:420px;width:100%;">
-                </div>
-            </div>
-
-            <div class="md:hidden px-8 py-2"><hr style="border:none;border-top:1px solid #e2d9cf;"></div>
-            <div class="hidden md:flex justify-center"><img src="./Images/right.png" alt="" class="w-full max-w-xl h-auto pointer-events-none"></div>
-
-            <!-- Row 6: image left, text right -->
-            <div class="max-w-6xl mx-auto px-8 md:px-24 py-8 md:py-14 grid md:grid-cols-[3fr_2fr] gap-10 md:gap-16 items-center">
-                <div class="scroll-reveal">
-                    <img src="./Images/example3-4.png" alt="Level up cards" class="w-full h-auto block rounded-2xl">
-                </div>
-                <div class="space-y-5 scroll-reveal">
-                    <img src="./Images/6.png" alt="6" style="width:52px;height:auto;display:block;margin-bottom:12px;">
-                    <h2 class="text-4xl md:text-5xl text-[#6A2500] leading-tight tracking-tight">Know when you've arrived.</h2>
-                    <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed">You can see yourself deepening in a theme, session by session. And when you've reached the end, Noah will let you know. You'll receive an insight card that captures what you worked through, what changed, and what to do next if you ever feel lost. It lives in your theme, so you can always come back to it.</p>
-                </div>
-            </div>
-
         </div>
     </section>
 
 
     <!-- Footer -->
+    <!-- ── APP-PREVIEW / PRIJZEN / FAQ ─────────────────────────── -->
+    <style>
+      /* Zelfde marge-trap en containerbreedte als de rest van de pagina. */
+      .sec-pad { padding: 88px 96px 96px; }
+      @media (max-width: 1023px) { .sec-pad { padding: 72px 64px 80px; } }
+      @media (max-width: 767px)  { .sec-pad { padding: 56px 24px 64px; } }
+      .sec-inner { max-width: 1152px; margin: 0 auto; }
+      .sec-title {
+        font-family: 'Albert Sans', sans-serif;
+        font-weight: 700;
+        font-size: clamp(30px, 4.4vw, 52px);
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        color: #644737;
+        text-align: center;
+        margin: 0 0 16px;
+      }
+      .sec-sub {
+        font-family: 'Albert Sans', sans-serif;
+        font-size: 15px;
+        line-height: 1.6;
+        color: #7b6455;
+        text-align: center;
+        max-width: 470px;
+        margin: 0 auto 52px;
+      }
+
+      /* ── App-preview: één toestel, de schermen schuiven ── */
+      #preview { background: #FCF7F0; }
+      #preview .pv-stage { display: flex; justify-content: center; }
+      #preview .pv-phone {
+        position: relative;
+        width: 286px;
+        aspect-ratio: 3 / 6.3;
+        flex: none;
+        border: 5px solid #B28B76;
+        border-radius: 38px;
+        background: #FBFAF6;
+        overflow: hidden;
+      }
+      #preview .pv-track {
+        display: flex;
+        height: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        overscroll-behavior-x: contain;
+      }
+      #preview .pv-track::-webkit-scrollbar { display: none; }
+      #preview .pv-slide {
+        position: relative;
+        flex: 0 0 100%;
+        height: 100%;
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+      }
+      #preview .pv-slide img {
+        position: relative; z-index: 1;
+        display: block; width: 100%; height: 100%;
+        object-fit: cover; object-position: top center;
+      }
+      /* Zolang een screenshot ontbreekt staat de bestandsnaam in beeld
+         in plaats van een kapot plaatje. */
+      #preview .pv-slide::after {
+        content: attr(data-todo);
+        position: absolute; inset: 0; z-index: 0;
+        display: flex; align-items: center; justify-content: center;
+        padding: 0 16px;
+        font-family: 'Albert Sans', sans-serif;
+        font-size: 12px; text-align: center; color: #c9b8aa;
+      }
+      #preview .pv-caption {
+        font-family: 'Albert Sans', sans-serif;
+        font-size: 15px; font-weight: 600; color: #644737;
+        text-align: center;
+        margin: 26px 0 0;
+        min-height: 22px;
+      }
+      @media (max-width: 767px) {
+        #preview .pv-phone { width: min(262px, 76vw); }
+      }
+      /* ── Prijzen ── */
+      #pricing { background: #fff; }
+      #pricing .pr-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+        max-width: 780px;
+        margin: 0 auto;
+        align-items: stretch;
+      }
+      #pricing .pr-card {
+        display: flex; flex-direction: column;
+        background: #FCF7F0;
+        border: 1px solid rgba(100, 71, 55, 0.10);
+        border-radius: 18px;
+        padding: 30px 30px 32px;
+      }
+      #pricing .pr-card.is-pro { background: #fff; border-color: #FF6D1F; }
+      #pricing .pr-name {
+        font-family: 'Albert Sans', sans-serif;
+        font-size: 14px; font-weight: 700; letter-spacing: 0.04em;
+        text-transform: uppercase; color: #FF6D1F; margin: 0 0 6px;
+      }
+      #pricing .pr-for {
+        font-family: 'Albert Sans', sans-serif;
+        font-size: 14px; color: #8a7365; margin: 0 0 18px;
+      }
+      #pricing .pr-price {
+        font-family: 'Albert Sans', sans-serif;
+        font-weight: 700; font-size: 40px; line-height: 1;
+        letter-spacing: -0.02em; color: #644737; margin: 0 0 24px;
+      }
+      #pricing .pr-price span { font-size: 15px; font-weight: 500; color: #8a7365; letter-spacing: 0; }
+      #pricing .pr-list { list-style: none; padding: 0; margin: 0 0 28px; }
+      #pricing .pr-list li {
+        position: relative;
+        padding-left: 26px;
+        font-family: 'Albert Sans', sans-serif;
+        font-size: 14px; line-height: 1.5; color: #6b5749;
+        margin-bottom: 11px;
+      }
+      #pricing .pr-list li::before {
+        content: ''; position: absolute; left: 4px; top: 6px;
+        width: 11px; height: 6px;
+        border-left: 2px solid #FF6D1F; border-bottom: 2px solid #FF6D1F;
+        transform: rotate(-45deg);
+      }
+      #pricing .pr-btn {
+        display: inline-flex; align-items: center; justify-content: center;
+        margin-top: auto;
+        height: 52px; border-radius: 10px;
+        font-family: 'Albert Sans', sans-serif;
+        font-size: 16px; font-weight: 700; text-decoration: none;
+        transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+      }
+      #pricing .pr-btn-free {
+        background: transparent; color: #644737;
+        border: 1.5px solid rgba(100, 71, 55, 0.25);
+      }
+      #pricing .pr-btn-free:hover { border-color: #FF6D1F; color: #FF6D1F; }
+      #pricing .pr-btn-pro { background: #FF6D1F; color: #fff; }
+      #pricing .pr-btn-pro:hover { background: #6A2500; color: #FF6D1F; }
+      #pricing .pr-fine {
+        font-family: 'Albert Sans', sans-serif;
+        font-size: 12px; color: #a3907f; text-align: center; margin: 14px 0 0;
+      }
+      #pricing .pr-more {
+        text-align: center; margin: 30px 0 0;
+        font-family: 'Albert Sans', sans-serif; font-size: 14px;
+      }
+      #pricing .pr-more a { color: #FF6D1F; text-decoration: none; font-weight: 600; }
+      #pricing .pr-more a:hover { text-decoration: underline; }
+      @media (max-width: 720px) {
+        #pricing .pr-grid { grid-template-columns: 1fr; }
+      }
+
+      /* ── FAQ ── */
+      #faq-short { background: #FCF7F0; }
+      #faq-short .fq-list { max-width: 720px; margin: 0 auto; }
+      #faq-short details {
+        border-bottom: 1px solid rgba(100, 71, 55, 0.12);
+      }
+      #faq-short details:first-of-type { border-top: 1px solid rgba(100, 71, 55, 0.12); }
+      #faq-short summary {
+        list-style: none;
+        cursor: pointer;
+        padding: 22px 34px 22px 0;
+        position: relative;
+        font-family: 'Albert Sans', sans-serif;
+        font-size: 16px; font-weight: 600; color: #644737;
+        transition: color 0.2s;
+      }
+      #faq-short summary::-webkit-details-marker { display: none; }
+      #faq-short summary:hover { color: #FF6D1F; }
+      #faq-short summary::after {
+        content: ''; position: absolute; right: 6px; top: 27px;
+        width: 9px; height: 9px;
+        border-right: 2px solid #b09a89; border-bottom: 2px solid #b09a89;
+        transform: rotate(45deg);
+        transition: transform 0.25s ease;
+      }
+      #faq-short details[open] summary::after { transform: rotate(-135deg); top: 31px; }
+      #faq-short .fq-a {
+        font-family: 'Albert Sans', sans-serif;
+        font-size: 14.5px; line-height: 1.65; color: #7b6455;
+        margin: 0; padding: 0 34px 24px 0;
+      }
+      #faq-short .fq-more { text-align: center; margin: 32px 0 0; font-family: 'Albert Sans', sans-serif; font-size: 14px; }
+      #faq-short .fq-more a { color: #FF6D1F; text-decoration: none; font-weight: 600; }
+      #faq-short .fq-more a:hover { text-decoration: underline; }
+    </style>
+
+    <!-- APP-PREVIEW -->
+    <section id="preview" class="sec-pad">
+      <div class="sec-inner">
+        <h2 class="sec-title">What it actually looks like</h2>
+        <p class="sec-sub">Swipe through the app — no mockups, these are the real screens.</p>
+
+        <div class="pv-stage">
+
+          <div class="pv-phone">
+            <div class="pv-track" id="pv-track" tabindex="0" role="group" aria-roledescription="carousel" aria-label="What it actually looks like">
+              <div class="pv-slide" data-caption="Today" data-todo="app-vandaag-en.png"><img src="./Images/app-vandaag-en.png" alt="The Today home screen" loading="lazy" onerror="this.remove()"></div>
+              <div class="pv-slide" data-caption="A conversation with Noah" data-todo="app-gesprek-en.png"><img src="./Images/app-gesprek-en.png" alt="A conversation with Noah in the Baeloom app" loading="lazy" onerror="this.remove()"></div>
+              <div class="pv-slide" data-caption="Themes" data-todo="app-themas-en.png"><img src="./Images/app-themas-en.png" alt="The themes screen" loading="lazy" onerror="this.remove()"></div>
+              <div class="pv-slide" data-caption="Session summary" data-todo="app-samenvatting-en.png"><img src="./Images/app-samenvatting-en.png" alt="A session summary" loading="lazy" onerror="this.remove()"></div>
+              <div class="pv-slide" data-caption="Your progress" data-todo="app-groei-en.png"><img src="./Images/app-groei-en.png" alt="Tracking your progress" loading="lazy" onerror="this.remove()"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="pv-caption" id="pv-caption" aria-live="polite">Today</p>
+      </div>
+    </section>
+
+    <script>
+    /* App-preview: één toestel, de schermen schuiven er vanzelf doorheen.
+       Geen pijlen en geen bolletjes — het schuift automatisch. Het schuiven
+       zelf doet de browser via scroll-snap, dus vegen op een telefoon werkt
+       gewoon; de JS zet alleen het bijschrift en de timer. */
+    (function () {
+      var track = document.getElementById('pv-track');
+      if (!track) return;
+      var slides = Array.prototype.slice.call(track.querySelectorAll('.pv-slide'));
+      var capEl = document.getElementById('pv-caption');
+      var index = 0, timer = null, paused = false;
+      var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function paint() {
+        var cap = slides[index] && slides[index].getAttribute('data-caption');
+        if (capEl && cap) capEl.textContent = cap;
+      }
+
+      function go(i) {
+        index = (i + slides.length) % slides.length;
+        track.scrollTo({ left: slides[index].offsetLeft - track.offsetLeft, behavior: 'smooth' });
+        paint();
+      }
+
+      /* Ook bijhouden waar iemand zelf naartoe veegt. */
+      var settle;
+      track.addEventListener('scroll', function () {
+        clearTimeout(settle);
+        settle = setTimeout(function () {
+          var near = Math.round(track.scrollLeft / track.clientWidth);
+          if (near !== index && slides[near]) { index = near; paint(); }
+        }, 90);
+      }, { passive: true });
+
+      /* Veegt iemand zelf, dan even wachten voor we weer doorschuiven. */
+      var resume;
+      function hold() {
+        paused = true;
+        clearTimeout(resume);
+        resume = setTimeout(function () { paused = false; }, 9000);
+      }
+      track.addEventListener('touchstart', hold, { passive: true });
+      track.addEventListener('pointerdown', hold);
+
+      function tick() { if (!paused && !document.hidden) go(index + 1); }
+      function start() { if (!timer && !calm) timer = setInterval(tick, 4000); }
+      function stop() { clearInterval(timer); timer = null; }
+      document.addEventListener('visibilitychange', function () { if (document.hidden) stop(); else start(); });
+
+      /* Pas laten lopen als de sectie in beeld staat. */
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) { en.isIntersecting ? start() : stop(); });
+        }, { threshold: 0.25 }).observe(document.getElementById('preview'));
+      } else { start(); }
+
+      paint();
+    })();
+    </script>
+
+    <!-- PRIJZEN -->
+    <section id="pricing" class="sec-pad">
+      <div class="sec-inner">
+        <h2 class="sec-title">Start free, go further when it clicks</h2>
+        <p class="sec-sub">No trial that quietly runs out. You start free and switch over when you want to.</p>
+        <div class="pr-grid">
+          <div class="pr-card">
+            <p class="pr-name">Free</p>
+            <p class="pr-for">To see whether it suits you</p>
+            <p class="pr-price">&euro;0</p>
+            <ul class="pr-list">
+              <li>60 messages to get started</li>
+              <li>Then 20 new messages every 30 days</li>
+              <li>Up to 2 active themes</li>
+              <li>No credit card needed</li>
+            </ul>
+            <a class="pr-btn pr-btn-free" href="https://chat.baeloom.com">Start for free</a>
+            <p class="pr-fine" aria-hidden="true">&nbsp;</p>
+          </div>
+          <div class="pr-card is-pro">
+            <p class="pr-name">Pro</p>
+            <p class="pr-for">For daily, deeper use</p>
+            <p class="pr-price">&euro;12 <span>/ month</span></p>
+            <ul class="pr-list">
+              <li>Generous limits for daily use</li>
+              <li>Up to 5 active themes</li>
+              <li>Session summaries and progress</li>
+              <li>Memory that grows with you</li>
+              <li>Image uploads</li>
+            </ul>
+            <a class="pr-btn pr-btn-pro" href="https://chat.baeloom.com">Go Pro</a>
+            <p class="pr-fine">Cancel anytime · Secure checkout via Stripe</p>
+          </div>
+        </div>
+        <p class="pr-more"><a href="./pricing.html">Full details on the pricing page</a></p>
+      </div>
+    </section>
+
+    <!-- FAQ (kort) -->
+    <section id="faq-short" class="sec-pad">
+      <div class="sec-inner">
+        <h2 class="sec-title">Before you start</h2>
+        <p class="sec-sub">The four things people ask us most.</p>
+        <div class="fq-list">
+          <details>
+            <summary>Can Noah replace therapy?</summary>
+            <p class="fq-a">No, and she’s not trying to. Noah is there to reflect with, not to treat. What she can do is give you a space to think things through, especially the things that feel hard to bring up with people around you. If you’re struggling, please speak to a professional.</p>
+          </details>
+          <details>
+            <summary>Is my data private?</summary>
+            <p class="fq-a">Yes. Your conversations with Noah are private and encrypted. We never use them to train AI models, and we never sell your data.</p>
+          </details>
+          <details>
+            <summary>Can I cancel anytime?</summary>
+            <p class="fq-a">Yes. You can cancel your subscription at any time. You’ll keep access to Pro features until the end of your current billing cycle.</p>
+          </details>
+          <details>
+            <summary>What happens when my free messages run out?</summary>
+            <p class="fq-a">You get 20 new messages every 30 days. Your conversations stay where they are. If you want more room, you can switch to Pro.</p>
+          </details>
+        </div>
+        <p class="fq-more"><a href="./faq.html">All questions and answers</a></p>
+      </div>
+    </section>
+
     <!-- App notify section -->
     <section id="app-notify" style="background:#FAF9F7;padding:96px 24px;text-align:center;border-top:1px solid rgba(0,0,0,0.05);position:relative;">
       <img src="./Images/app.png" alt="" aria-hidden="true" class="hidden md:block" style="position:absolute;right:40px;top:50%;transform:translateY(-45%) rotate(10deg);width:250px;opacity:0.9;pointer-events:none;user-select:none;z-index:10;">
@@ -901,90 +1268,7 @@
     </footer>
 
     <script>
-        lucide.createIcons();
-
-        // FLOATING CHAT ANIMATION
-        const allChats = {
-            playful: [
-                { type: 'user', text: "The ikea cabinet is up but it wobbles and I'm not redoing it" },
-                { type: 'lucy', text: "Nah, that usually just means one leg isn't quite touching the floor. Stick a felt pad under it and you're done." },
-                { type: 'user', text: "I'm not buying felt pads specially for this" },
-                { type: 'lucy', text: "Don't most furniture sets come with them? Otherwise I'd push up one corner and feel where the play is." },
-                { type: 'user', text: "oh wait it does dip on the left side" },
-                { type: 'lucy', text: "Can you put something under it you already have lying around? A coin or something?" },
-            ],
-            honest: [
-                { type: 'user', text: "I think I should just work less. I'm tired all the time." },
-                { type: 'lucy', text: "Maybe. It could also be that the work itself is draining you. Fewer hours doesn't fix that on its own." },
-                { type: 'user', text: "Yeah, but I just feel like I have too little time for myself." },
-                { type: 'lucy', text: "Could be. Though if you fill that time with the same things that are draining you now, does anything actually change?" },
-                { type: 'user', text: "Maybe not. I think I'm mostly trying to make my life easier." },
-                { type: 'lucy', text: "I think so too. Only, the way I see it, you're solving the effect right now, not the reason you're so tired." },
-            ],
-            sharp: [
-                { type: 'user', text: "I was secretly relieved when my colleague went home sick." },
-                { type: 'lucy', text: "Why did you feel relieved?" },
-                { type: 'user', text: "Because I always feel a bit insecure around her." },
-                { type: 'lucy', text: "Because you keep comparing yourself to her?" },
-                { type: 'user', text: "Yeah. She doesn't actually do anything wrong, but it still feels like I'm behind." },
-                { type: 'lucy', text: "Then maybe you're not jealous of her, but of where you think you should be by now." },
-            ],
-        };
-
-        let activeTab = 'playful';
-        let chatGen = 0; // increment to cancel any running animation
-
-        function switchTab(tab) {
-            activeTab = tab;
-            ['playful','honest','sharp'].forEach(t => {
-                const btn = document.getElementById('tab-' + t);
-                if (t === tab) {
-                    btn.style.background = '#FF6D1F';
-                    btn.style.borderColor = '#FF6D1F';
-                    btn.style.color = '#fff';
-                } else {
-                    btn.style.background = 'transparent';
-                    btn.style.borderColor = '#e8e0d5';
-                    btn.style.color = '#888';
-                }
-            });
-            const caption = document.getElementById('chat-caption');
-            if (caption) caption.style.opacity = '0';
-            runChat(allChats[tab]);
-        }
-
-        function runChat(chatData) {
-            ++chatGen;
-            const chatEl = document.getElementById('float-chat');
-            if (!chatEl) return;
-            chatEl.style.opacity = '0';
-            chatEl.style.transition = 'opacity 0.2s ease';
-            setTimeout(() => {
-                chatEl.innerHTML = '';
-                chatData.forEach((item, i) => {
-                    const isLucy = item.type === 'lucy';
-                    const prev = chatData[i - 1];
-                    const sameType = prev && prev.type === item.type;
-                    const wrapper = document.createElement('div');
-                    wrapper.style.cssText = `display:flex;flex-direction:column;align-items:${isLucy ? 'flex-start' : 'flex-end'};margin-bottom:${sameType ? '3px' : '10px'};flex-shrink:0;`;
-                    const bubble = document.createElement('div');
-                    bubble.textContent = item.text;
-                    bubble.style.cssText = `max-width:82%;padding:11px 16px;border-radius:${isLucy ? '18px 18px 18px 5px' : '18px 18px 5px 18px'};font-size:15px;line-height:1.55;font-family:'Albert Sans',sans-serif;background:${isLucy ? '#ffffff' : '#F5E7C6'};color:#222;`;
-                    wrapper.appendChild(bubble);
-                    chatEl.appendChild(wrapper);
-                });
-                chatEl.style.opacity = '1';
-                const caption = document.getElementById('chat-caption');
-                if (caption) caption.style.opacity = '1';
-            }, 220);
-        }
-
-        let chatStarted = false;
-        function startChatAnimation() {
-            if (chatStarted) return;
-            chatStarted = true;
-            runChat(allChats['playful']);
-        }
+        try { lucide.createIcons(); } catch (e) {}
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -992,14 +1276,11 @@
                     if (entry.target.classList.contains('scroll-reveal')) {
                         entry.target.classList.add('reveal-visible');
                     }
-                    if (entry.target.classList.contains('scroll-trigger')) {
-                        startChatAnimation();
-                    }
                 }
             });
         }, { threshold: 0.15 });
 
-        document.querySelectorAll('.scroll-reveal, .scroll-trigger').forEach(el => observer.observe(el));
+        document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
 
         // Hamburger menu
         function toggleMenu() {

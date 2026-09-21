@@ -27,14 +27,21 @@
       border-bottom: 1px solid rgba(0,0,0,0.07);
     }
     .nav-inner {
-      max-width: 1152px;
+      max-width: 1344px;
       margin: 0 auto;
-      padding: 0 48px;
+      padding: 0 96px;
+      box-sizing: border-box;
       height: 64px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
+
+        /* Zelfde marges als de rest van de pagina, zodat het logo links
+           uitlijnt met de inhoud eronder. */
+        @media (max-width: 1023px) { .nav-inner { max-width: 1280px; padding: 0 64px; } }
+        @media (max-width: 767px)  { .nav-inner { max-width: 100%; padding: 0 24px; } }
+
     .nav-logo img { height: 28px; width: auto; display: block; }
     .nav-right { display: flex; align-items: center; gap: 24px; }
     .nav-link-item {
@@ -77,7 +84,6 @@
     }
     .nav-cta:hover { background: #6A2500; color: #FF6D1F; }
     @media (max-width: 640px) {
-      .nav-inner { padding: 0 20px; }
       .nav-contact { display: none; }
       .nav-link-item { display: none; }
     }
@@ -276,7 +282,7 @@
       border-radius: 10px; font-family: 'Albert Sans', sans-serif; font-size: 0.95rem;
       font-weight: 600; text-decoration: none; transition: background 0.2s;
     }
-    #mobile-menu .mobile-cta:hover { background: #6A2500; }
+    #mobile-menu .mobile-cta:hover { background: #6A2500; color: #FF6D1F; }
     @media (max-width: 640px) {
       #hamburger { display: flex; }
       .nav-link-item, .nav-contact, .nav-cta { display: none !important; }

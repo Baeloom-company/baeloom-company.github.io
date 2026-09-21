@@ -27,7 +27,13 @@
       flex-direction: column;
     }
     nav { background: #FCF7F0; border-bottom: 1px solid rgba(0,0,0,0.07); }
-    .nav-inner { max-width: 1152px; margin: 0 auto; padding: 0 48px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-inner { max-width: 1344px; margin: 0 auto; padding: 0 96px; box-sizing: border-box; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+
+        /* Zelfde marges als de rest van de pagina, zodat het logo links
+           uitlijnt met de inhoud eronder. */
+        @media (max-width: 1023px) { .nav-inner { max-width: 1280px; padding: 0 64px; } }
+        @media (max-width: 767px)  { .nav-inner { max-width: 100%; padding: 0 24px; } }
+
     .nav-logo img { height: 28px; width: auto; display: block; }
     .nav-right { display: flex; align-items: center; gap: 24px; }
     .nav-link-item { font-family: 'Albert Sans', sans-serif; font-size: 0.95rem; font-weight: 500; color: #505050; text-decoration: none; transition: color 0.2s; }
@@ -37,7 +43,6 @@
     .nav-cta { display: inline-flex; align-items: center; padding: 11px 32px; border-radius: 10px; font-family: 'Albert Sans', sans-serif; font-size: 0.9rem; font-weight: 600; color: white; background: #FF6D1F; text-decoration: none; line-height: 1; transition: background 0.2s; }
     .nav-cta:hover { background: #6A2500; color: #FF6D1F; }
     @media (max-width: 640px) {
-      .nav-inner { padding: 0 20px; }
       .nav-contact { display: none; }
       .nav-link-item { display: none; }
     }
@@ -215,7 +220,7 @@
       border-radius: 10px; font-family: 'Albert Sans', sans-serif; font-size: 0.95rem;
       font-weight: 600; text-decoration: none; transition: background 0.2s;
     }
-    #mobile-menu .mobile-cta:hover { background: #6A2500; }
+    #mobile-menu .mobile-cta:hover { background: #6A2500; color: #FF6D1F; }
     @media (max-width: 640px) {
       #hamburger { display: flex; }
       .nav-link-item, .nav-contact, .nav-cta { display: none !important; }
@@ -245,16 +250,16 @@
   <meta property="og:title" content="Baeloom | Contact">
   <meta property="og:description" content="Questions about Baeloom or Noah? Send us a message and we'll reply within 24 hours.">
   <meta property="og:url" content="https://www.baeloom.com/contact">
-  <meta property="og:image" content="https://www.baeloom.com/Images/og-image-v2.png">
+  <meta property="og:image" content="https://www.baeloom.com/Images/og-image-v3.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Baeloom — Think inward, live forward.">
+  <meta property="og:image:alt" content="Baeloom — your sparring partner for personal growth.">
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Baeloom | Contact">
   <meta name="twitter:description" content="Questions about Baeloom or Noah? Send us a message and we'll reply within 24 hours.">
-  <meta name="twitter:image" content="https://www.baeloom.com/Images/og-image-v2.png">
+  <meta name="twitter:image" content="https://www.baeloom.com/Images/og-image-v3.png">
 </head>
 <body>
 
