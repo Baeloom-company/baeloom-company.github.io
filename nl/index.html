@@ -936,82 +936,117 @@
       @media (max-width: 767px) {
         #preview .pv-phone { width: min(262px, 76vw); }
       }
-      /* ── Prijzen ── */
-      #pricing { background: #fff; }
+      /* ── Prijzen ── Zelfde opbouw als het abonnementsscherm in de app:
+         witte kaart, naam in Lora, prijs eronder, knop boven de lijst. */
+      #pricing { background: #FBF9F4; }
       #pricing .pr-grid {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 22px;
-        max-width: 780px;
+        gap: 18px;
+        max-width: 820px;
         margin: 0 auto;
         align-items: stretch;
       }
       #pricing .pr-card {
-        display: flex; flex-direction: column;
-        background: #FCF7F0;
-        border: 1px solid rgba(100, 71, 55, 0.10);
-        border-radius: 18px;
-        padding: 30px 30px 32px;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        border-radius: 20px;
+        padding: 32px;
+        text-align: left;
       }
-      #pricing .pr-card.is-pro { background: #fff; border-color: #FF6D1F; }
       #pricing .pr-name {
-        font-family: 'Albert Sans', sans-serif;
-        font-size: 14px; font-weight: 700; letter-spacing: 0.04em;
-        text-transform: uppercase; color: #FF6D1F; margin: 0 0 6px;
+        font-family: 'Lora', serif;
+        font-size: 20px;
+        font-weight: 600;
+        color: #644737;
+        margin: 0 0 4px;
       }
       #pricing .pr-for {
         font-family: 'Albert Sans', sans-serif;
-        font-size: 14px; color: #8a7365; margin: 0 0 18px;
+        font-size: 13px;
+        color: #a49a92;
+        margin: 0 0 24px;
       }
       #pricing .pr-price {
-        font-family: 'Albert Sans', sans-serif;
-        font-weight: 700; font-size: 40px; line-height: 1;
-        letter-spacing: -0.02em; color: #644737; margin: 0 0 24px;
+        display: flex;
+        align-items: baseline;
+        gap: 6px;
+        font-family: 'Lora', serif;
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 1;
+        color: #644737;
+        margin: 0 0 20px;
       }
-      #pricing .pr-price span { font-size: 15px; font-weight: 500; color: #8a7365; letter-spacing: 0; }
-      #pricing .pr-list { list-style: none; padding: 0; margin: 0 0 28px; }
-      #pricing .pr-list li {
-        position: relative;
-        padding-left: 26px;
+      #pricing .pr-price span {
         font-family: 'Albert Sans', sans-serif;
-        font-size: 14px; line-height: 1.5; color: #6b5749;
-        margin-bottom: 11px;
-      }
-      #pricing .pr-list li::before {
-        content: ''; position: absolute; left: 4px; top: 6px;
-        width: 11px; height: 6px;
-        border-left: 2px solid #FF6D1F; border-bottom: 2px solid #FF6D1F;
-        transform: rotate(-45deg);
+        font-size: 14px;
+        font-weight: 400;
+        color: #a49a92;
       }
       #pricing .pr-btn {
-        display: inline-flex; align-items: center; justify-content: center;
-        margin-top: auto;
-        height: 52px; border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 14px 0;
+        border-radius: 12px;
         font-family: 'Albert Sans', sans-serif;
-        font-size: 16px; font-weight: 700; text-decoration: none;
-        transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
       }
       #pricing .pr-btn-free {
-        background: transparent; color: #644737;
-        border: 1.5px solid rgba(100, 71, 55, 0.25);
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        color: #6b5749;
+        background: transparent;
       }
       #pricing .pr-btn-free:hover { border-color: #FF6D1F; color: #FF6D1F; }
       #pricing .pr-btn-pro { background: #FF6D1F; color: #fff; }
-      #pricing .pr-btn-pro:hover { background: #6A2500; color: #FF6D1F; }
+      #pricing .pr-btn-pro:hover { opacity: 0.9; }
       #pricing .pr-fine {
         font-family: 'Albert Sans', sans-serif;
-        font-size: 12px; color: #a3907f; text-align: center; margin: 14px 0 0;
+        font-size: 11px;
+        color: #a49a92;
+        text-align: center;
+        margin: 10px 0 0;
       }
+      /* De lijst begint bij beide kaarten op dezelfde hoogte, ook al staat er
+         onder de Pro-knop nog een regel kleine letters. */
+      #pricing .pr-list {
+        list-style: none;
+        padding: 0;
+        margin: 28px 0 0;
+      }
+      #pricing .pr-card-free .pr-list { margin-top: 49px; }
+      #pricing .pr-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        font-family: 'Albert Sans', sans-serif;
+        font-size: 15px;
+        line-height: 1.45;
+        color: #6b625a;
+        margin-bottom: 14px;
+      }
+      #pricing .pr-list li:last-child { margin-bottom: 0; }
+      #pricing .pr-list svg { flex: none; margin-top: 4px; }
       #pricing .pr-more {
-        text-align: center; margin: 30px 0 0;
-        font-family: 'Albert Sans', sans-serif; font-size: 14px;
+        text-align: center;
+        margin: 30px 0 0;
+        font-family: 'Albert Sans', sans-serif;
+        font-size: 14px;
       }
       #pricing .pr-more a { color: #FF6D1F; text-decoration: none; font-weight: 600; }
       #pricing .pr-more a:hover { text-decoration: underline; }
       @media (max-width: 720px) {
         #pricing .pr-grid { grid-template-columns: 1fr; }
+        #pricing .pr-card { padding: 26px; }
+        #pricing .pr-card-free .pr-list { margin-top: 28px; }
       }
-
       /* ── FAQ ── */
       #faq-short { background: #FCF7F0; }
       #faq-short .fq-list { max-width: 720px; margin: 0 auto; }
@@ -1135,36 +1170,38 @@
     <!-- PRIJZEN -->
     <section id="pricing" class="sec-pad">
       <div class="sec-inner">
-        <h2 class="sec-title">Begin gratis, ga verder als het klikt</h2>
+        <h2 class="sec-title">Begin gratis, ga verder als het bevalt</h2>
         <p class="sec-sub">Geen proefperiode die stiekem afloopt. Je begint gratis en stapt over wanneer jíj dat wilt.</p>
         <div class="pr-grid">
-          <div class="pr-card">
-            <p class="pr-name">Gratis</p>
+
+          <div class="pr-card pr-card-free">
+            <h3 class="pr-name">Gratis</h3>
             <p class="pr-for">Om te kijken of het bij je past</p>
             <p class="pr-price">&euro;0</p>
-            <ul class="pr-list">
-              <li>60 berichten om te beginnen</li>
-              <li>Daarna elke 30 dagen 20 nieuwe berichten</li>
-              <li>Tot 2 actieve thema’s</li>
-              <li>Geen creditcard nodig</li>
-            </ul>
             <a class="pr-btn pr-btn-free" href="https://chat.baeloom.com/?lang=nl">Begin gratis</a>
-            <p class="pr-fine" aria-hidden="true">&nbsp;</p>
+            <ul class="pr-list">
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#FF6D1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,8 6,12 14,4"/></svg><span>60 berichten om te beginnen</span></li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#FF6D1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,8 6,12 14,4"/></svg><span>Daarna elke 30 dagen 20 nieuwe berichten</span></li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#FF6D1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,8 6,12 14,4"/></svg><span>Tot 2 actieve thema’s</span></li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#FF6D1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,8 6,12 14,4"/></svg><span>Geen creditcard nodig</span></li>
+            </ul>
           </div>
-          <div class="pr-card is-pro">
-            <p class="pr-name">Pro</p>
+
+          <div class="pr-card pr-card-pro">
+            <h3 class="pr-name">Pro</h3>
             <p class="pr-for">Voor dagelijks, dieper gebruik</p>
             <p class="pr-price">&euro;12 <span>/ maand</span></p>
-            <ul class="pr-list">
-              <li>Ruime limieten voor dagelijks gebruik</li>
-              <li>Tot 5 actieve thema’s</li>
-              <li>Sessie samenvattingen en je voortgang</li>
-              <li>Geheugen dat met je meegroeit</li>
-              <li>Afbeeldingen uploaden</li>
-            </ul>
             <a class="pr-btn pr-btn-pro" href="https://chat.baeloom.com/?lang=nl">Word Pro</a>
             <p class="pr-fine">Altijd opzegbaar · Veilig afrekenen via Stripe</p>
+            <ul class="pr-list">
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#FF6D1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,8 6,12 14,4"/></svg><span>Ruime limieten voor dagelijks gebruik</span></li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#FF6D1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,8 6,12 14,4"/></svg><span>Tot 5 actieve thema’s</span></li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#FF6D1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,8 6,12 14,4"/></svg><span>Sessie samenvattingen en je voortgang</span></li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#FF6D1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,8 6,12 14,4"/></svg><span>Geheugen dat met je meegroeit</span></li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#FF6D1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,8 6,12 14,4"/></svg><span>Afbeeldingen uploaden</span></li>
+            </ul>
           </div>
+
         </div>
         <p class="pr-more"><a href="./pricing.html">Alle details op de prijzenpagina</a></p>
       </div>
