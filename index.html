@@ -604,7 +604,7 @@
                     <a href="./faq.html" class="nav-link">FAQ</a>
                 </div>
                 <a href="https://chat.baeloom.com" class="nav-link hidden sm:inline-flex">Log in</a>
-                <a id="nav-cta" href="https://chat.baeloom.com" class="nav-cta-btn hidden sm:inline-flex">Try Noah for free</a>
+                <a id="nav-cta" href="https://chat.baeloom.com" class="nav-cta-btn hidden sm:inline-flex">Try for free</a>
                 <a href="/nl/" class="lang-switch hidden sm:inline-flex" hreflang="nl" aria-label="Switch language" onclick="try{localStorage.setItem('bae-lang','nl')}catch(e){}"><span class="flag">🇳🇱</span>NL</a>
                 <button id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
                     <span></span><span></span><span></span>
@@ -620,7 +620,7 @@
         <a href="./contact.html" class="mobile-link">Contact support</a>
         <a href="/nl/" class="mobile-link mobile-lang" onclick="try{localStorage.setItem('bae-lang','nl')}catch(e){}"><span style="margin-right:8px">🇳🇱</span>Nederlands</a>
         <div class="menu-bottom">
-            <a href="https://chat.baeloom.com" class="mobile-cta">Try Noah for free</a>
+            <a href="https://chat.baeloom.com" class="mobile-cta">Try for free</a>
             <a href="https://chat.baeloom.com" class="mobile-support">Log in</a>
         </div>
     </div>
@@ -637,10 +637,10 @@
             <h1 style="font-weight:500;" class="text-[28px] md:text-[54px] lg:text-[68px] leading-[1.25] md:leading-[1.25] lg:leading-[1.2] tracking-tight md:tracking-tighter text-white mt-12 md:mt-20 mb-5 md:mb-8 max-w-4xl mx-auto px-6 md:px-0 text-center break-words">
                 Your&nbsp;sparring&nbsp;partner <span class="block md:inline-block">for personal growth</span>
             </h1>
-            <p class="text-white/80 text-base md:text-lg max-w-xl mx-auto text-center" style="font-family:'Albert Sans',sans-serif;">Meet Noah. Explore what’s going on, discover patterns and gain more insight into what’s on your mind.</p>
+            <p class="text-white/80 text-base md:text-lg max-w-xl mx-auto text-center" style="font-family:'Albert Sans',sans-serif;">Explore what’s going on, discover patterns and gain more insight into what’s on your mind.</p>
             <div class="flex flex-col items-center gap-3 mt-8">
                 <a href="https://chat.baeloom.com" class="inline-flex items-center justify-center px-9 py-4 rounded-[10px] text-base font-semibold text-white bg-[#FF6D1F] hover:bg-[#6A2500] hover:text-[#FF6D1F] transition-colors no-underline" style="font-family:'Albert Sans',sans-serif;">
-                    Chat with Noah for free
+                    Try Baeloom for free
                 </a>
             </div>
             <div id="hero-chevron" class="flex items-center justify-center pt-8 md:pt-12">
@@ -785,7 +785,7 @@
             <article class="hl-card hl-card-text hl-card-push">
               <div class="hl-copy">
                 <h3>Get honest pushback</h3>
-                <p>Noah has her own view, listens, asks questions and challenges you.</p>
+                <p>Noah listens, asks questions and gives you her own take on what’s on your mind.</p>
               </div>
             </article>
             <article class="hl-card hl-card-voice">
@@ -824,11 +824,11 @@
     <!-- SPIRAL / JOURNEY SECTION -->
     <section id="features" class="py-16 md:py-32 relative overflow-hidden bg-[#FFFFFF] px-0 md:px-16 lg:px-24 border-b border-orange-50">
         <div class="max-w-6xl mx-auto relative z-10">
-            <div class="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-x-12 md:gap-y-12 lg:gap-x-24 lg:gap-y-16 md:items-center">
+            <div class="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-x-12 md:gap-y-5 lg:gap-x-24 lg:gap-y-6 md:items-center">
 
                 <!-- Heading: 1st on mobile, left col on desktop -->
-                <h2 class="order-1 md:col-start-1 md:row-start-1 px-8 md:px-0 text-5xl md:text-7xl text-[#6A2500] leading-[1.05] md:leading-[0.9] tracking-tight scroll-reveal">
-                    What if you actually understood yourself?
+                <h2 class="sec-title order-1 md:col-start-1 md:row-start-1 md:self-end px-8 md:px-0 scroll-reveal">
+                    Discover what is going on
                 </h2>
 
                 <!-- Spiral: 3rd on mobile, right col spanning on desktop -->
@@ -840,9 +840,9 @@
                 </div>
 
                 <!-- Description: 2nd on mobile, left col 2nd on desktop -->
-                <div class="order-2 md:col-start-1 md:row-start-2 px-8 md:px-0 space-y-6">
+                <div class="order-2 md:col-start-1 md:row-start-2 md:self-start px-8 md:px-0 space-y-6">
                     <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed scroll-reveal">
-                        You know that feeling when the same things keep coming back? Same patterns, same questions. That's not a sign you're stuck, that's just how growth works. Noah remembers what you share, builds on it session by session, and over time gives you a clearer picture of what's really going on. Think inward, live forward.
+                        What you tell her today can suddenly connect to something later. Noah, your personal sparring partner, remembers what you shared before and builds on it. Along the way you find patterns, connections and new insights that help you move forward.
                     </p>
                 </div>
 
@@ -869,6 +869,9 @@
         text-align: center;
         margin: 0 0 16px;
       }
+      /* Deze kop staat in een raster naast de spiraal en hoort daar links
+         uitgelijnd, dus alleen de typografie wordt overgenomen. */
+      #features .sec-title { text-align: left; margin: 0; }
       .sec-sub {
         font-family: 'Albert Sans', sans-serif;
         font-size: 15px;
@@ -882,14 +885,15 @@
       /* ── App-preview: één toestel, de schermen schuiven ── */
       #preview { background: #FCF7F0; }
       #preview .pv-stage { display: flex; justify-content: center; }
+      /* Geen eigen toestel meer: de screenshots zijn zelf al mockups met een
+         frame eromheen. Dit is nu alleen nog het venster waar ze doorheen
+         schuiven. De verhouding komt van de bestanden zelf (902 x 1635). */
       #preview .pv-phone {
         position: relative;
-        width: 286px;
-        aspect-ratio: 3 / 6.3;
+        width: 320px;
+        max-width: 80vw;
+        aspect-ratio: 902 / 1635;
         flex: none;
-        border: 5px solid #B28B76;
-        border-radius: 38px;
-        background: #FBFAF6;
         overflow: hidden;
       }
       #preview .pv-track {
@@ -910,28 +914,54 @@
         scroll-snap-align: center;
         scroll-snap-stop: always;
       }
+      /* contain, niet cover: een mockup mag niet bijgesneden worden. */
       #preview .pv-slide img {
-        position: relative; z-index: 1;
         display: block; width: 100%; height: 100%;
-        object-fit: cover; object-position: top center;
-      }
-      /* Zolang een screenshot ontbreekt staat de bestandsnaam in beeld
-         in plaats van een kapot plaatje. */
-      #preview .pv-slide::after {
-        content: attr(data-todo);
-        position: absolute; inset: 0; z-index: 0;
-        display: flex; align-items: center; justify-content: center;
-        padding: 0 16px;
-        font-family: 'Albert Sans', sans-serif;
-        font-size: 12px; text-align: center; color: #c9b8aa;
+        object-fit: contain; object-position: center;
       }
       #preview .pv-caption {
         font-family: 'Albert Sans', sans-serif;
-        font-size: 15px; font-weight: 600; color: #644737;
         text-align: center;
-        margin: 26px 0 0;
-        min-height: 22px;
+        margin: 26px auto 0;
+        max-width: 420px;
+        min-height: 72px;
       }
+
+      /* Het bijschrift is nu een kopje met een zin eronder. min-height houdt
+         de hoogte vast, anders springt de sectie bij elk scherm. */
+      #preview .pv-cap-title {
+        display: block;
+        font-size: 15px; font-weight: 700; color: #644737;
+      }
+      #preview .pv-cap-desc {
+        display: block; margin-top: 5px;
+        font-size: 14px; font-weight: 400; line-height: 1.45; color: #8a7365;
+        /* Browsers die het kennen verdelen de regels zelf netjes; de vaste
+           spatie in de JS vangt de rest op. */
+        text-wrap: pretty;
+      }
+
+      /* Bolletjes: gevuld voor waar je bent, open voor de rest. Maten en
+         kleuren uit het ontwerp: 11px, rand een vijfde van de diameter. Ze
+         zijn er niet alleen om te tonen waar je bent, maar vooral om te
+         verraden dat er meer is en dat je zelf kunt kiezen. Wie "verminder
+         beweging" aan heeft staan krijgt geen automatisch schuiven, en heeft
+         hier dan de enige manier om verder te kijken. */
+      #preview .pv-dots {
+        display: flex; justify-content: center; gap: 14px;
+        margin-top: 22px;
+      }
+      #preview .pv-dot {
+        width: 11px; height: 11px; padding: 0;
+        border-radius: 50%;
+        border: 2px solid #AAAAAA;
+        background: #fff;
+        cursor: pointer;
+        transition: background .2s ease, border-color .2s ease;
+      }
+      #preview .pv-dot.is-on { background: #622A0D; border-color: #622A0D; }
+      #preview .pv-dot:focus-visible { outline: 2px solid #FF6D1F; outline-offset: 3px; }
+
       @media (max-width: 767px) {
         #preview .pv-phone { width: min(262px, 76vw); }
       }
@@ -1087,24 +1117,28 @@
     <!-- APP-PREVIEW -->
     <section id="preview" class="sec-pad">
       <div class="sec-inner">
-        <h2 class="sec-title">What it actually looks like</h2>
-        <p class="sec-sub">Swipe through the app — no mockups, these are the real screens.</p>
+        <h2 class="sec-title">More than a conversation</h2>
+        <p class="sec-sub">Everything you need to move forward with what is on your mind.</p>
 
         <div class="pv-stage">
 
           <div class="pv-phone">
-            <div class="pv-track" id="pv-track" tabindex="0" role="group" aria-roledescription="carousel" aria-label="What it actually looks like">
-              <div class="pv-slide" data-caption="Today" data-todo="app-vandaag-en.png"><img src="./Images/app-vandaag-en.png" alt="The Today home screen" loading="lazy" onerror="this.remove()"></div>
-              <div class="pv-slide" data-caption="A conversation with Noah" data-todo="app-gesprek-en.png"><img src="./Images/app-gesprek-en.png" alt="A conversation with Noah in the Baeloom app" loading="lazy" onerror="this.remove()"></div>
-              <div class="pv-slide" data-caption="Themes" data-todo="app-themas-en.png"><img src="./Images/app-themas-en.png" alt="The themes screen" loading="lazy" onerror="this.remove()"></div>
-              <div class="pv-slide" data-caption="Session summary" data-todo="app-samenvatting-en.png"><img src="./Images/app-samenvatting-en.png" alt="A session summary" loading="lazy" onerror="this.remove()"></div>
-              <div class="pv-slide" data-caption="Your progress" data-todo="app-groei-en.png"><img src="./Images/app-groei-en.png" alt="Tracking your progress" loading="lazy" onerror="this.remove()"></div>
+            <div class="pv-track" id="pv-track" tabindex="0" role="group" aria-roledescription="carousel" aria-label="More than a conversation">
+              <div class="pv-slide" data-caption="A voice of her own" data-desc="A reply that goes further than just an answer."><img src="./Images/app-gesprek.png" alt="A conversation with Noah in the Baeloom app" loading="lazy"></div>
+              <div class="pv-slide" data-caption="Overview" data-desc="Everything that matters to you, together in one place."><img src="./Images/app-dashboard.png" alt="The dashboard with your themes and saved messages" loading="lazy"></div>
+              <div class="pv-slide" data-caption="Themes" data-desc="Go deeper into the things that matter to you."><img src="./Images/app-themas.png" alt="A theme card with your goal and where you left off" loading="lazy"></div>
+              <div class="pv-slide" data-caption="Insight card" data-desc="What you found out, what changed, and how to carry on."><img src="./Images/app-inzichtkaart.png" alt="An insight card from a finished theme" loading="lazy"></div>
             </div>
           </div>
 
         </div>
 
-        <p class="pv-caption" id="pv-caption" aria-live="polite">Today</p>
+        <div class="pv-dots" id="pv-dots"></div>
+
+        <div class="pv-caption" id="pv-caption" aria-live="polite">
+          <b class="pv-cap-title">A voice of her own</b>
+          <span class="pv-cap-desc">A reply that goes further than just an answer.</span>
+        </div>
       </div>
     </section>
 
@@ -1121,13 +1155,56 @@
       var index = 0, timer = null, paused = false;
       var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-      function paint() {
-        var cap = slides[index] && slides[index].getAttribute('data-caption');
-        if (capEl && cap) capEl.textContent = cap;
+      var capTitle = capEl && capEl.querySelector('.pv-cap-title');
+      var capDesc = capEl && capEl.querySelector('.pv-cap-desc');
+
+      /* Bolletjes uit de slides zelf opbouwen, zodat er nooit een verschil
+         kan ontstaan tussen het aantal schermen en het aantal bolletjes. */
+      var dotsEl = document.getElementById('pv-dots');
+      var dots = [];
+      if (dotsEl) {
+        slides.forEach(function (sl, i) {
+          var d = document.createElement('button');
+          d.type = 'button';
+          d.className = 'pv-dot';
+          d.setAttribute('aria-label', sl.getAttribute('data-caption') || String(i + 1));
+          d.addEventListener('click', function () { hold(); go(i); });
+          dotsEl.appendChild(d);
+          dots.push(d);
+        });
       }
 
+      /* Een laatste regel met alleen "antwoord." erop leest als een fout.
+         De laatste twee woorden aan elkaar plakken met een vaste spatie lost
+         dat op zonder ergens een harde regelafbreking in te bakken: ze wrappen
+         voortaan samen of helemaal niet. Werkt op elke tekst, dus ook op wat
+         hier later nog komt te staan. */
+      function noOrphan(t) {
+        return String(t || '').replace(/\s+(\S+)\s*$/, '\u00A0$1');
+      }
+
+      function paint() {
+        var sl = slides[index];
+        if (!sl) return;
+        var cap = sl.getAttribute('data-caption');
+        var desc = sl.getAttribute('data-desc');
+        if (capTitle && cap) capTitle.textContent = cap;
+        if (capDesc) capDesc.textContent = noOrphan(desc);
+        dots.forEach(function (d, i) {
+          d.classList.toggle('is-on', i === index);
+          d.setAttribute('aria-current', i === index ? 'true' : 'false');
+        });
+      }
+
+      /* Onthouden of WIJ aan het schuiven zijn. Zonder dit telde onze eigen
+         beweging als "de bezoeker veegt" en zette de carrousel zichzelf elke
+         keer negen seconden stil. */
+      var selfScroll = false, selfTimer;
       function go(i) {
         index = (i + slides.length) % slides.length;
+        selfScroll = true;
+        clearTimeout(selfTimer);
+        selfTimer = setTimeout(function () { selfScroll = false; }, 700);
         track.scrollTo({ left: slides[index].offsetLeft - track.offsetLeft, behavior: 'smooth' });
         paint();
       }
@@ -1139,6 +1216,8 @@
         settle = setTimeout(function () {
           var near = Math.round(track.scrollLeft / track.clientWidth);
           if (near !== index && slides[near]) { index = near; paint(); }
+          /* Alleen pauzeren als de bezoeker zelf verschoof. */
+          if (!selfScroll) hold();
         }, 90);
       }, { passive: true });
 
@@ -1149,8 +1228,11 @@
         clearTimeout(resume);
         resume = setTimeout(function () { paused = false; }, 9000);
       }
-      track.addEventListener('touchstart', hold, { passive: true });
-      track.addEventListener('pointerdown', hold);
+      /* Geen hold meer op touchstart of pointerdown: op een telefoon scrollt
+         iedereen met de duim over de inhoud, en dat legde de carrousel stil
+         zonder dat er ook maar iets geveegd werd. Nu pauzeert hij pas als er
+         daadwerkelijk horizontaal verschoven is, gemeten in de scroll-handler
+         hierboven. */
 
       function tick() { if (!paused && !document.hidden) go(index + 1); }
       function start() { if (!timer && !calm) timer = setInterval(tick, 4000); }
@@ -1179,7 +1261,7 @@
             <h3 class="pr-name">Free</h3>
             <p class="pr-for">To see whether it suits you</p>
             <p class="pr-price">&euro;0</p>
-            <a class="pr-btn pr-btn-free" href="https://chat.baeloom.com">Start for free</a>
+            <a class="pr-btn pr-btn-free" href="https://chat.baeloom.com">Try for free</a>
             <ul class="pr-list">
               <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#FF6D1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,8 6,12 14,4"/></svg><span>60 messages to get started</span></li>
               <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#FF6D1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,8 6,12 14,4"/></svg><span>Up to 2 active themes</span></li>
@@ -1210,12 +1292,11 @@
     <!-- FAQ (kort) -->
     <section id="faq-short" class="sec-pad">
       <div class="sec-inner">
-        <h2 class="sec-title">Before you start</h2>
-        <p class="sec-sub">The four things people ask us most.</p>
+        <h2 class="sec-title" style="margin-bottom:52px;">Frequently asked questions</h2>
         <div class="fq-list">
           <details>
-            <summary>Can Noah replace therapy?</summary>
-            <p class="fq-a">No, and she’s not trying to. Noah is there to reflect with, not to treat. What she can do is give you a space to think things through, especially the things that feel hard to bring up with people around you. If you’re struggling, please speak to a professional.</p>
+            <summary>What is Noah?</summary>
+            <p class="fq-a">Noah is a personal sparring partner built by Baeloom. She has her own character and opinions, listens to what you share, remembers it and helps you understand yourself more clearly. She’s not a therapist and not a mirror. She’s someone to think things through with.</p>
           </details>
           <details>
             <summary>Is my data private?</summary>
@@ -1239,7 +1320,7 @@
       <img src="./Images/app.png" alt="" aria-hidden="true" class="hidden md:block" style="position:absolute;right:40px;top:50%;transform:translateY(-45%) rotate(10deg);width:250px;opacity:0.9;pointer-events:none;user-select:none;z-index:10;">
       <div style="max-width:520px;margin:0 auto;position:relative;z-index:1;">
         <img src="./Images/icon-app.png" alt="Baeloom app icon" class="block md:hidden" style="width:104px;height:auto;margin:0 auto 34px;display:block;">
-        <h2 class="text-4xl md:text-5xl text-[#6A2500] leading-tight tracking-tight" style="margin-bottom:16px;">Noah in your pocket.</h2>
+        <h2 class="sec-title" style="margin-bottom:16px;">Noah in your pocket</h2>
         <p style="font-family:'Albert Sans',sans-serif;font-size:1rem;color:#888;font-weight:400;line-height:1.65;margin-bottom:36px;">We're currently super busy building the Baeloom app. Want to be one of the first to know when it launches? Leave your email and we'll reach out the moment it's ready.</p>
         <div id="notify-form" style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
           <input id="notify-email" type="email" placeholder="your@email.com" aria-label="Your email address" autocomplete="email" style="font-family:'Albert Sans',sans-serif;font-size:0.95rem;padding:13px 22px;border-radius:10px;border:1.5px solid rgba(0,0,0,0.15);background:white;color:#1a1a1a;outline:none;width:260px;transition:border-color 0.2s;" onfocus="this.style.borderColor='#FF6D1F'" onblur="this.style.borderColor='rgba(0,0,0,0.15)'" />
@@ -1259,7 +1340,7 @@
         <div class="bg-white px-0 md:px-16 lg:px-24 py-12 md:py-24 border-t border-gray-100 text-center md:text-left">
             <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
                 <div class="space-y-2 px-8 md:px-0">
-                    <h3 class="text-4xl md:text-5xl text-[#6A2500]" style="font-weight:600;letter-spacing:-0.02em;">Still have questions?</h3>
+                    <h3 class="sec-title" style="text-align:left;margin:0;">Still have questions?</h3>
                     <p class="text-[var(--text-muted)] text-sm md:text-base font-light leading-relaxed px-8 md:px-0">Our support team is always here to guide you.</p>
                 </div>
                 <div class="px-8 md:px-0 w-full md:w-auto">
