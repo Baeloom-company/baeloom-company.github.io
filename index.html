@@ -922,8 +922,12 @@
       #preview .pv-caption {
         font-family: 'Albert Sans', sans-serif;
         text-align: center;
+        /* 420px liet de twee korte bijschriften op één regel staan en de twee
+           langere op twee, waardoor de sectie er per scherm anders uitzag. Bij
+           300px breken ze alle vier naar twee regels; gemeten blijft dat zo van
+           260 tot 320, dus er is marge aan beide kanten. */
         margin: 26px auto 0;
-        max-width: 420px;
+        max-width: min(300px, 82vw);
         min-height: 72px;
       }
 
@@ -936,9 +940,10 @@
       #preview .pv-cap-desc {
         display: block; margin-top: 5px;
         font-size: 14px; font-weight: 400; line-height: 1.45; color: #8a7365;
-        /* Browsers die het kennen verdelen de regels zelf netjes; de vaste
-           spatie in de JS vangt de rest op. */
-        text-wrap: pretty;
+        /* balance verdeelt twee regels even lang, wat bij zo'n kort bijschrift
+           beter oogt dan een volle eerste regel met een restje eronder. De
+           vaste spatie in de JS blijft de ondergrens bewaken. */
+        text-wrap: balance;
       }
 
       /* Bolletjes: gevuld voor waar je bent, open voor de rest. Maten en
