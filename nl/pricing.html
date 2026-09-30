@@ -402,7 +402,7 @@
     <div class="card">
       <div class="card-plan">Pro</div>
       <div class="card-tagline">Voor dagelijks, dieper gebruik</div>
-      <div class="card-price"><span id="price-pro">€12</span> <span class="period">/ maand</span></div>
+      <div class="card-price"><span id="price-pro">€15</span> <span class="period">/ maand</span></div>
       <a href="https://chat.baeloom.com/?lang=nl" class="btn-get-pro">Word Pro</a>
       <div class="btn-note">Altijd opzegbaar · Veilig afrekenen via Stripe</div>
       <ul class="features">
@@ -453,21 +453,23 @@
 
 <script>
   const PRICES = {
-    gb:  { pro: '£10',       free: '£0' },
-    dk:  { pro: '89 kr.',   free: '0 kr.' },
-    jp:  { pro: '¥2,200',    free: '¥0' },
-    ca:  { pro: 'CA$19',     free: 'CA$0' },
-    au:  { pro: 'A$19',      free: 'A$0' },
-    nz:  { pro: 'NZ$24',     free: 'NZ$0' },
-    kr:  { pro: '₩19,000',   free: '₩0' },
-    us:  { pro: '$13',       free: '$0' }
+    gb:  { pro: '£12.50',       free: '£0' },
+    dk:  { pro: '109 kr.',   free: '0 kr.' },
+    jp:  { pro: '¥2,800',    free: '¥0' },
+    ca:  { pro: 'CA$24',     free: 'CA$0' },
+    au:  { pro: 'A$24',      free: 'A$0' },
+    nz:  { pro: 'NZ$30',     free: 'NZ$0' },
+    kr:  { pro: '₩24,000',   free: '₩0' },
+    us:  { pro: '$16',       free: '$0' },
+    in:  { pro: '₹1,650',    free: '₹0' },
+    id:  { pro: 'Rp 310.000', free: 'Rp 0' }
   };
-  const EURO = { pro: '€12', free: '€0' };
+  const EURO = { pro: '€15', free: '€0' };
   ['at','be','hr','cy','ee','fi','fr','de','gr','ie','it','lv','lt','lu','mt','nl','pt','sk','si','es']
     .forEach(c => { PRICES[c] = EURO; });
 
   function applyPrices(cc) {
-    const p = PRICES[cc] || { pro: '$13', free: '$0' };
+    const p = PRICES[cc] || { pro: '$16', free: '$0' };
     document.getElementById('price-pro').textContent  = p.pro;
     document.getElementById('price-free').textContent = p.free;
   }
@@ -481,7 +483,7 @@
       const cc   = (data.country_code || '').toLowerCase();
       if (cc) localStorage.setItem('baeloom_country_cc', cc);
       applyPrices(cc);
-    } catch (e) { /* keep €12 default */ }
+    } catch (e) { /* keep €15 default */ }
   })();
 </script>
 <script src="../cookie-banner.js"></script>
