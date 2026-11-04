@@ -356,6 +356,12 @@
     .lang-switch .flag { font-size: 1rem; line-height: 1; }
     @media (max-width: 640px) { .lang-switch { display: none; } }
 
+
+    /* Founding-aanbod */
+    .fo-pill { align-self: flex-start; display: inline-block; font-family: 'Albert Sans', sans-serif; font-weight: 500; font-size: 13px; color: #B4470E; background: #FFE9D9; padding: 5px 11px; border-radius: 8px; margin: 0 0 14px; }
+    .fo-was { font-family: 'Lora', serif; font-size: 1.15rem; font-weight: 600; color: #b9aea5; text-decoration: line-through; }
+    .fo-line { font-family: 'Albert Sans', sans-serif; font-size: 13px; line-height: 1.45; color: #8a6a55; margin: -8px 0 18px; }
+    .fo-valid { display: block; margin-top: 2px; color: #a08672; }
   </style>
 </head>
 <body>
@@ -419,9 +425,11 @@
 
     <!-- Pro -->
     <div class="card">
+      <span class="fo-pill" data-founding>Founding member discount</span>
       <div class="card-plan">Pro</div>
       <div class="card-tagline">For daily, deeper use</div>
-      <div class="card-price"><span id="price-pro">€15</span> <span class="period">/ month</span></div>
+      <div class="card-price"><span id="price-pro">€9</span> <span id="price-was" class="fo-was" data-founding>€15</span> <span class="period">/ month</span></div>
+      <p class="fo-line" data-founding><span class="fo-price">€9</span>/month for your first 3 months, then&nbsp;<span class="fo-full">€15</span>/month.<span class="fo-valid">Discount valid until 31 December.</span></p>
       <a href="https://chat.baeloom.com" class="btn-get-pro">Get Pro</a>
       <div class="btn-note">Cancel anytime · Secure checkout via Stripe</div>
       <ul class="features">
@@ -497,7 +505,30 @@
     const p = PRICES[cc] || { pro: '$16', free: '$0' };
     document.getElementById('price-pro').textContent  = p.pro;
     document.getElementById('price-free').textContent = p.free;
+    applyFounding(cc, p);
   }
+
+  // ── Founding-aanbod: 40% korting op Pro voor 3 maanden, t/m 31 dec 2026 ──
+  // Na de einddatum verdwijnt alles met data-founding vanzelf en staat de
+  // gewone prijs er weer. De korting zelf zit in Stripe (code FOUNDING).
+  const FOUNDING_END = Date.UTC(2026, 11, 31, 23, 0, 0);
+  const FOUNDING_ON = Date.now() < FOUNDING_END;
+  const FOUNDING_PRICE = { gb: '£7.50', dk: '65.40 kr.', jp: '¥1,680', ca: 'CA$14.40', au: 'A$14.40',
+    nz: 'NZ$18', kr: '₩14,400', us: '$9.60', in: '₹990', id: 'Rp 186.000' };
+  function applyFounding(cc, p) {
+    if (!FOUNDING_ON) {
+      document.querySelectorAll('[data-founding]').forEach(e => e.remove());
+      document.querySelectorAll('[data-founding-off]').forEach(e => { e.style.display = ''; });
+      return;
+    }
+    const fp = p.pro === '€15' ? '€9' : (FOUNDING_PRICE[cc] || '$9.60');
+    document.getElementById('price-pro').textContent = fp;
+    const was = document.getElementById('price-was'); if (was) was.textContent = p.pro;
+    document.querySelectorAll('.fo-price').forEach(e => { e.textContent = fp; });
+    document.querySelectorAll('.fo-full').forEach(e => { e.textContent = p.pro; });
+  }
+  applyFounding('nl', EURO);
+
 
   (async function () {
     const cached = localStorage.getItem('baeloom_country_cc');

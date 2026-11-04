@@ -566,6 +566,14 @@
 
 
         
+
+        /* Founding-aanbod in de banner */
+        .hero-founding { display: inline-flex; align-items: center; padding: 8px 14px; border-radius: 8px; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.32); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); color: #fff; font-family: 'Albert Sans', sans-serif; font-size: 13px; font-weight: 500; text-decoration: none; transition: background 0.2s; }
+        .hero-founding:hover { background: rgba(255,255,255,0.22); }
+        #pricing .fo-pill { align-self: flex-start; display: inline-block; font-family: 'Albert Sans', sans-serif; font-weight: 500; font-size: 13px; color: #B4470E; background: #FFE9D9; padding: 5px 11px; border-radius: 8px; margin: 0 0 14px; }
+        #pricing .pr-price .fo-was { font-family: 'Lora', serif; font-size: 19px; font-weight: 600; color: #b9aea5; text-decoration: line-through; }
+        #pricing .fo-line { font-family: 'Albert Sans', sans-serif; font-size: 13px; line-height: 1.45; color: #8a6a55; margin: -8px 0 18px; }
+        #pricing .fo-valid { display: block; margin-top: 2px; color: #a08672; }
     </style>
     <script type="application/ld+json">
     {
@@ -643,7 +651,8 @@
             </video>
         </div>
         <div class="hero-content max-w-6xl mx-auto px-6 flex flex-col items-center">
-            <span class="hero-eyebrow block text-center text-white/85 uppercase mt-12 md:mt-20 mb-3 md:mb-4" style="font-family:'Albert Sans',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.14em;">Baeloom presents</span>
+            <a href="./pricing.html" class="hero-founding mt-12 md:mt-20 mb-4 md:mb-5" data-founding>Founding offer · 40% off Pro until 31&nbsp;Dec</a>
+            <span data-founding-off style="display:none" class="hero-eyebrow block text-center text-white/85 uppercase mt-12 md:mt-20 mb-3 md:mb-4" style="font-family:'Albert Sans',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.14em;">Baeloom presents</span>
             <h1 style="font-weight:500;" class="text-[28px] md:text-[54px] lg:text-[68px] leading-[1.25] md:leading-[1.25] lg:leading-[1.2] tracking-tight md:tracking-tighter text-white mt-0 mb-5 md:mb-8 max-w-4xl mx-auto px-6 md:px-0 text-center break-words">
                 Noah, your&nbsp;sparring&nbsp;partner <span class="block md:inline-block">for personal growth</span>
             </h1>
@@ -1285,9 +1294,11 @@
           </div>
 
           <div class="pr-card pr-card-pro">
+            <span class="fo-pill" data-founding>Founding member discount</span>
             <h3 class="pr-name">Pro</h3>
             <p class="pr-for">For daily, deeper use</p>
-            <p class="pr-price"><span id="price-pro" style="font:inherit;color:inherit">&euro;15</span> <span>/ month</span></p>
+            <p class="pr-price"><span id="price-pro" style="font:inherit;color:inherit">&euro;9</span> <span id="price-was" class="fo-was" data-founding>&euro;15</span> <span>/ month</span></p>
+            <p class="fo-line" data-founding><span class="fo-price">€9</span>/month for your first 3 months, then&nbsp;<span class="fo-full">€15</span>/month.<span class="fo-valid">Discount valid until 31 December.</span></p>
             <a class="pr-btn pr-btn-pro" href="https://chat.baeloom.com">Go Pro</a>
             <p class="pr-fine">Cancel anytime · Secure checkout via Stripe</p>
             <ul class="pr-list">
@@ -1631,7 +1642,30 @@
     const p = PRICES[cc] || { pro: '$16', free: '$0' };
     document.getElementById('price-pro').textContent  = p.pro;
     document.getElementById('price-free').textContent = p.free;
+    applyFounding(cc, p);
   }
+
+  // ── Founding-aanbod: 40% korting op Pro voor 3 maanden, t/m 31 dec 2026 ──
+  // Na de einddatum verdwijnt alles met data-founding vanzelf en staat de
+  // gewone prijs er weer. De korting zelf zit in Stripe (code FOUNDING).
+  const FOUNDING_END = Date.UTC(2026, 11, 31, 23, 0, 0);
+  const FOUNDING_ON = Date.now() < FOUNDING_END;
+  const FOUNDING_PRICE = { gb: '£7.50', dk: '65.40 kr.', jp: '¥1,680', ca: 'CA$14.40', au: 'A$14.40',
+    nz: 'NZ$18', kr: '₩14,400', us: '$9.60', in: '₹990', id: 'Rp 186.000' };
+  function applyFounding(cc, p) {
+    if (!FOUNDING_ON) {
+      document.querySelectorAll('[data-founding]').forEach(e => e.remove());
+      document.querySelectorAll('[data-founding-off]').forEach(e => { e.style.display = ''; });
+      return;
+    }
+    const fp = p.pro === '€15' ? '€9' : (FOUNDING_PRICE[cc] || '$9.60');
+    document.getElementById('price-pro').textContent = fp;
+    const was = document.getElementById('price-was'); if (was) was.textContent = p.pro;
+    document.querySelectorAll('.fo-price').forEach(e => { e.textContent = fp; });
+    document.querySelectorAll('.fo-full').forEach(e => { e.textContent = p.pro; });
+  }
+  applyFounding('nl', EURO);
+
 
   (async function () {
     const cached = localStorage.getItem('baeloom_country_cc');
