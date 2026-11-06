@@ -843,34 +843,6 @@
       </div>
     </section>
 
-    <!-- SPIRAL / JOURNEY SECTION -->
-    <section id="features" class="py-16 md:py-32 relative overflow-hidden bg-[#FFFFFF] px-0 md:px-16 lg:px-24 border-b border-orange-50">
-        <div class="max-w-6xl mx-auto relative z-10">
-            <div class="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-x-12 md:gap-y-5 lg:gap-x-24 lg:gap-y-6 md:items-center">
-
-                <!-- Heading: 1st on mobile, left col on desktop -->
-                <h2 class="sec-title order-1 md:col-start-1 md:row-start-1 md:self-end px-8 md:px-0 scroll-reveal">
-                    Duik dieper
-                </h2>
-
-                <!-- Spiral: 3rd on mobile, right col spanning on desktop -->
-                <div class="order-3 md:col-start-2 md:row-start-1 md:row-span-2 flex items-center justify-center px-8 md:px-0 scroll-reveal">
-                    <div class="relative w-full max-w-[480px] mx-auto">
-                        <div class="absolute inset-0 bg-orange-500/10 blur-[80px] rounded-full pointer-events-none"></div>
-                        <img src="../Images/spiral-core-nl.png" alt="De Baeloom-spiraal" class="w-full h-auto object-contain relative z-10" style="mix-blend-mode:multiply;">
-                    </div>
-                </div>
-
-                <!-- Description: 2nd on mobile, left col 2nd on desktop -->
-                <div class="order-2 md:col-start-1 md:row-start-2 md:self-start px-8 md:px-0 space-y-6">
-                    <p class="text-sm md:text-base text-[#505050] font-light leading-relaxed scroll-reveal">
-                        Wat je vandaag vertelt, kan later ineens ergens op aansluiten. Noah, jouw persoonlijke sparringpartner, onthoudt wat je eerder hebt gedeeld en bouwt daarop voort. Zo ga je steeds een laag dieper en ontdek je patronen, verbanden en nieuwe inzichten die je helpen om jezelf beter te begrijpen.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
 
 
     <!-- Footer -->
@@ -1153,7 +1125,6 @@
             <div class="pv-track" id="pv-track" tabindex="0" role="group" aria-roledescription="carousel" aria-label="Meer dan een gesprek">
               <div class="pv-slide" data-caption="Een eigen stem" data-desc="Een reactie die verder gaat dan alleen een antwoord."><img src="../Images/app-gesprek.png" alt="Een gesprek met Noah in de Baeloom-app" loading="lazy"></div>
               <div class="pv-slide" data-caption="Overzicht" data-desc="Alles wat voor jou belangrijk is, overzichtelijk bij elkaar."><img src="../Images/app-dashboard.png" alt="Het dashboard met je thema’s en bewaarde berichten" loading="lazy"></div>
-              <div class="pv-slide" data-caption="Thema’s" data-desc="Ga dieper in op de dingen die voor jou belangrijk zijn."><img src="../Images/app-themas.png" alt="Een themakaart met je doel en waar je gebleven was" loading="lazy"></div>
               <div class="pv-slide" data-caption="Inzichtkaart" data-desc="Wat je hebt ontdekt, wat er veranderde en hoe je verder kunt."><img src="../Images/app-inzichtkaart.png" alt="Een inzichtkaart van een afgerond thema" loading="lazy"></div>
             </div>
           </div>
@@ -1276,6 +1247,50 @@
       paint();
     })();
     </script>
+
+    <!-- THEMA'S -->
+    <style>
+      /* ── Thema's: links alle twaalf, rechts een echte themakaart ── */
+      #themes { background: #FFFFFF; }
+      #themes .th-grid { display: grid; grid-template-columns: 1fr 330px; gap: 96px; align-items: center; }
+      #themes .sec-title { text-align: left; }
+      #themes .sec-sub { text-align: left; margin: 0 0 40px; max-width: 460px; font-size: 16px; }
+      #themes .th-rows { display: flex; flex-direction: column; gap: 14px; }
+      #themes .th-row { display: flex; gap: 10px; flex-wrap: wrap; }
+      #themes .th-pill { display: inline-flex; align-items: center; gap: 10px; background: #FCF7F0; border: 1px solid rgba(74,29,0,0.06); border-radius: 999px; padding: 6px 18px 6px 6px; font-family: 'Albert Sans', sans-serif; font-size: 15.5px; font-weight: 500; color: #644737; }
+      #themes .th-pill img { width: 40px; height: 32px; object-fit: contain; }
+      #themes .th-phone img { width: 330px; max-width: 100%; height: auto; display: block; }
+      @media (max-width: 900px) {
+        #themes .th-grid { grid-template-columns: 1fr; gap: 48px; }
+        #themes .sec-title, #themes .sec-sub { text-align: center; margin-left: auto; margin-right: auto; }
+        #themes .th-row { justify-content: center; }
+        #themes .th-phone { display: flex; justify-content: center; }
+        #themes .th-phone img { width: 280px; }
+      }
+      @media (max-width: 767px) {
+        /* Op een telefoon lopen alle twaalf door als één rij, anders bleef
+           er per groep een los label op een eigen regel staan. */
+        #themes .th-rows { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 8px; }
+        #themes .th-row { display: contents; }
+        #themes .th-pill { font-size: 14.5px; padding: 5px 14px 5px 5px; }
+        #themes .th-pill img { width: 34px; height: 28px; }
+      }
+    </style>
+    <section id="themes" class="sec-pad">
+      <div class="sec-inner th-grid">
+        <div>
+          <h2 class="sec-title">Ga dieper met thema’s</h2>
+          <p class="sec-sub">Kies wat je bezighoudt. In elk thema stel je een doel, en Noah helpt je ernaartoe&nbsp;te&nbsp;werken.</p>
+          <div class="th-rows">
+            <div class="th-row"><span class="th-pill"><img src="../Images/art-daily-life.webp" alt="" loading="lazy">Dagelijks leven</span><span class="th-pill"><img src="../Images/art-finances.webp" alt="" loading="lazy">Financiën</span><span class="th-pill"><img src="../Images/art-interests.webp" alt="" loading="lazy">Interesses</span></div>
+            <div class="th-row"><span class="th-pill"><img src="../Images/art-family.webp" alt="" loading="lazy">Familie</span><span class="th-pill"><img src="../Images/art-friends.webp" alt="" loading="lazy">Vrienden</span><span class="th-pill"><img src="../Images/art-relationships.webp" alt="" loading="lazy">Relaties</span></div>
+            <div class="th-row"><span class="th-pill"><img src="../Images/art-identity.webp" alt="" loading="lazy">Identiteit</span><span class="th-pill"><img src="../Images/art-values.webp" alt="" loading="lazy">Waarden</span><span class="th-pill"><img src="../Images/art-life-story.webp" alt="" loading="lazy">Levensverhaal</span></div>
+            <div class="th-row"><span class="th-pill"><img src="../Images/art-goals.webp" alt="" loading="lazy">Doelen</span><span class="th-pill"><img src="../Images/art-growth.webp" alt="" loading="lazy">Groei</span><span class="th-pill"><img src="../Images/art-dreams.webp" alt="" loading="lazy">Dromen</span></div>
+          </div>
+        </div>
+        <div class="th-phone"><img src="../Images/app-themas.png" alt="Een themakaart met je doel, je voortgang en wat je laatst besprak" loading="lazy"></div>
+      </div>
+    </section>
 
     <!-- PRIJZEN -->
     <section id="pricing" class="sec-pad">
